@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="http://nathanhoad.net/rss" rel="self" type="application/rss+xml" />
+    <title>NathanHoad.net</title>
+    <link><%= url %>/</link>
+    <description>Nathan Hoad's Blog</description>
+    <image>
+      <url><%= url %>/images/rss.png</url>
+      <title>NathanHoad.net</title>
+      <link><%= url %>/</link>
+    </image>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <language>en-au</language>
+    <copyright>Nathan Hoad</copyright>
+    <pubDate><%= @posts.first.published_at.rfc2822 %></pubDate>
+    <% for post in @posts %>
+      <item>
+        <title><%= post.title %></title>
+        <description><![CDATA[
+          <% if post.link %>
+            <a href="<%= post.link %>">&#9733; <%= post.link %></a>
+          <% end %>
+          <%= text_to_html(post.body, :teaser => true, :slug => post.slug, :base_url => url) %>
+        ]]></description>
+        <pubDate><%= post.published_at.rfc2822 %></pubDate>
+        <link><%= url + '/' + post.slug %></link>
+        <guid isPermaLink="true"><%= url + '/' + post.slug %></guid>
+      </item>
+    <% end %>
+  </channel>
+</rss>

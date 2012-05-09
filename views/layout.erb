@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="keywords" content="nathan hoad, nathanhoad, blog, projects, ruby, iphone, objective-c, inkscape, graphic design, programming, filmmaking, film" />
+  <meta name="description" content="I'm Nathan Hoad and I blog about Ruby, Rails, Sinatra, Git, and Graphic Design" />
+  <meta name="author" content="nathan hoad, nathanhoad.net" />
+  <meta name="verify-v1" content="FJjra037EqYRGo8w0Atq5BHkBi8B+MPZSD+0jKQebLs=" />
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+
+  <title><%= page_title %></title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/application.css" media="only screen and (min-device-width:481px)" />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/mobile.css" media="only screen and (max-device-width: 480px)" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+  <link rel="apple-touch-icon" type="image/png" href="/images/apple-touch-icon.png" />
+  <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/nathanhoad" title="NathanHoad.net RSS" />
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  
+  <link rel="openid.server" href="http://www.myopenid.com/server" />
+  <link rel="openid.delegate" href="http://nathanhoad.myopenid.com" />
+</head>
+
+<body>
+  <header>
+    <hgroup>
+      <h1><a href="/">Hi! I'm Nathan Hoad</a></h1>
+      <p>
+        I like to <a href="http://nathanhoad.deviantart.com">draw things</a> 
+        and <a href="http://github.com/nathanhoad">write code</a>
+      </p>
+    </hgroup>
+    <ul>
+      <li><a href="http://feeds.feedburner.com/nathanhoad">&#10084; Subscribe</a></li>
+      <li><a href="http://twitter.com/nathanhoad">&#9755; Stalk me<span> on Twitter</span></a></li>
+      <li><a href="http://kondoot.com/nathanhoad">&#10029; Kondoot me</a></li>
+    </ul>
+  </header>
+  
+  <section>
+    <%= yield %>
+  </section>
+  
+  <footer>
+    <hr />
+    <section>
+      <h2>About</h2>
+      <p>
+        My name is Nathan Hoad (obviously) and I'm an Interaction Designer living in sunny Brisbane, Australia.
+      </p>
+      <p>
+        I'm a fan of Ruby, Rails, Sinatra, Git, TextMate, Inkscape, Pixelmator, and Skitch. I post code to 
+        <a href="http://github.com/nathanhoad">my Github repositories</a> and graphic designs to 
+        <a href="http://nathanhoad.deviantart.com">my Deviant Art gallery</a>.
+      </p>
+      <p>
+        You can <a href="http://twitter.com/nathanhoad">follow me on Twitter</a>. 
+        If you have a question then <a href="http://formspring.me/nathanhoad">just ask me</a>.
+      </p>
+    </section>
+    
+    <section>
+      <h2>Recent projects</h2>
+      <ul>
+        <li>
+          <h3><a href="http://athletable.com" data-icon="athletable">Ahtletable</a></h3>
+          <p>Change how you work by changing how you play</p>
+        </li>
+        <li>
+          <h3><a href="http://github.com/nathanhoad/maneki" data-icon="maneki">Maneki</a></h3>
+          <p>A simple file-based model for your Ruby app</p>
+        </li>
+        <li>
+          <h3><a href="http://github.com/nathanhoad/moredown" data-icon="moredown">Moredown</a></h3>
+          <p>Get more out of your Markdown.</p>
+        </li>
+      </ul>
+    </section>
+    
+    <section>      
+      <aside>
+        <a href="http://nathanhoad.net">Designed by Nathan Hoad</a> using Inkscape and Textmate. 
+        Powered by <a href="http://github.com/nathanhoad/nathanhoad">Velociraptors</a>.
+      </aside>
+    </section>
+  </footer>
+    
+  <script type="text/javascript" src="/javascripts/code_highlighter.js"></script>
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try { var pageTracker = _gat._getTracker("UA-650804-3"); pageTracker._trackPageview(); } catch(err) {}
+  </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+/***** reset ****/
+* { box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; outline: none; }
+html, body, 
+header, footer, article, section, aside, nav,
+p, a, ol, ul, li, h1, h2, h3, h4, h5, h6, code, pre, th, td, table, figure, caption, legend { padding: 0;  margin: 0; }
+header, hgroup, footer, article, section, aside, nav { display: block; }
+abbr { border-bottom: none; }
+/****************/
+
+
+html,
+body { background: #333; color: white; font: 13px Helvetica, Arial, sans-serif; }
+a { color: white; text-decoration: underline; }
+a img { border: 0px; }
+hr { clear: both; display: block; visibility: hidden; }
+blockquote { background: url(../images/blockquote-bg.png) no-repeat left top; color: #ccc; font-family: Georgia, Times, serif; font-size: 15px; font-style: italic; margin: 30px 0 10px 20px; padding: 0 0 20px 50px; }
+blockquote > p { margin-bottom: 15px; }
+img.left { float: left; margin: 0 5px 5px 0; }
+img.right { float: right; margin: 0 0 5px 5px; }
+img.center { display: block; margin: auto; }
+object { display: block; margin: auto; }
+
+body > header { background: url(../images/header-bg.png) repeat-x top #1c1c1c; }
+body > header > hgroup { margin: auto; width: 480px; text-align: center; }
+body > header > hgroup > h1 {  font: normal 35px Georgia, Times, serif; }
+body > header > hgroup > h1 > a { background: url(../images/header-couch.png) no-repeat top; display: block; margin: 0 0 10px 0; padding: 205px 0 0 0; text-decoration: none; width: 480px; }
+body > header > hgroup > p { color: #868686; font-size: 16px; }
+body > header > hgroup > p > a { color: #868686; }
+body > header > hgroup > p > a:hover { background: #868686; color: black; text-decoration: none; }
+body > header > ul { list-style: none; position: fixed; right: 15px; top: 5px; }
+body > header > ul > li { margin: 8px; }
+body > header > ul > li > a { padding: 1px; text-decoration: none; }
+body > header > ul > li > a:hover { background: none; }
+body > header > ul > li > a > span { display: none; }
+body > header a[href^="http://feeds.feedburner.com/"] { color: #f80; }
+body > header a[href^="http://feeds.feedburner.com/"]:hover { border-bottom: 1px solid #B55800; }
+body > header a[href^="http://twitter.com"] { color: #65c0ff; }
+body > header a[href^="http://twitter.com"]:hover { border-bottom: 1px solid #325F79; }
+body > header a[href^="http://kondoot.com"] { color: #aaa; }
+body > header a[href^="http://kondoot.com"]:hover { border-bottom: 1px solid #666; }
+
+body > section { background: #1c1c1c; padding: 70px 0 30px 0; }
+body > section > header { background: white; margin: 0 auto 60px auto; padding: 15px; text-align: center; width: 480px;  -moz-border-radius: 10px; -webkit-border-radius: 10px; }
+body > section > header > h3 { color: #222; font-size: 20px; font-weight: normal; margin-bottom: 5px; }
+body > section > header > h3 > a { color: #222; }
+body > section > header > h3 > a:hover { background: #222; color: white; }
+body > section > header > h3 > em { color: #060; font-style: normal; font-weight: bold; }
+body > section > header > p { color: #555; font-size: 14px; }
+body > section > article { background: url(../images/article-divider.png) bottom no-repeat; font-size: 14px; margin: auto; padding: 50px 0 50px 0; width: 480px; }
+body > section > article:first-of-type { padding-top: 0px; }
+body > section > article > header > h2 { color: #009deb; font-size: 26px; font-weight: normal; }
+body > section > article > header > h2 > a { color: #009deb; text-decoration: none; }
+body > section > article > header > h2 > a:hover { background: none; color: #009deb; border-bottom: 1px solid #003E99; }
+body > section > article > header > h2 > a[href^=http] { color: #02D700; }
+body > section > article > header > h2 > a[href^=http]:hover { border-bottom: 1px solid #004905; }
+body > section > article > header > aside { margin: 12px 0 24px 0; }
+body > section > article > header > aside,
+body > section > article > header > aside a,
+body > section > article > header > aside a:hover { background: none; color: #999; font-size: 12px; text-decoration: none; }
+body > section > article > header > aside a:hover { text-decoration: underline; }
+body > section > article > header > aside > ul { display: inline; list-style: none; margin: 0; padding: 0; }
+body > section > article > header > aside > ul > li { display: inline; }
+body > section > article a:hover { background: white; color: black; text-decoration: none; }
+body > section > article h3 { color: #999; font-size: 14px; font-weight: normal; letter-spacing: 2px; margin: 22px 0 12px 0; text-transform: uppercase; }
+body > section > article p { line-height: 19px; margin: 0 0 10px 0; text-align: justify; }
+body > section > article p > abbr { border-bottom: 1px dashed #444; }
+body > section > article ul,
+body > section > article ol { padding: 10px 0 15px 30px; }
+
+body > section > h2,
+body > section > ul { margin: auto; width: 480px; }
+body > section > h2 { color: #555; letter-spacing: 3px; font-size: 13px; font-weight: normal; text-transform: uppercase; }
+body > section > ul { margin-bottom: 40px; list-style: none; }
+body > section > ul > li { font-size: 18px; margin: 5px 0; }
+body > section > ul > li > a { text-decoration: none; }
+body > section > ul > li > a:hover { background: none; border-bottom: 1px solid #444; color: white; }
+
+body > section > footer { margin: 30px auto; width: 480px; }
+body > section > footer > h4 { color: #666; font-family: Georgia, Times, serif; font-size: 22px; font-weight: normal; text-align: center; }
+body > section > footer > h4 > a { color: #666; }
+body > section > footer > h4 > a:hover { background: #666; color: black; text-decoration: none; }
+body > section > footer > ul { list-style: none; margin: 20px auto; }
+body > section > footer > ul > li > span { display: none; }
+body > section > footer > ul[data-context="pages"] { overflow: auto; text-align: center; width: 100%; width: 300px; }
+body > section > footer > ul[data-context="pages"] > li > a { color: #888; float: left; font-size: 15px; padding: 128px 0 0 0; text-decoration: none; width: 128px; }
+body > section > footer > ul[data-context="pages"] > li > a:hover { background-position: 0 -180px; color: white; }
+body > section > footer > ul[data-context="pages"] > li:first-of-type > a { background: url(../images/older-posts.png) no-repeat top; }
+body > section > footer > ul[data-context="pages"] > li:last-of-type > a { background: url(../images/newer-posts.png) no-repeat top; float: right; }
+body > section > footer > ul[data-context="posts"] > li { color: #aaa; font-size: 14px; margin-bottom: 10px; text-align: center; }
+body > section > footer > ul[data-context="posts"] > li > a { color: #eee; font-size: 18px; text-decoration: none; }
+body > section > footer > ul[data-context="posts"] > li > a:hover { background: none; border-bottom: 1px solid #666; }
+body > section > footer > ul[data-context="posts"] > li:last-of-type { text-align: center; }
+
+body > footer { background: url(../images/footer-bg.png) repeat-x top #333; padding: 10px 0 20px 0; }
+body > footer a[data-icon="athletable"] { background: url(../images/athletable-icon.png) no-repeat top; }
+body > footer a[data-icon="maneki"] { background: url(../images/maneki-icon.png) no-repeat top; }
+body > footer a[data-icon="moredown"] { background: url(../images/moredown-icon.png) no-repeat top; }
+body > footer a[data-icon]:hover { text-decoration: underline; }
+body > footer > section { clear: both; margin: 40px auto 0 auto; padding: 0 0 40px 0; width: 480px; }
+body > footer > section > h2 { display: none; }
+body > footer > section > p { font-size: 15px; margin: 0 0 15px 0; text-align: justify; }
+body > footer > section > p a:hover { background: white; color: black; text-decoration: none; }
+body > footer > section:nth-of-type(2) > ul { list-style: none; overflow: auto; width: 100%; }
+body > footer > section:nth-of-type(2) > ul > li { float: left; margin: 0 5px; text-align: center; width: 150px; }
+body > footer > section:nth-of-type(2) > ul > li > h3 { font-weight: normal; margin: 0 0 5px 0; }
+body > footer > section:nth-of-type(2) > ul > li > p { color: #999; }
+body > footer > section:nth-of-type(2) > ul > li > h3 > a { color: white; display: block; padding: 70px 0 0 0; text-decoration: none; }
+
+body > footer > section:last-of-type { background: none; padding: 0; }
+body > footer > section:last-of-type > aside { background: url(../images/designed-by-nathan-hoad.png) no-repeat top; color: #999; font-size: 11px; padding: 45px 0 0 0; text-align: center; }
+body > footer > section:last-of-type > aside > a { color: #999; }
+body > footer > section:last-of-type > aside > a:hover { background: none; color: #999; text-decoration: underline; }
+body > footer > section:last-of-type > ul { list-style: none; margin: auto; overflow: auto; text-align: center; width: 100%; width: 200px; }
+
+pre { padding: 10px 0 20px 10px; }
+code span.comment { color: #777; }
+code span.string { color: #a5c254; }
+code span.symbol { color: #6d9cbe; }
+code span.module_class { color: #e45c47; }
+code span.variable { color: #d0d0fb; }
+code span.keywords { color: #ffa752; }
+code span.global { color: #6d9cbe; }
+
+code.html span { color: #fff; }
+code.html span.tag,
+code.haml span.tag,
+code.html span.anglebrackets { color: #e8bf6a; }
+code.html span.attribute { color: #e8bf6a; }
+code.html span.string { color: #a5c254; }
+code.html span.comment { color: #777; }
+code.html span.doctype,
+code.haml span.doctype { color: #c12e00; }
+
+code.css .selectors { color: #e8bf6a; }
+code.css .properties { color: #6d9cbe; }
+
+code.shell { color: #ccc; }
+code.shell span.keywords { color: #fff; }

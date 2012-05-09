@@ -1,0 +1,12 @@
+<article>
+  <header>
+    <h2><%= post_title(post) %></h2>
+    <aside>
+      <%= link_to_post post, "Published #{time_ago_in_words(post.published_at)}" %> with <%= tags(post.tags) %>
+    </aside>
+  </header>
+  
+  <%= text_to_html post.body, :teaser => (post.link.nil? and defined? teaser), :slug => post.slug %>
+
+  <hr />
+</article>

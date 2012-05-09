@@ -1,0 +1,8 @@
+<% for date, posts in @posts_by_month_and_year %>
+  <h2><%= date.strftime("%B, %Y") %></h2>
+  <ul>
+    <% for post in posts %>
+      <li><%= link_to_post post %></li>
+    <% end %>
+  </ul>
+<% end %>

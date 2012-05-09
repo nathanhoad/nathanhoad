@@ -1,0 +1,9 @@
+<header>
+  <h3>The <em><%=h @tag %></em> tag has <%= pluralise @posts.size, 'post' %></h3>
+</header>
+
+<%= partial :posts => @posts %>
+
+<footer>
+  <h4>You can also <a href="/archive">browse the archives</a>.</h4>
+</footer>

@@ -1,0 +1,17 @@
+<header>
+  <h3>The post titled <em>'<%=h @keyword %>'</em> could not be found.</h3>
+  <% unless @posts.empty? %>
+    <p>There
+      <%= "is 1 possibly similar post." if @posts.size == 1 %>
+      <%= "are #{@posts.size} possibly similar posts." if @posts.size != 1 %>
+    </p>
+  <% else %>
+    <p>No similar posts could be found either.</p>
+  <% end %>
+</header>
+
+<%= partial :posts => @posts %>
+
+<footer>
+  <h4>Still lost? <a href="/archive">Browse the archives</a>.</h4>
+</footer>
