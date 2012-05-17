@@ -18,6 +18,12 @@ Then set up the Heroku app:
     heroku create --stack cedar
     git push heroku master
     heroku ps:scale web=1
+    
+Then set your `HEROKU_URL` environment variable:
+
+    heroku config:add HEROKU_URL="http://crazy-panda-3184.herokuapp.com"
+    
+Where `http://crazy-panda-3184.herokuapp.com` is the URL on Heroku where your app is technically living.
 
 If you have a verified Heroku account then you can make use of Redis To Go:
 
@@ -25,10 +31,11 @@ If you have a verified Heroku account then you can make use of Redis To Go:
 
 If not, then remove it from your scripts list. Open hubot-scripts.json and remove the "redis-brain.coffee" reference.
 
+
 Campfire settings
 =================
 
-Now you just need to tell it about your Campfire setup. Create a new user for your bot and sign in as them. Click the 'My Info' link in the top right of the screen: 
+Now you just need to tell it about your Campfire setup. Create a **new user** for your bot and sign in as them. Click the 'My Info' link in the top right of the screen: 
 
 ![Campfire My Info](media/campfire-my-info.png)
 
@@ -42,6 +49,8 @@ Now you need to tell it which rooms you want to join and for which subdomain. As
     heroku config:add HUBOT_CAMPFIRE_ACCOUNT="thing"
 
 Where `12345` is the room ID and `thing` is the subdomain.
+
+Make sure you sign out of Campfire now - you can't be signed in and have the bot running with the same user.
 
 Now for good measure you can restart your bot (you might need to do this every now and then):
 
