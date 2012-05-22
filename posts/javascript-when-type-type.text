@@ -26,8 +26,6 @@ When comparing two types (in an `if` statement, for example) JavaScript will att
 But sometimes, things don't behave as you would expect:
 
     #! Javascript
-    undefined == null // false
-    
     NaN == NaN // false, but
     Infinity == Infinity // true
     
