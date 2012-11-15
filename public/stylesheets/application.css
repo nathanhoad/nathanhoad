@@ -15,7 +15,7 @@ img.center { display: block; margin: auto; }
 object { display: block; margin: auto; }
 abbr { border-bottom: 1px dashed #444; }
 
-#title { position: fixed; top: 40px; }
+#title { position: fixed; left: 80px; top: 40px; }
   #title h1 { display: none; }
     #title a {}
     #title a:hover { text-decoration: none; }
@@ -101,3 +101,21 @@ code.css .properties { color: #6d9cbe; }
 
 code.shell { color: #ccc; }
 code.shell span.keywords { color: #fff; }
+
+
+/* Mobile */
+@media all and (max-device-width: 480px) {
+  /* Title */
+  #title { left: 10px; top: 20px; }
+  #title a span { display: block; opacity: 0.3; }
+  
+  body > .row { margin-left: 0; }
+  #content { margin-left: 0px; padding-left: 90px; width: 65%; }
+  
+  /* About */
+  #content > aside { position: static; width: 200px; }
+    #content > aside > h2 { background: url(/images/nathan.png) no-repeat top; font-size: 15px; font-weight: normal; line-height: 18px; height: 400px; }
+    #content > aside > h2 > span { display: block; font-family: "Gloria Hallelujah"; font-size: 17px; line-height: 20px; margin: auto; padding-top: 40px; width: 130px; }
+    #content > aside > h2 > span > a { text-decoration: none; }
+    #content > aside > ul { display: none; }
+}

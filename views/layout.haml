@@ -19,15 +19,17 @@
     %link{ rel: "openid.delegate", href: "http://nathanhoad.myopenid.com" }/
     
   %body
+    %header#title
+      %h1 Nathan Hoad
+      %a{ href: '/' }
+        %img{ src: '/images/index.png' }
+        %span Index
+        
     .row
-      .span2.offset1
-        %header#title
-          %h1 Nathan Hoad
-          %a{ href: '/' }
-            %img{ src: '/images/index.png' }
-            %span Index          
-          
-      .span7#content
+      #content.span7.offset3
+        %section
+          = yield
+        
         %aside
           %h2
             %span
@@ -35,13 +37,10 @@
               = link_to 'draw things', 'http://dribbble.com/nathanhoad' 
               and 
               = link_to 'write code', 'http://github.com/nathanhoad'
-          
+              
           %ul
             %li.twitter{ rel: 'tooltip', title: 'Follow me on Twitter' }= link_to '<span>Follow me on Twitter</span>', 'http://twitter.com/nathanhoad'
             %li.subscribe{ rel: 'tooltip', title: 'Subscribe for updates' }= link_to '<span>Subscribe for updates</span>', '/rss'
-        
-        %section
-          = yield
           
           
     %script{ type: 'text/javascript', src: '/javascripts/jquery.js' }
