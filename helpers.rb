@@ -75,20 +75,18 @@ helpers do
   def time_ago_in_words (time)
     t = (Time.now - time).to_i    
     case
-      when t < 1.minute
-        "less than a minute ago"
       when t < 50.minutes
         "#{pluralise((t / 1.minute).round, "minute")} ago"
       when t < 90.minutes
-        "about an hour ago"
+        "About an hour ago"
       when t < 18.hours
         "#{pluralise((t / 1.hour).round, "hour")} ago"
       when t < 2.day
-        "about a day ago"
+        "About a day ago"
       when t < 20.days
         "#{pluralise((t / 1.day).round, "day")} ago"
       when t < 1.month
-        "about a month ago"
+        "About a month ago"
       else
         time.strftime("%B %Y")
     end
