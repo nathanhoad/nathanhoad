@@ -3,7 +3,7 @@ class Post < Maneki
   
   
   # Grab a handful of posts
-  def self.page (n, per_page = 10)
+  def self.page (n, per_page = 5)
     n = 1 unless n
     start = (n.to_i - 1) * per_page
     
