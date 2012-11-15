@@ -1,0 +1,55 @@
+!!! XHTML 5
+%html{html_attrs}
+  %head
+    %title= page_title
+    %meta{ name: "keywords", content: "nathan hoad, nathanhoad, blog, projects, ruby, iphone, objective-c, inkscape, graphic design, programming, filmmaking, film" }/
+    %meta{ name: "description", content: "I'm Nathan Hoad and I'm a software geek that loves the beauty of simple things. I blog about Ruby, Rails, Sinatra, Git, and Graphic Design" }/
+    %meta{ name: "author", content: "nathan hoad, nathanhoad.net" }/
+    %meta{ name: "verify-v1", content: "FJjra037EqYRGo8w0Atq5BHkBi8B+MPZSD+0jKQebLs=" }/
+    %meta{ :'http-equiv' => "Content-type", content: "text/html;charset=UTF-8" }/
+    
+    %link{ rel: "stylesheet", type: "text/css", href: '/stylesheets/bootstrap.css' }/
+    %link{ rel: "stylesheet", type: "text/css", href: '/stylesheets/application.css' }/
+    %meta{ name: "viewport", content: "width=device-width, minimum-scale=1.0, maximum-scale=1.0" }/
+    %link{ rel: "apple-touch-icon", type: "image/png", href: "/images/apple-touch-icon.png" }/
+    %link{ rel: "alternate", type: "application/rss+xml", href: "http://feeds.feedburner.com/nathanhoad", title: "NathanHoad.net RSS" }/
+    %link{ rel: "icon", type: "image/png", href: "/images/favicon.png" }/
+    
+    %link{ rel: "openid.server", href: "http://www.myopenid.com/server" }/
+    %link{ rel: "openid.delegate", href: "http://nathanhoad.myopenid.com" }/
+    
+  %body
+    .row
+      .span2.offset1
+        %header#title
+          %h1 Nathan Hoad
+          %a{ href: '/' }
+            %img{ src: '/images/index.png' }
+            %span Index          
+          
+      .span7#content
+        %aside
+          %h2
+            %span
+              Hi! I'm Nathan Hoad. I like to 
+              = link_to 'draw things', 'http://dribbble.com/nathanhoad' 
+              and 
+              = link_to 'write code', 'http://github.com/nathanhoad'
+          
+          %ul
+            %li.twitter{ rel: 'tooltip', title: 'Follow me on Twitter' }= link_to '<span>Follow me on Twitter</span>', 'http://twitter.com/nathanhoad'
+            %li.subscribe{ rel: 'tooltip', title: 'Subscribe for updates' }= link_to '<span>Subscribe for updates</span>', '/rss'
+        
+        %section
+          = yield
+          
+          
+    %script{ type: 'text/javascript', src: '/javascripts/jquery.js' }
+    %script{ type: 'text/javascript', src: '/javascripts/bootstrap.js' }
+    %script{ type: 'text/javascript', src: '/javascripts/application.js' }
+    %script{ type: 'text/javascript', src: '/javascripts/code_highlighter.js' }
+    %script{ type: 'text/javascript' }
+      :plain
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        try { var pageTracker = _gat._getTracker("UA-650804-3"); pageTracker._trackPageview(); } catch(err) {}

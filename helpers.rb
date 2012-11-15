@@ -29,7 +29,7 @@ helpers do
       options[:locals].merge! template
       template = template.reject{ |key, value| [:locals].include? key }.keys.first.to_s
     end    
-    erb("_#{template}".to_sym, options)
+    haml("_#{template}".to_sym, options)
   end
   
   
@@ -51,7 +51,7 @@ helpers do
       end
       
       if teaser != nil and teaser != html.strip and args[:slug]
-        teaser += "<p><a href=\"/#{args[:slug]}\">Read more...</a></p>"
+        teaser += "<p><a href='/#{args[:slug]}'>Read more...</a></p>"
         html = teaser
       end
     end
@@ -89,10 +89,8 @@ helpers do
         "#{pluralise((t / 1.day).round, "day")} ago"
       when t < 1.month
         "about a month ago"
-      when t < 6.months
-        "#{pluralise((t / 1.month).round, "month")} ago"
       else
-        time.strftime("%B %d, %Y")
+        time.strftime("%B %Y")
     end
   end
   
@@ -100,16 +98,23 @@ helpers do
   # Link to a post unless the post is a link itself
   def post_title (post)
     if post.link
-      "<a href=\"#{post.link}\" title=\"#{post.link}\">&#9733; #{post.title}</a>"
+      "<a href='#{post.link}' title='#{post.link}'>&#9733; #{post.title}</a>"
     else
       link_to_post(post)
     end
   end
   
+  
+  # Link to a url
+  def link_to (label, url)
+    "<a href='#{url}'>#{label}</a>"
+  end
+  
+  
   # Link to a post
   def link_to_post (post, label = nil)
     label ||= post.title
-    "<a href=\"/#{post.slug}\">#{label}</a>"
+    "<a href='/#{post.slug}'>#{label}</a>"
   end
   
   
@@ -117,16 +122,8 @@ helpers do
   def tags (tags)
     tags = [tags] if tags.is_a? String
     
-    tags = tags.collect do |tag| 
-      if tags.size > 1
-        if tag == tags.last
-          prefix = 'and '
-        else
-          suffix = ','
-        end
-      end
-      "<li>#{prefix}<a href=\"/tags/#{tag}\">#{tag}</a>#{suffix}</li>"
-    end
+    tags = tags.map{ |tag| "<li><a href=\"/tags/#{tag}\">##{tag}</a></li>" }
+    
     "<ul>#{tags.sort.join(' ')}</ul>"
   end
   
@@ -141,8 +138,8 @@ helpers do
       older_post = (older_post)? "Previously, #{link_to_post(older_post)}" : "<span>Previously, nothing</span>"
       options = "<ul data-context=\"posts\"><li>#{newer_post}</li><li>#{older_post}</li></ul>"
     else # page number
-      older_posts = (Post.page(relative_to + 1).empty?)? "<span>No older posts</span>" : "<a href=\"/?page=#{relative_to + 1}\">Older posts</a>"
-      newer_posts = (relative_to > 1)? "<a href=\"/?page=#{relative_to - 1}\">Newer posts</a>" : "<span>No newer posts</span>"
+      older_posts = (Post.page(relative_to + 1).empty?)? "<span>No older posts</span>" : "<a href='/?page=#{relative_to + 1}'>Older posts</a>"
+      newer_posts = (relative_to > 1)? "<a href='/?page=#{relative_to - 1}'>Newer posts</a>" : "<span>No newer posts</span>"
       options = "<ul data-context=\"pages\"><li>#{older_posts}</li><li>#{newer_posts}</li></ul>"
     end
     

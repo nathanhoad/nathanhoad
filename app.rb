@@ -4,6 +4,7 @@ require 'chronic'
 require 'maneki'
 require 'moredown'
 require 'erb'
+require 'haml'
 
 ENV['TZ'] = 'Australia/Brisbane'
 
@@ -17,20 +18,20 @@ get '/' do
   end
   @page = (params[:page] || 1).to_i
   @posts = Post.page(@page) || raise(Sinatra::NotFound)
-  erb :index
+  haml :index
 end
 
 
 get '/tags/:tag/?' do
   @tag = params[:tag]
   @posts = Post.find_tagged_with(@tag)
-  erb :tag
+  haml :tag
 end
 
 
 get '/archive/?' do
   @posts_by_month_and_year = Post.archive
-  erb :archive
+  haml :archive
 end
 
 
@@ -71,11 +72,11 @@ get '/:slug/?' do
   @post = Post.find(params[:slug])
   
   if @post
-    erb :post
+    haml :post
   else
     @keyword = params[:slug].gsub('-', ' ')
     @posts = Post.search(@keyword)
-    erb :search
+    haml :search
   end
 end
 
@@ -88,5 +89,5 @@ before do
 end
 
 not_found do
-  erb :not_found
+  haml :not_found
 end

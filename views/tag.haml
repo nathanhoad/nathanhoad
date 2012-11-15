@@ -1,0 +1,13 @@
+%header
+  .alert.alert-info
+    The 
+    %em=h @tag
+    tag has
+    = pluralise @posts.size, 'post'
+
+= partial posts: @posts
+
+%footer
+  %h4
+    You can also
+    = link_to 'browse the archives', '/archive'
