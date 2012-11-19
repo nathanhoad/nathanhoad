@@ -19,12 +19,6 @@
     %link{ rel: "openid.delegate", href: "http://nathanhoad.myopenid.com" }/
     
   %body
-    #athletable
-      %span &#10029; &#10029; &#10029;
-      Hey you! Check out this thing I made: 
-      = link_to 'Athletable', 'http://athletable.com'
-      %span &#10029; &#10029; &#10029;
-    
     %header#title
       %h1 Nathan Hoad
       %a{ href: '/' }
@@ -34,6 +28,12 @@
     .row
       #content.span7.offset3
         %section
+          #athletable.alert.alert-danger
+            %span &#10029;
+            I made a new thing: 
+            = link_to 'Athletable - check it out now!', 'http://athletable.com'
+            %span &#10029;
+          
           = yield
         
         %aside

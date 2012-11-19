@@ -5,7 +5,7 @@
 */
 
 /* Layout */
-.row { margin-top: 50px; }
+.row { margin-top: 30px; }
 
 a { color: #3f78bd; }
 a:hover { color: #3f78bd; }
@@ -15,11 +15,11 @@ img.center { display: block; margin: auto; }
 object { display: block; margin: auto; }
 abbr { border-bottom: 1px dashed #444; }
 
-#athletable { background: white; border-bottom: 1px solid #ccc; color: #666; padding: 8px; position: fixed; text-align: center; top: 0; width: 100%; }
-  #athletable span { color: #080; }
-  #athletable a { color: #666; font-weight: bold; text-decoration: underline; }
+#athletable { text-align: center; font-size: 16px; }
+  #athletable span {}
+  #athletable a { color: #b94a48; font-weight: bold; text-decoration: underline; }
 
-#title { position: fixed; left: 80px; top: 60px; }
+#title { position: fixed; left: 80px; top: 50px; }
   #title h1 { display: none; }
     #title a {}
     #title a:hover { text-decoration: none; }
