@@ -19,6 +19,12 @@
     %link{ rel: "openid.delegate", href: "http://nathanhoad.myopenid.com" }/
     
   %body
+    #athletable
+      %span &#10029; &#10029; &#10029;
+      Hey you! Check out this thing I made: 
+      = link_to 'Athletable', 'http://athletable.com'
+      %span &#10029; &#10029; &#10029;
+    
     %header#title
       %h1 Nathan Hoad
       %a{ href: '/' }
@@ -49,6 +55,11 @@
     %script{ type: 'text/javascript', src: '/javascripts/code_highlighter.js' }
     %script{ type: 'text/javascript' }
       :plain
-        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-        try { var pageTracker = _gat._getTracker("UA-650804-3"); pageTracker._trackPageview(); } catch(err) {}
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-650804-3']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
