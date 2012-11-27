@@ -17,7 +17,7 @@ abbr { border-bottom: 1px dashed #444; }
 
 #athletable { text-align: center; font-size: 16px; }
   #athletable span {}
-  #athletable a { color: #b94a48; font-weight: bold; text-decoration: underline; }
+  #athletable a { color: #080; font-weight: bold; text-decoration: underline; }
 
 #title { position: fixed; left: 80px; top: 50px; }
   #title h1 { display: none; }

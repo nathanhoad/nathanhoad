@@ -5,11 +5,34 @@ helpers do
   def page_title
     case
       when @post
-        @post.title + " - Nathan Hoad"
+        "#{@post.title} - Nathan Hoad"
+      when @tag
+        "Tagged with ##{@tag} - Nathan Hoad"
       else
         "Nathan Hoad"
     end
   end
+  
+  
+  # Get the page description
+  def page_description
+    if defined?(@post) && ! @post.nil?
+      paragraphs = @post.body.split("\n\n")
+      if paragraphs.first =~ /^\!/
+        description = paragraphs[1]
+      else
+        description = paragraphs.first
+      end
+      description.gsub(/<\/?p>/, '').gsub(/\[(.*?)\]\(.*?\)/){ |match| $1 }
+      
+    elsif defined?(@tag) && ! @tag.nil?
+      "Posts tagged with ##{@tag}"
+      
+    else
+      "I'm Nathan Hoad and I'm a software geek that loves the beauty of simple things. I blog about Ruby, Rails, Sinatra, Git, and Graphic Design"
+    end
+  end
+  
   
   # Grab the full url of the current site
   def url
