@@ -6,8 +6,6 @@
     %meta{ name: "description", content: page_description }/
     %meta{ name: 'title', content: page_title }/
     %meta{ property: 'og:title', content: page_title }/
-    %meta{ property: 'og:site_name', content: 'Nathan Hoad' }/
-    %meta{ property: 'og:url', content: 'http://nathanhoad.net' }/
     %meta{ name: 'description', content: page_description }/
     %meta{ property: 'og:description', content: page_description }/
     %link{ rel: 'image_src', href: '/images/nathan-profile.png' }/
@@ -28,8 +26,7 @@
     %link{ rel: "openid.delegate", href: "http://nathanhoad.myopenid.com" }/
     
   %body
-    #thumbnail.hide
-      %img{ src: '/images/nathan-profile.png' }
+    %img.hide{ src: '/images/nathan-profile.png' }
     
     %header#title
       %h1 Nathan Hoad
