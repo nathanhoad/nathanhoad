@@ -3,7 +3,7 @@
  - published: 2009-10-02 14:42
  - tags: ruby, git, web
 
-Are you using [Capistrano](http://www.capify.org/index.php/Capistrano) and [Git](http://git-scm.com/) and want to easily deploy from Git tags? It couldn't be simpler ;-)
+Are you using [Capistrano](http://www.capify.org/index.php/Capistrano) and [Git](http://git-scm.com/) and want to easily deploy from Git tags? It couldn't be simpler 
 
 Using Git, [tag a new release](http://progit.org/book/ch2-6.html):
 

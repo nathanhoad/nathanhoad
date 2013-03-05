@@ -7,6 +7,6 @@ I was listening to some music with Amarok this morning when I wanted to watch [t
 
     sudo apt-get install libflashsupport
 
-Then maybe log out and log back in :-P.
+Then maybe log out and log back in .
 
 It seems the reason `libflashsupport` isn't installed by default is because of [some problems](https://bugs.launchpad.net/ubuntu/+source/libflashsupport/+bug/192888) some people are having with it.

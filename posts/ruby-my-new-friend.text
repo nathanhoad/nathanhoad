@@ -3,7 +3,7 @@
  - published: 2008-07-17 10:10
  - tags: programming, ruby
 
-Recently I started learning [Ruby](http://www.ruby-lang.org/en/) and I have to say: I can easily see it becoming my favourite language :-). Firstly, I would like to thank [Keith Rowell](http://blog.keithrowell.com) for getting me to give Ruby a go and for helping me unlearn some tendencies learnt from other languages (ocassionally referred to as PHPisms and Pythonisms :-P).
+Recently I started learning [Ruby](http://www.ruby-lang.org/en/) and I have to say: I can easily see it becoming my favourite language . Firstly, I would like to thank [Keith Rowell](http://blog.keithrowell.com) for getting me to give Ruby a go and for helping me unlearn some tendencies learnt from other languages (ocassionally referred to as PHPisms and Pythonisms ).
 
 Ruby is full of what many describe as 'syntactic sugar' and makes writing in the language a dream. For example, every number is an object and has methods:
 

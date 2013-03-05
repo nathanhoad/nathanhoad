@@ -3,7 +3,7 @@
  - published: 2010-04-24 10:00
  - tags: programming, ruby
 
-If you're hosting a Sinatra app on Dreamhost and you come across an error like 'No such file to load - sinatra on Dreamhost' then you're in luck. You've just found a blog post that can help you ;-)
+If you're hosting a Sinatra app on Dreamhost and you come across an error like 'No such file to load - sinatra on Dreamhost' then you're in luck. You've just found a blog post that can help you 
 
 
 A solution first

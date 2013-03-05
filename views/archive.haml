@@ -1,5 +1,6 @@
 - for date, posts in @posts_by_month_and_year
-  %h2= date.strftime("%B, %Y")
-  %ul
-    - posts.each do |post|
-      %li= link_to_post post
+  %section
+    %h2= date.strftime("%B, %Y")
+    %ul
+      - posts.each do |post|
+        %li= post_title(post)

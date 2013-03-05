@@ -1,3 +1,7 @@
 - if posts
-  - posts.each do |post|
-    = partial post: post, locals: { teaser: false }
+  %ul
+    - posts.each do |post|
+      %li= post_title(post)
+  
+  %aside
+    = link_to 'Browse the archives', '/archive'

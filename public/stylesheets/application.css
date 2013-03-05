@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Quando|Gloria+Hallelujah');
+@import url('http://fonts.googleapis.com/css?family=Arvo|Enriqueta|Gloria+Hallelujah');
 
 /*
   blue: #3f78bd
@@ -7,76 +7,72 @@
 /* Layout */
 .row { margin-top: 30px; }
 
-a { color: #3f78bd; }
-a:hover { color: #3f78bd; }
+a { color: black; }
+a:hover { color: black; text-decoration: underline; }
 img.left { float: left; margin: 0 5px 5px 0; }
 img.right { float: right; margin: 0 0 5px 5px; }
 img.center { display: block; margin: auto; }
 object { display: block; margin: auto; }
 abbr { border-bottom: 1px dashed #444; }
 
-#athletable { text-align: center; font-size: 16px; }
-  #athletable span {}
-  #athletable a { color: #080; font-weight: bold; text-decoration: underline; }
+a.star { color: rgba(200,0,0,0.5); }
+a.star:hover { color: rgba(200,0,0,1); text-decoration: none; }
 
-#title { position: fixed; left: 80px; top: 50px; }
-  #title h1 { display: none; }
-    #title a {}
-    #title a:hover { text-decoration: none; }
-    #title a strong { display: none; }
-    #title a span { background: url(/images/arrow-up.png) no-repeat 12px 15px; display: none; color: #999; font-family: "Gloria Hallelujah"; font-size: 17px; font-weight: bold; padding: 50px 0 0 0; }
-    #title a:hover span { display: block; }
+body > header {}
+  body > header > h1 > a { background: url(/images/logo.png) no-repeat top; display: block; width: 480px; height: 94px; margin: 40px auto; }
+  body > header > h1 > a > span { display: none; }
 
+body > section { margin: auto; width: 480px; }
+body > section > hr { border-top: 1px solid #ccc; height: 1px; width: 300px; margin: 30px auto; }
+
+/* Index */
+body > section > ul { list-style: none; margin: 0; padding: 0; }
+body > section > ul > li { text-align: center; padding: 10px 0; }
+body > section > ul a { color: #333; font-family: 'Arvo'; font-size: 23px; line-height: 30px; }
+
+body > section > aside { text-align: center; margin-top: 30px; padding-top: 20px; }
+body > section > aside > a { color: #999; font-family: 'Arvo'; font-size: 23px; line-height: 30px; }
+body > section > aside > a:hover { color: #999; }
+
+body > section > aside > ul { font-family: 'Enriqueta'; font-size: 18px; color: #333; list-style: none; margin-top: -20px; margin-bottom: 40px; }
+body > section > aside > ul > li { padding: 5px; }
+body > section > aside > ul > li > a { color: #333; }
+
+body > section > header { text-align: center; margin-bottom: 25px; font-family: 'Georgia'; font-size: 16px; font-style: italic; color: #090; }
 
 /* Posts */
-article { background: url(/images/article-divider.png) no-repeat bottom; padding-bottom: 40px; margin-bottom: 40px; }
-  article h2 { font-family: 'Quando'; font-size: 23px; line-height: 32px }
+article { padding-bottom: 40px; margin-bottom: 40px; }
+  article h2 { font-family: 'Arvo'; font-size: 40px; line-height: 50px; text-align: center; margin-top: 40px; margin-bottom: 20px; }
     article h2 a { color: #333; }
     article h2 a:hover { color: #333; text-decoration: underline; }
-  article aside { color: #999; margin-bottom: 15px; }
+  article aside { font-size: 16px; color: #999; margin: auto; margin-bottom: 50px; text-align: center; }
     article aside a { color: #999; }
     article aside a:hover { color: #999; text-decoration: underline; }
     article aside ul { display: inline; list-style: none; margin: 0; padding: 0; }
     article aside li { display: inline; }
-  article p { text-align: justify; }
-  article p a { text-decoration: underline; }
-  article h3 { color: #999; font-family: "Gloria Hallelujah"; font-size: 22px; line-height: 50px; text-align: center; }
+  article p { font-family: 'Enriqueta'; text-align: justify; font-size: 18px; line-height: 28px; }
+  article p > img:only-child { margin: 30px auto !important; }
+  article p > object { margin: 30px auto; }
+  article p a { color: black; text-decoration: underline; }
+  article h3 { color: #999; font-family: "Arvo"; font-weight: normal; font-size: 22px; line-height: 50px; margin-top: 40px; text-align: center; }
   article hr { display: none; }
 
 /* About */
-#content > aside { position: fixed; bottom: 20px; right: 30px; width: 200px; }
-  #content > aside > h2 { background: url(/images/nathan.png) no-repeat top; font-size: 15px; font-weight: normal; line-height: 18px; height: 400px; }
-  #content > aside > h2 > span { display: block; font-family: "Gloria Hallelujah"; font-size: 17px; line-height: 20px; margin: auto; padding-top: 40px; width: 130px; }
-  #content > aside > h2 > span > a { text-decoration: none; }
-  #content > aside > ul { list-style: none; margin: 30px auto; width: 70px; }
-  #content > aside > ul > li { float: left; }
-  #content > aside > ul > li > a { display: block; width: 30px; height: 30px; opacity: 0.3; -webkit-transition: all 0.3s ease-out; }
-  #content > aside > ul > li > a:hover { opacity: 1; }
-  #content > aside > ul > li > a > span { display: none; }
-  #content > aside > ul > li.twitter > a { background: url(/images/twitter.png) no-repeat; margin-right: 10px; }
-  #content > aside > ul > li.subscribe > a { background: url(/images/subscribe.png) no-repeat; }
-
-/* Footer */
-#content > section > footer { text-align: center; margin: 0 0 30px 0; }
-  #content > section > footer > h4 { color: #ccc; font-family: "Gloria Hallelujah"; font-size: 22px; text-align: center; margin-bottom: 20px }
-  #content > section > footer > h4 > a { color: #3f78bd; font-family: "Gloria Hallelujah"; text-decoration: none; }
-  #content > section > footer > ul { list-style: none; margin: 0; padding: 0; }
-  #content > section > footer > ul > li { padding: 5px 0; }
-  #content > section > footer > ul > li > span { display: none; }
-  #content > section > footer a { color: black; font-family: "Quando"; text-decoration: underline; }
-  
-  /* Newer posts / Older posts */
-  #content > section > footer > ul[data-context="pages"] { margin-bottom: 30px; width: 100%; overflow: hidden; }
-    #content > section > footer > ul[data-context="pages"] > li { float: left; width: 50% }
-    #content > section > footer > ul[data-context="pages"] > li > a { display: block; padding-top: 130px; }
-    #content > section > footer > ul[data-context="pages"] > li:first-of-type > a { background: url(/images/older-posts.png) no-repeat top; }
-    #content > section > footer > ul[data-context="pages"] > li:last-of-type > a { background: url(/images/newer-posts.png) no-repeat top; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; text-decoration: none; }
+body > footer { margin: 60px 0 30px 0; }
+body > footer > h2 { background: url(/images/nathan.png) no-repeat top; font-size: 15px; font-weight: normal; line-height: 18px; height: 320px; width: 400px; margin: auto; position: relative; }
+body > footer > h2 > span { color: #444; display: block; font-family: "Gloria Hallelujah"; font-size: 17px; line-height: 23px; margin: auto; width: 130px; position: absolute; top: 20px; left: 84px; }
+body > footer > h2 > span > a { color: black; text-decoration: none; }
+body > footer > section { color: #999; text-align: center; font-size: 14px; font-weight: bold; margin-bottom: 5px; }
+body > footer > section > a { color: #999; }
+body > footer > section > a:hover { color: #999; }
+body > footer > aside { color: #999; font-size: 14px; text-align: center; }
 
 /* Archives */
-#content > section > h2 { color: #999; font-size: 16px; }
-  #content > section > ul { list-style: none; margin: 0 0 20px 0; padding: 0; }
-  #content > section > ul > li { margin: 10px 0; }
-  #content > section > ul a { font-family: 'Quando'; color: black; }
+body > section > section { text-align: center; }
+body > section > section > h2 { color: #999; font-family: 'Arvo'; font-size: 14px; font-weight: normal; margin-top: 30px; }
+body > section > section > ul { list-style: none; margin: 0 0 20px 0; padding: 0; }
+body > section > section > ul > li { margin: 10px 0; }
+body > section > section > ul a { font-family: 'Arvo'; color: black; font-size: 18px; }
 
 
 /* Code */
@@ -119,9 +115,9 @@ code.shell span.keywords { color: #fff; }
   #content { margin-left: 0px; padding-left: 90px; width: 65%; }
   
   /* About */
-  #content > aside { position: static; width: 200px; }
-    #content > aside > h2 { background: url(/images/nathan.png) no-repeat top; font-size: 15px; font-weight: normal; line-height: 18px; height: 400px; }
-    #content > aside > h2 > span { display: block; font-family: "Gloria Hallelujah"; font-size: 17px; line-height: 20px; margin: auto; padding-top: 40px; width: 130px; }
-    #content > aside > h2 > span > a { text-decoration: none; }
-    #content > aside > ul { display: none; }
+  body > footer { position: static; width: 200px; }
+    body > footer > h2 { background: url(/images/nathan.png) no-repeat top; font-size: 15px; font-weight: normal; line-height: 18px; height: 400px; }
+    body > footer > h2 > span { display: block; font-family: "Gloria Hallelujah"; font-size: 17px; line-height: 20px; margin: auto; padding-top: 40px; width: 130px; }
+    body > footer > h2 > span > a { text-decoration: none; }
+    body > footer > ul { display: none; }
 }

@@ -71,4 +71,4 @@ You might also need to make an entry in your `etc/hosts` file and restart your b
 
     127.0.0.1   dev.blah.com
 
-That should be it ;-)
+That should be it 

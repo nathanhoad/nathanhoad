@@ -58,7 +58,7 @@ helpers do
   
   # Convert text to html
   def text_to_html (text, args = {})
-    args = { :emotes => true, :map_headings => 2 }.merge args
+    args = { :emotes => false, :map_headings => 2 }.merge args
     
     html = Moredown.text_to_html(text, args)
     html.gsub!('src="media/', 'src="/media/')
@@ -119,7 +119,7 @@ helpers do
   # Link to a post unless the post is a link itself
   def post_title (post)
     if post.link
-      "<a href='#{post.link}' title='#{post.link}'>&#9733; #{post.title}</a>"
+      "<a href='/#{post.slug}' class='star'>&#9733;</a> <a href='#{post.link}' title='#{post.link}'>#{post.title}</a>"
     else
       link_to_post(post)
     end
@@ -155,16 +155,16 @@ helpers do
       newer_post = Post.previous_before(relative_to)
       older_post = Post.next_after(relative_to)
 
-      newer_post = (newer_post)? "#{link_to_post(newer_post)} is next" : "<span>Nothing is next</span>"
-      older_post = (older_post)? "Previously, #{link_to_post(older_post)}" : "<span>Previously, nothing</span>"
-      options = "<ul data-context=\"posts\"><li>#{newer_post}</li><li>#{older_post}</li></ul>"
+      newer_post = (newer_post)? "#{link_to_post(newer_post)} is next" : ""
+      older_post = (older_post)? "Previously, #{link_to_post(older_post)}" : ""
+      options = "<ul><li>#{newer_post}</li><li>#{older_post}</li></ul>"
     else # page number
       older_posts = (Post.page(relative_to + 1).empty?)? "<span>No older posts</span>" : "<a href='/?page=#{relative_to + 1}'>Older posts</a>"
       newer_posts = (relative_to > 1)? "<a href='/?page=#{relative_to - 1}'>Newer posts</a>" : "<span>No newer posts</span>"
-      options = "<ul data-context=\"pages\"><li>#{older_posts}</li><li>#{newer_posts}</li></ul>"
+      options = "<ul><li>#{older_posts}</li><li>#{newer_posts}</li></ul>"
     end
     
-    "<h4>Where to now?</h4>\n#{options}"
+    options
   end
 end
 

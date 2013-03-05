@@ -13,11 +13,7 @@ require 'helpers'
 
 
 get '/' do
-  if params[:page] == '1'
-    redirect '/'
-  end
-  @page = (params[:page] || 1).to_i
-  @posts = Post.page(@page) || raise(Sinatra::NotFound)
+  @posts = Post.page(1, 6) || raise(Sinatra::NotFound)
   haml :index
 end
 

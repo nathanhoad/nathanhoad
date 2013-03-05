@@ -3,7 +3,7 @@
  - published: 2008-10-29 16:25
  - tags: linux, software
 
-I find the little chat application that sits in the Facebook status bar pretty handy for sending quick messages to buddies who are online when I am. If you're a user of [Pidgin](http://www.pidgin.im) like me you might like the idea of being able to use the Facebook chat service from within Pidgin (keeping all your IM accounts in one place :-D). Awesomely enough, you can do just that. All you have to do is grab the Facebook Chat for Pidgin plugin:
+I find the little chat application that sits in the Facebook status bar pretty handy for sending quick messages to buddies who are online when I am. If you're a user of [Pidgin](http://www.pidgin.im) like me you might like the idea of being able to use the Facebook chat service from within Pidgin (keeping all your IM accounts in one place ). Awesomely enough, you can do just that. All you have to do is grab the Facebook Chat for Pidgin plugin:
 
     wget http://pidgin-facebookchat.googlecode.com/files/pidgin-facebookchat-1.38.deb
 
@@ -19,4 +19,4 @@ After you restart Pidgin you will have a Facebook option in your Add Account dia
 
 ![Facebook chat with Pidgin](media/pidgin-facebook.jpg):center
 
-Done and done ;-).
+Done and done .

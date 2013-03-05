@@ -3,7 +3,7 @@
  - published: 2009-09-20 13:12
  - tags: programming, ruby
 
-Just a quick note to mention some previously unmentioned syntax for [Moredown](http://github.com/nathanhoad/moredown). It was already possible to specify a width and height for Flash embeds, I had just neglected to say how :-P.
+Just a quick note to mention some previously unmentioned syntax for [Moredown](http://github.com/nathanhoad/moredown). It was already possible to specify a width and height for Flash embeds, I had just neglected to say how .
 
 If you want to specify a width and height in a Flash movie (or Youtube video) then just include it as you would the title text of a Markdown image. 
 

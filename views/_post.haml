@@ -7,5 +7,3 @@
       = tags(post.tags)
   
   = text_to_html post.body, teaser: (post.link.nil? && defined? teaser), slug: post.slug
-  
-  %hr

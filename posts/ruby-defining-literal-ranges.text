@@ -28,4 +28,4 @@ This is useful if you have a count variable and want to define a range without h
     
     range = 4...count
 
-In the end both range definitions have their uses - the main thing is just remembering which is which :-P
+In the end both range definitions have their uses - the main thing is just remembering which is which 

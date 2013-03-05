@@ -37,5 +37,5 @@ And then there are cases where types that shouldn't match do:
     #! Javascript
     typeof NaN // Number, even tho NaN means 'Not a Number'
 
-So that's just a sample of JavaScript's random behaviour but now when you come across phantom errors you can rest assured that you aren't going crazy; it's just JavaScript :-P
+So that's just a sample of JavaScript's random behaviour but now when you come across phantom errors you can rest assured that you aren't going crazy; it's just JavaScript 
 

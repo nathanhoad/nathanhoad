@@ -7,7 +7,7 @@ If you're on a Mac and use any multi-window X11 application (Inkscape and Gimp b
 
     defaults write org.x.X11 wm_ffm -bool true
 
-Then restart X11 and now the focus should be following your mouse pointer, meaning no more double clicking floating windows :-)
+Then restart X11 and now the focus should be following your mouse pointer, meaning no more double clicking floating windows 
 
 To turn 'focus follows mouse' mode off simply change the `true` to `false`:
 
@@ -17,4 +17,4 @@ If you want to see the file where these settings are actually written to then ty
 
     open ~/Library/Preferences/org.x.X11.plist
 
-I hope you find this as useful as I did - Inkscape is awesome but that's one thing that has always bugged me :-P
+I hope you find this as useful as I did - Inkscape is awesome but that's one thing that has always bugged me 

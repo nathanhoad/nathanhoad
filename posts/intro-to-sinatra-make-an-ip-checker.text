@@ -31,7 +31,7 @@ The "Hello World" is there just for testing at the moment; we will do something 
 
 And then go to [http://localhost:4567](http://localhost:4567) (4567 being the default port of the server) and you will see "Hello world". Go back to Terminal and kill the server by pressing Ctrl+C.
 
-With me so far? No? Surely you meant yes... Yes? That's better ;-)
+With me so far? No? Surely you meant yes... Yes? That's better 
 
 Now we want to actually do something useful - check our IP. We will be using [HAML](http://haml-lang.com/) for our templates so we will need to get it installed:
 
@@ -79,6 +79,6 @@ If you are unfamiliar with HAML don't worry too much - all you need to notice is
 
 If everything has gone to plan so far we should now have a semi-useful app. Try running it again with `ruby app.rb` and see for yourself.
 
-So that wraps it up for this super simple intro to Sinatra. Now you've got no excuse not to try it out :-P
+So that wraps it up for this super simple intro to Sinatra. Now you've got no excuse not to try it out 
 
 Find out more about Sinatra at [sinatrarb.com](http://www.sinatrarb.com/) and [Sinatra on GitHub](http://github.com/sinatra/sinatra/).

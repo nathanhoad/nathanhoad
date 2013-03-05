@@ -13,6 +13,6 @@ The `stash` command in Git is kind of like a clipboard; you can stash away any c
 
     git stash apply
 
-If you want to clean out your stash (multiple stashes can be stored) then run `git stash clear` but be careful not to clear out your stashes if you have any that you need to apply first :-P
+If you want to clean out your stash (multiple stashes can be stored) then run `git stash clear` but be careful not to clear out your stashes if you have any that you need to apply first 
 
 Check out the [git-stash documentation](http://www.kernel.org/pub/software/scm/git/docs/git-stash.html) for more information.

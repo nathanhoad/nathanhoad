@@ -28,35 +28,37 @@
   %body
     %img.hide{ src: '/images/nathan-profile.png' }
     
-    %header#title
-      %h1 Nathan Hoad
-      %a{ href: '/' }
-        %img{ src: '/images/index.png' }
-        %span Index
-        
-    .row
-      #content.span7.offset3
-        %section
-          #athletable.alert.alert-success
-            %span &#10029;
-            I made a new thing: 
-            = link_to 'Athletable - check it out now!', 'http://athletable.com'
-            %span &#10029;
+    %header
+      %h1
+        %a{ href: '/' }
+          %span Nathan Hoad
+    
+    %section
+      %hr
+      = yield
+      %hr
           
-          = yield
-        
-        %aside
-          %h2
-            %span
-              Hi! I'm Nathan Hoad. I like to 
-              = link_to 'draw things', 'http://dribbble.com/nathanhoad' 
-              and 
-              = link_to 'write code', 'http://github.com/nathanhoad'
-              
-          %ul
-            %li.twitter{ rel: 'tooltip', title: 'Follow me on Twitter' }= link_to '<span>Follow me on Twitter</span>', 'http://twitter.com/nathanhoad'
-            %li.subscribe{ rel: 'tooltip', title: 'Subscribe for updates' }= link_to '<span>Subscribe for updates</span>', '/rss'
-          
+    %footer
+      %h2
+        %span
+          Hi! I'm Nathan Hoad. I like to 
+          = link_to 'draw things', 'http://dribbble.com/nathanhoad' 
+          and 
+          = link_to 'write code', 'http://github.com/nathanhoad'
+      
+      %section
+        = link_to 'Twitter', 'http://twitter.com/nathanhoad'
+        &middot;
+        = link_to 'GitHub', 'http://github.com/nathanhoad'
+        &middot;
+        = link_to 'Dribbble', 'http://dribbble.com/nathanhoad'
+        &middot;
+        = link_to 'RSS', '/rss'
+      
+      %aside
+        &copy;
+        = Time.now.year
+        Nathan Hoad
           
     %script{ type: 'text/javascript', src: '/javascripts/jquery.js' }
     %script{ type: 'text/javascript', src: '/javascripts/bootstrap.js' }

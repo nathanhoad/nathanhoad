@@ -3,7 +3,7 @@
  - published: 2010-06-03 16:00
  - tags: programming, ruby
 
-It's so easy to output JSON from Sinatra it will take longer to read this post than to actually do it :-P
+It's so easy to output JSON from Sinatra it will take longer to read this post than to actually do it 
 
 First, make sure you have the 'json' gem:
 
@@ -22,4 +22,4 @@ Now all you have to do is spit out some JSON using the `to_json` method provided
       { :key1 => 'value1', :key2 => 'value2' }.to_json
     end
 
-It's **that** simple ;-)
+It's **that** simple 

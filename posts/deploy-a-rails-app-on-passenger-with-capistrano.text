@@ -31,4 +31,4 @@ Then you can just deploy like you normally would with Capistrano:
 
     cap deploy
 
-And that should be it ;-).
+And that should be it .
