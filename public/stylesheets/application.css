@@ -42,7 +42,7 @@ body > section > header { text-align: center; margin-bottom: 25px; font-family: 
 
 /* Posts */
 article { padding-bottom: 40px; margin-bottom: 40px; }
-  article h2 { font-family: 'Arvo'; font-size: 40px; line-height: 50px; text-align: center; margin-top: 40px; margin-bottom: 20px; }
+  article h2 { font-family: 'Arvo'; font-size: 35px; line-height: 45px; text-align: center; margin-top: 40px; margin-bottom: 20px; }
     article h2 a { color: #333; }
     article h2 a:hover { color: #333; text-decoration: underline; }
   article aside { font-size: 16px; color: #999; margin: auto; margin-bottom: 50px; text-align: center; }
@@ -50,7 +50,7 @@ article { padding-bottom: 40px; margin-bottom: 40px; }
     article aside a:hover { color: #999; text-decoration: underline; }
     article aside ul { display: inline; list-style: none; margin: 0; padding: 0; }
     article aside li { display: inline; }
-  article p { font-family: 'Enriqueta'; text-align: justify; font-size: 18px; line-height: 28px; }
+  article p { font-family: 'Enriqueta'; text-align: justify; font-size: 18px; line-height: 25px; }
   article p > img:only-child { margin: 30px auto !important; }
   article p > object { margin: 30px auto; }
   article p a { color: black; text-decoration: underline; }
@@ -108,6 +108,13 @@ code.shell span.keywords { color: #fff; }
   body > header > h1 > a { width: 100%; }
   body > section { width: 100%; }
   
-  article { padding: 0 10px; }
+  article { padding: 0 15px; }
   article h2 { font-family: 'Arvo'; font-size: 30px; line-height: 40px; text-align: center; margin-top: 40px; margin-bottom: 20px; }
+}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+  body > header > h1 > a { background-image: url(/images/logo@2x.png); background-size: 84px 91px; }
+  body > footer > h2 { background-image: url(/images/nathan@2x.png); background-size: 277px 299px; }
 }
