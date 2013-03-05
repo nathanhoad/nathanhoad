@@ -19,8 +19,8 @@ a.star { color: rgba(200,0,0,0.5); }
 a.star:hover { color: rgba(200,0,0,1); text-decoration: none; }
 
 body > header {}
-  body > header > h1 > a { background: url(/images/logo.png) no-repeat top; display: block; width: 480px; height: 94px; margin: 40px auto; }
-  body > header > h1 > a > span { display: none; }
+body > header > h1 > a { background: url(/images/logo.png) no-repeat top; display: block; width: 480px; height: 94px; margin: 40px auto; }
+body > header > h1 > a > span { display: none; }
 
 body > section { margin: auto; width: 480px; }
 body > section > hr { border-top: 1px solid #ccc; height: 1px; width: 300px; margin: 30px auto; }
@@ -34,7 +34,7 @@ body > section > aside { text-align: center; margin-top: 30px; padding-top: 20px
 body > section > aside > a { color: #999; font-family: 'Arvo'; font-size: 23px; line-height: 30px; }
 body > section > aside > a:hover { color: #999; }
 
-body > section > aside > ul { font-family: 'Enriqueta'; font-size: 18px; color: #333; list-style: none; margin-top: -20px; margin-bottom: 40px; }
+body > section > aside > ul { font-family: 'Enriqueta'; font-size: 18px; color: #333; list-style: none; margin: 0; margin-top: -20px; margin-bottom: 40px; }
 body > section > aside > ul > li { padding: 5px; }
 body > section > aside > ul > li > a { color: #333; }
 
@@ -59,8 +59,8 @@ article { padding-bottom: 40px; margin-bottom: 40px; }
 
 /* About */
 body > footer { margin: 60px 0 30px 0; }
-body > footer > h2 { background: url(/images/nathan.png) no-repeat top; font-size: 15px; font-weight: normal; line-height: 18px; height: 320px; width: 400px; margin: auto; position: relative; }
-body > footer > h2 > span { color: #444; display: block; font-family: "Gloria Hallelujah"; font-size: 17px; line-height: 23px; margin: auto; width: 130px; position: absolute; top: 20px; left: 84px; }
+body > footer > h2 { background: url(/images/nathan.png) no-repeat top; font-size: 15px; font-weight: normal; line-height: 18px; height: 320px; width: 280px; margin: auto; position: relative; }
+body > footer > h2 > span { color: #444; display: block; font-family: "Gloria Hallelujah"; font-size: 17px; line-height: 23px; margin: auto; width: 130px; position: absolute; top: 20px; left: 30px; }
 body > footer > h2 > span > a { color: black; text-decoration: none; }
 body > footer > section { color: #999; text-align: center; font-size: 14px; font-weight: bold; margin-bottom: 5px; }
 body > footer > section > a { color: #999; }
@@ -105,19 +105,9 @@ code.shell span.keywords { color: #fff; }
 
 /* Mobile */
 @media all and (max-device-width: 480px) {
-  #athletable { display: none; }
+  body > header > h1 > a { width: 100%; }
+  body > section { width: 100%; }
   
-  /* Title */
-  #title { left: 10px; top: 20px; }
-  #title a span { display: block; opacity: 0.3; }
-  
-  body > .row { margin-left: 0; }
-  #content { margin-left: 0px; padding-left: 90px; width: 65%; }
-  
-  /* About */
-  body > footer { position: static; width: 200px; }
-    body > footer > h2 { background: url(/images/nathan.png) no-repeat top; font-size: 15px; font-weight: normal; line-height: 18px; height: 400px; }
-    body > footer > h2 > span { display: block; font-family: "Gloria Hallelujah"; font-size: 17px; line-height: 20px; margin: auto; padding-top: 40px; width: 130px; }
-    body > footer > h2 > span > a { text-decoration: none; }
-    body > footer > ul { display: none; }
+  article { padding: 0 10px; }
+  article h2 { font-family: 'Arvo'; font-size: 30px; line-height: 40px; text-align: center; margin-top: 40px; margin-bottom: 20px; }
 }
