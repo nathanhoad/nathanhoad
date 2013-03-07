@@ -3,7 +3,7 @@ class Post < Maneki
   
   
   # Grab a handful of posts
-  def self.index (count = 6)
+  def self.index (count = 7)
     all.sort[0...count]
   end
   

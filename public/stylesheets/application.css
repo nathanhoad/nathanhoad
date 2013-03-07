@@ -15,8 +15,9 @@ img.center { display: block; margin: auto; }
 object { display: block; margin: auto; }
 abbr { border-bottom: 1px dashed #444; }
 
-a.star { color: rgba(200,0,0,0.5); }
-a.star:hover { color: rgba(200,0,0,1); text-decoration: none; }
+
+#athletable > a { background: url(/images/athletable.png) no-repeat top; color: #333; display: block; position: fixed; bottom: 20px; right: 20px; padding-top: 80px; font-size: 12px; width: 120px; text-align: center; }
+
 
 body > header {}
 body > header > h1 > a { background: url(/images/logo.png) no-repeat top; display: block; width: 480px; height: 94px; margin: 40px auto; }
