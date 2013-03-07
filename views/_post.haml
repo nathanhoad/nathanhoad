@@ -5,5 +5,8 @@
       = link_to_post post, "#{time_ago_in_words(post.published_at)}"
       &middot;
       = tags(post.tags)
+    - if post.link
+      %cite
+        = link_to post.link, post.link
   
-  = text_to_html post.body, teaser: (post.link.nil? && defined? teaser), slug: post.slug
+  = text_to_html post.body, slug: post.slug

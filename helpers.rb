@@ -116,13 +116,9 @@ helpers do
   end
   
   
-  # Link to a post unless the post is a link itself
+  # Link to a post
   def post_title (post)
-    if post.link
-      "<a href='/#{post.slug}' class='star'>&#9733;</a> <a href='#{post.link}' title='#{post.link}'>#{post.title}</a>"
-    else
-      link_to_post(post)
-    end
+    link_to_post(post)
   end
   
   
