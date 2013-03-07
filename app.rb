@@ -6,14 +6,12 @@ require 'moredown'
 require 'erb'
 require 'haml'
 
-ENV['TZ'] = 'Australia/Brisbane'
-
 require 'models'
 require 'helpers'
 
 
 get '/' do
-  @posts = Post.page(1, 6) || raise(Sinatra::NotFound)
+  @posts = Post.index || raise(Sinatra::NotFound)
   haml :index
 end
 

@@ -3,16 +3,8 @@ class Post < Maneki
   
   
   # Grab a handful of posts
-  def self.page (n, per_page = 5)
-    n = 1 unless n
-    start = (n.to_i - 1) * per_page
-    
-    return [] if start >= all.size
-    
-    finish = start + per_page
-    finish = all.size if finish > all.size
-    
-    all.sort[start...finish]
+  def self.index (count = 6)
+    all.sort[0...count]
   end
   
   
