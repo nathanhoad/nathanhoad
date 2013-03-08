@@ -110,6 +110,8 @@ code.shell span.keywords { color: #fff; }
 
 /* Mobile */
 @media all and (max-device-width: 480px) {
+  #athletable { display: none; }
+  
   body > header > h1 > a { width: 100%; }
   body > section { width: 100%; }
   
