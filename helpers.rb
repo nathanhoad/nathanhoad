@@ -58,7 +58,7 @@ helpers do
   
   # Convert text to html
   def text_to_html (text, args = {})
-    args = { :emotes => false, :map_headings => 2 }.merge args
+    args = { emotes: false, map_headings: 1 }.merge args
     
     html = Moredown.text_to_html(text, args)
     html.gsub!('src="media/', 'src="/media/')
