@@ -16,9 +16,6 @@ object { display: block; margin: auto; }
 abbr { border-bottom: 1px dashed #444; }
 
 
-#athletable > a { background: url(/images/athletable.png) no-repeat top; color: #333; display: block; position: fixed; bottom: 20px; right: 20px; padding-top: 80px; font-size: 12px; width: 120px; text-align: center; }
-
-
 body > header {}
 body > header > h1 > a { background: url(/images/logo.png) no-repeat top; display: block; width: 480px; height: 94px; margin: 40px auto; }
 body > header > h1 > a > span { display: none; }
@@ -61,6 +58,9 @@ article > p > object { margin: 30px auto; }
 article > p a { color: black; text-decoration: underline; }
 article > h3 { color: #999; font-family: "Arvo"; font-weight: normal; font-size: 22px; line-height: 50px; margin-top: 40px; text-align: center; }
 article > hr { display: none; }
+
+article > .say-thanks { font-family: "Enriqueta"; font-size: 18px; color: #060; margin-top: 30px; }
+article > .say-thanks a { color: #060; }
 
 /* About */
 body > footer { margin: 60px 0 30px 0; }
@@ -110,8 +110,6 @@ code.shell span.keywords { color: #fff; }
 
 /* Mobile */
 @media all and (max-device-width: 480px) {
-  #athletable { display: none; }
-  
   body > header > h1 > a { width: 100%; }
   body > section { width: 100%; }
   
