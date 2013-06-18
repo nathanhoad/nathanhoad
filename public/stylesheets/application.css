@@ -50,7 +50,7 @@ article > header > aside a:hover { color: #999; text-decoration: underline; }
 article > header > aside ul { display: inline; list-style: none; margin: 0; padding: 0; }
 article > header > aside li { display: inline; }
 article > header > cite { display: block; margin-top: 40px; text-align: center; }
-article > header > cite > a { font-size: 20px; color: #090; font-family: 'Enriqueta'; }
+article > header > cite > a { font-size: 20px; color: #090; font-family: 'Enriqueta'; text-decoration: underline; }
 article > header > cite > a:hover { color: #090; }
 article > p { font-family: 'Enriqueta'; text-align: justify; font-size: 18px; line-height: 25px; }
 article > p > img:only-child { margin: 30px auto !important; }
