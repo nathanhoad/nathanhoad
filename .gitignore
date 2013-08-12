@@ -1,3 +1,4 @@
 .bundle
 tmp
 .DS_Store
+log
