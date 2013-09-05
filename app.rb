@@ -31,9 +31,9 @@ end
 
 
 get '/rss' do
-  @posts = Post.page(1, 10)
+  @posts = Post.index
   content_type 'application/rss+xml'
-  erb :rss, :layout => false
+  erb :rss, layout: false
 end
 
 
