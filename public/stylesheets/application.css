@@ -60,7 +60,7 @@ article > h3 { color: #999; font-family: "Arvo"; font-weight: normal; font-size:
 article > hr { display: none; }
 
 article > .say-thanks { font-family: "Enriqueta"; font-size: 18px; color: #060; margin-top: 30px; }
-article > .say-thanks a { color: #060; }
+article > .say-thanks a { color: #090; }
 
 /* About */
 body > footer { margin: 60px 0 30px 0; }
