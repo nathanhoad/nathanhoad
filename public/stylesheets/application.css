@@ -28,10 +28,13 @@ body > section > ul { list-style: none; margin: 0; padding: 0; }
 body > section > ul > li { text-align: center; padding: 10px 0; }
 body > section > ul a { color: #333; font-family: 'Arvo'; font-size: 23px; line-height: 30px; }
 
-body > section > aside { text-align: center; margin-top: 30px; padding-top: 20px; }
+body > section > aside { text-align: center; margin-top: 30px; }
 body > section > aside > a { color: #999; font-family: 'Arvo'; font-size: 23px; line-height: 30px; }
 body > section > aside > a:hover { color: #999; }
 
+body > section > aside > h3 { color: #999; font-family: 'Arvo'; font-size: 14px; font-weight: normal; margin: 0 0 15px 0; }
+body > section > aside > h3 > a { color: #999; }
+body > section > aside > h3 > a:hover { color: #999; }
 body > section > aside > ul { font-family: 'Enriqueta'; font-size: 18px; color: #333; list-style: none; margin: 0; margin-top: -20px; margin-bottom: 40px; }
 body > section > aside > ul > li { padding: 5px; }
 body > section > aside > ul > li > a { color: #333; }

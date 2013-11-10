@@ -106,18 +106,6 @@ helpers do
     
     "<ul>#{tags.sort.join(' ')}</ul>"
   end
-  
-  
-  # Render links to the next and previous things
-  def where_to_now? (relative_to)
-    newer_post = Post.previous_before(relative_to)
-    older_post = Post.next_after(relative_to)
-      
-    newer_post = (newer_post)? "#{link_to_post(newer_post)} is next" : ""
-    older_post = (older_post)? "Previously, #{link_to_post(older_post)}" : ""
-    
-    "<ul><li>#{newer_post}</li><li>#{older_post}</li></ul>"
-  end
 end
 
 

@@ -3,4 +3,8 @@
 %hr
 
 %aside
-  = where_to_now? @post
+  - @post.related_posts.each do |tag, posts|
+    %h3 Recent other posts tagged with #{link_to "##{tag}", "/tags/#{tag}"}
+    %ul
+      - posts.each do |post|
+        %li= link_to_post post

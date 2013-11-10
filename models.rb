@@ -42,11 +42,31 @@ class Post < Maneki
     posts = Post.find :headers => { :tags => tag }
     posts.sort
   end
+
+
+  # Find other posts that are related to this one via tags
+  def related_posts
+    related_posts = {}
+
+    posts_per_tag = tags.count == 1 ? 5 : 3
+
+    tags.each do |tag|
+      Post.find_tagged_with(tag).delete_if{ |p| p.slug == self.slug }[0...posts_per_tag].each do |post|
+        related_posts[tag] ||= []
+        related_posts[tag] << post
+      end
+    end
+
+    related_posts
+  end
   
   
   # This post's tags
   def tags
-    @headers[:tags]
+    t = @headers[:tags]
+    t = [t] if t.is_a? String
+
+    t
   end
   
   
