@@ -115,6 +115,7 @@ code.shell span.keywords { color: #fff; }
 @media all and (max-device-width: 480px) {
   body > header > h1 > a { width: 100%; }
   body > section { width: 100%; }
+  body > section > ul { padding: 0 5px; }
   
   article { padding: 0 15px; }
   article h2 { font-family: 'Arvo'; font-size: 30px; line-height: 40px; text-align: center; margin-top: 40px; margin-bottom: 20px; }

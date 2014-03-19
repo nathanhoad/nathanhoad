@@ -92,6 +92,8 @@ end
 
 
 def render_to_cache (slug, html)
+  return html if settings.development?
+
   filename = File.dirname(__FILE__) + '/cache/' + slug + '.html'
   File.open(filename, 'w') { |f| f.write(html) }
   html
