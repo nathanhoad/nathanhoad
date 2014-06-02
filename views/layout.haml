@@ -26,16 +26,7 @@
     %script{ type: 'text/javascript', src: '/javascripts/bootstrap.js' }
     %script{ type: 'text/javascript', src: '/javascripts/application.js' }
     %script{ type: 'text/javascript', src: '/javascripts/code_highlighter.js' }
-    %script{ type: 'text/javascript' }
-      :plain
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-650804-3']);
-        _gaq.push(['_trackPageview']);
-        (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+    %script{ type: 'text/javascript', src: '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js' }
     
   %body
     %header
@@ -71,3 +62,16 @@
         &copy;
         = Time.now.year
         Nathan Hoad
+
+    %script{ type: 'text/javascript' }
+      :plain
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-650804-3']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+        (adsbygoogle = window.adsbygoogle || []).push({});
