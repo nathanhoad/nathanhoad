@@ -111,6 +111,13 @@ code.shell { color: #ccc; }
 code.shell span.keywords { color: #fff; }
 
 
+/* Google Adsense */
+.ad.ad-300-250 {
+  width: 300px;
+  margin: auto;
+}
+
+
 /* Mobile */
 @media all and (max-device-width: 480px) {
   body > header > h1 > a { width: 100%; }
