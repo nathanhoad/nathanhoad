@@ -2,7 +2,8 @@
 
 %hr
 
-= partial 'ad'
+- if @post.body.length > 300
+  = partial 'ad'
 
 %hr
 
