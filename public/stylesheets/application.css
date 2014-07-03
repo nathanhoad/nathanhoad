@@ -112,14 +112,13 @@ code.shell span.keywords { color: #fff; }
 
 
 /* Google Adsense */
-.ad.ad-300-250 {
-  width: 300px;
-  margin: auto;
-}
-
+.ad-300-250 { width: 300px; margin: auto; }
+.ad-120-600 { position: fixed; top: 20px; left: 10px; }
 
 /* Mobile */
 @media all and (max-device-width: 480px) {
+  .ad-120-600 { display: none; }
+  
   body > header > h1 > a { width: 100%; }
   body > section { width: 100%; }
   body > section > ul { padding: 0 5px; }
