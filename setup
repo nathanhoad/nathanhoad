@@ -20,6 +20,6 @@ puts "Cleaning layout/style"
 puts "Creating your first post"
 
 `touch posts/first-post.text`
-`echo "# Post title\n\n - published 2014-09-12 12:00\n - tags: example\n\nThis is an example post." > posts/first-post.text`
+`echo "# Post title\n\n - published: 2014-09-12 12:00\n - tags: example\n\nThis is an example post." > posts/first-post.text`
 
 puts "\nDone!"
