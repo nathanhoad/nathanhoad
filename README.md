@@ -10,7 +10,8 @@ I'm currently using it to power my blog at [nathanhoad.net](http://nathanhoad.ne
 1. Delete everything in `./posts`
 2. Delete anything in `./public/images` 
 3. Create your own `./public/stylesheets/application.css`
-4. Create some posts in `./posts` (in Markdown format with a `.text` file extension).
+4. Modify `./views/layout.haml` as needed
+5. Create some posts in `./posts` (in Markdown format with a `.text` file extension).
 
 ### Post format
 
