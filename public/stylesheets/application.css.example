@@ -1,3 +1,5 @@
+@import url('http://fonts.googleapis.com/css?family=Arvo|Enriqueta');
+
 /* Layout */
 .row { margin-top: 30px; }
 
@@ -11,7 +13,9 @@ abbr { border-bottom: 1px dashed #444; }
 
 
 body > header {}
-body > header > h1 > a {}
+body > header > h1 { font-weight: normal; font-size: 25px; margin-top: 20px; text-align: center; }
+body > header > h1 > a { color: #06c; }
+body > header > h1 > a:hover { color: #06c; text-decoration: none; }
 body > header > h1 > a > span {}
 
 body > section { margin: auto; width: 480px; }
@@ -20,16 +24,16 @@ body > section > hr { border-top: 1px solid #ccc; height: 1px; width: 300px; mar
 /* Index */
 body > section > ul { list-style: none; margin: 0; padding: 0; }
 body > section > ul > li { text-align: center; padding: 10px 0; }
-body > section > ul a { color: #333; font-size: 23px; line-height: 30px; }
+body > section > ul a { color: #333; font-family: 'Arvo'; font-size: 23px; line-height: 30px; }
 
 body > section > aside { text-align: center; margin-top: 30px; }
 body > section > aside > a { color: #999; font-family: 'Arvo'; font-size: 23px; line-height: 30px; }
 body > section > aside > a:hover { color: #999; }
 
-body > section > aside > h3 { color: #999; font-size: 14px; font-weight: normal; margin: 0 0 15px 0; }
+body > section > aside > h3 { color: #999; font-family: 'Arvo'; font-size: 14px; font-weight: normal; margin: 0 0 15px 0; }
 body > section > aside > h3 > a { color: #999; }
 body > section > aside > h3 > a:hover { color: #999; }
-body > section > aside > ul { font-size: 18px; color: #333; list-style: none; margin: 0; margin-top: -20px; margin-bottom: 40px; }
+body > section > aside > ul { font-family: 'Enriqueta'; font-size: 18px; color: #333; list-style: none; margin: 0; margin-top: -20px; margin-bottom: 40px; }
 body > section > aside > ul > li { padding: 5px; }
 body > section > aside > ul > li > a { color: #333; }
 
@@ -54,17 +58,18 @@ article > p > img:only-child { margin: 30px auto !important; }
 article > p > object { margin: 30px auto; }
 article > p a { color: black; text-decoration: underline; }
 article > blockquote { border: none; border-left: 2px solid #900; margin: 30px; }
-article > blockquote > p { color: #900; font-size: 18px; font-style: italic; }
-article > h3 { color: #999; font-weight: normal; font-size: 22px; line-height: 50px; margin-top: 40px; text-align: center; }
+article > blockquote > p { color: #900; font-family: 'Enriqueta'; font-size: 18px; font-style: italic; }
+article > h3 { color: #999; font-family: "Arvo"; font-weight: normal; font-size: 22px; line-height: 50px; margin-top: 40px; text-align: center; }
 article > hr { display: none; }
+
 
 article > .say-thanks { font-size: 18px; color: #060; margin-top: 30px; }
 article > .say-thanks a { color: #090; }
 
 /* About */
 body > footer { margin: 60px 0 30px 0; }
-body > footer > h2 { font-size: 15px; font-weight: normal; line-height: 18px; height: 320px; width: 280px; margin: auto; position: relative; }
-body > footer > h2 > span { color: #444; display: block; font-size: 17px; line-height: 23px; margin: auto; width: 130px; position: absolute; top: 20px; left: 30px; }
+body > footer > h2 { font-size: 15px; font-weight: normal; line-height: 18px; margin: auto; position: relative; }
+body > footer > h2 > span { color: #444; display: block; font-size: 17px; line-height: 23px; margin: 0 auto 20px auto; text-align: center; }
 body > footer > section { color: #999; text-align: center; font-size: 14px; font-weight: bold; margin-bottom: 5px; }
 body > footer > section > a { color: #999; }
 body > footer > section > a:hover { color: #999; }
@@ -111,12 +116,14 @@ code.shell span.keywords { color: #fff; }
 .ad-120-600 { position: fixed; top: 20px; left: 10px; }
 
 /* Mobile */
-@media all and (max-device-width: 480px) {
+@media all and (max-width: 480px) {
   .ad-120-600 { display: none; }
   
   body > header > h1 > a { width: 100%; }
   body > section { width: 100%; }
   body > section > ul { padding: 0 5px; }
+  
+  body > section { margin: auto; width: 320px; }
   
   article { padding: 0 15px; }
   article h2 { font-size: 30px; line-height: 40px; text-align: center; margin-top: 40px; margin-bottom: 20px; }

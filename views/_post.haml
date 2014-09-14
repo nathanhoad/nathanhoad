@@ -2,7 +2,6 @@
   %header
     %h2= post_title(post)
     %aside
-      By Nathan Hoad,
       = link_to_post post, "<span data-date='#{post.published_at}'></span>"
       &middot;
       = tags(post.tags)
