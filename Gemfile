@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'sinatra', '~> 1.3.3'
-gem 'newrelic_rpm'
 
 gem 'chronic', '0.9.1'
 

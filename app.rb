@@ -5,7 +5,6 @@ require 'maneki'
 require 'moredown'
 require 'erb'
 require 'haml'
-require 'newrelic_rpm'
 
 require 'models'
 require 'helpers'
