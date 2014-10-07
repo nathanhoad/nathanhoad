@@ -59,6 +59,8 @@ article > p { font-family: 'Enriqueta'; text-align: justify; font-size: 18px; li
 article > p > img:only-child { margin: 30px auto !important; }
 article > p > object { margin: 30px auto; }
 article > p a { color: black; text-decoration: underline; }
+article > ul { font-family: 'Enriqueta'; text-align: justify; font-size: 18px; line-height: 25px; }
+article > ul > li { margin-bottom: 15px; }
 article > blockquote { border: none; border-left: 2px solid #900; margin: 30px; }
 article > blockquote > p { color: #900; font-family: 'Enriqueta'; font-size: 18px; font-style: italic; }
 article > h3 { color: #999; font-family: "Arvo"; font-weight: normal; font-size: 22px; line-height: 50px; margin-top: 40px; text-align: center; }

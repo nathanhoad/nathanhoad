@@ -1,7 +1,7 @@
 # Slacker - Post to Slack as your favourite character
 
  - published: 2014-07-31 14:00
- - tags: web, app
+ - tags: apps, slack
 
 I'm a big fan of [Slack](https://slack.com/) for team chat. It is insanely simple to set up and use but that's not the biggest reason I love it. The biggest thing that sold me was the integrations and, in particular, the Incoming Webhooks integration.
 
