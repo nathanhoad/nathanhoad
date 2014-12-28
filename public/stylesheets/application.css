@@ -116,8 +116,15 @@ code.shell span.keywords { color: #fff; }
 
 
 /* Google Adsense */
-.ad-300-250 { width: 300px; margin: auto; }
-.ad-120-600 { position: fixed; top: 20px; left: 10px; }
+.aff { position: relative; width: 300px; margin: auto; }
+.aff > .ad-300-250 { width: 300px; margin: auto; position: absolute; top: 0; left: 0; }
+.aff > .ad-120-600 { position: fixed; top: 20px; left: 10px; }
+
+.aff > .internal { cursor: pointer; display: block; height: 250px; width: 300px; text-align: center; }
+  .aff > .internal:hover { text-decoration: none; }
+  .aff > .internal > .image > img { height: 180px; margin-bottom: 10px; }
+  .aff > .internal > .title { color: black; font-size: 16px; }
+  .aff > .internal > .from { color: #999; font-family: 'Enriqueta'; font-size: 16px; }
 
 /* Mobile */
 @media all and (max-device-width: 480px) {
