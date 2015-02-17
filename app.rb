@@ -78,7 +78,7 @@ end
 before do
   # Redirect to nathanhoad.net
   unless request.env['REMOTE_ADDR'] == '127.0.0.1'
-    redirect 'http://nathanhoad.net' if request.env['HTTP_HOST'] != 'nathanhoad.net'
+    redirect "#{request.scheme}://nathanhoad.net" if request.host == 'www.nathanhoad.net'
   end
 end
 

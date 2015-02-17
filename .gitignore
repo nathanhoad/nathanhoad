@@ -1,5 +1,7 @@
+# OS Junk
+.DS_Store
+
+# App Junk
 .bundle
 tmp
-.DS_Store
 log
-cache/*.html
