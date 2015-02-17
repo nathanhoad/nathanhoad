@@ -63,16 +63,14 @@ end
 
 
 get '/:slug/?' do
-  unless render_from_cache(params[:slug])
-    @post = Post.find(params[:slug])
-    
-    if @post
-      render_to_cache(params[:slug], haml(:post))
-    else
-      @keyword = params[:slug].gsub('-', ' ')
-      @posts = Post.search(@keyword)
-      haml :search
-    end
+  @post = Post.find(params[:slug])
+  
+  if @post
+    haml :post
+  else
+    @keyword = params[:slug].gsub('-', ' ')
+    @posts = Post.search(@keyword)
+    haml :search
   end
 end
 
@@ -87,22 +85,4 @@ end
 
 not_found do
   haml :not_found
-end
-
-
-def render_to_cache (slug, html)
-  return html if settings.development?
-
-  filename = File.dirname(__FILE__) + '/cache/' + slug + '.html'
-  File.open(filename, 'w') { |f| f.write(html) }
-  html
-end
-
-def render_from_cache (slug)
-  filename = File.dirname(__FILE__) + '/cache/' + slug + '.html'
-  if File.file? filename
-    send_file(filename)
-  else
-    false
-  end
 end
