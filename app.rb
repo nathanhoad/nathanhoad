@@ -10,6 +10,11 @@ require 'models'
 require 'helpers'
 
 
+configure do
+  set :static_cache_control, [:public, max_age: 1.year]
+end
+
+
 get '/' do
   @posts = Post.index || raise(Sinatra::NotFound)
   haml :index
@@ -46,6 +51,7 @@ end
 get '/media/:file.:ext' do
   filename = File.dirname(__FILE__) + '/posts/media/' + params[:file] + '.' + params[:ext]
   if File.file? filename
+    cache_control :public, max_age: 1.week
     send_file(filename)
   else
     raise(Sinatra::NotFound)
@@ -66,6 +72,7 @@ get '/:slug/?' do
   @post = Post.find(params[:slug])
   
   if @post
+    cache_control :public, max_age: 1.week
     haml :post
   else
     @keyword = params[:slug].gsub('-', ' ')

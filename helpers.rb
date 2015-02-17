@@ -126,8 +126,18 @@ class Fixnum
   end
   alias :days :day
   
+  def week
+    self.days * 7
+  end
+  alias :weeks :week
+  
   def month
     self.days * 30
   end
   alias :months :month
+  
+  def year
+    self.weeks * 52
+  end
+  alias :years :year
 end
