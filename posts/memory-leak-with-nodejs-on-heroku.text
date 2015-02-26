@@ -11,4 +11,4 @@ Sure enough, after commenting out my `require('newrelic');` and leaving the app 
 
 [![Heroku memory graph](media/nodejs-heroku-memory-leak.jpg):center](media/nodejs-heroku-memory-leak.jpg)
 
-As much as I like New Relic I'll be using a different monitoring solution until they can put a plug in their memory leak.
+New Relic do [have a support page for the issue](https://docs.newrelic.com/docs/agents/nodejs-agent/troubleshooting/large-memory-usage) if you'd like to try out some of their suggestions (a few people have had success).
