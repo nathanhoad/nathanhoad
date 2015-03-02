@@ -46,18 +46,22 @@ class Post < Maneki
 
   # Find other posts that are related to this one via tags
   def related_posts
-    related_posts = {}
-
-    posts_per_tag = tags.count == 1 ? 5 : 3
-
-    tags.each do |tag|
-      Post.find_tagged_with(tag).delete_if{ |p| p.slug == self.slug }[0...posts_per_tag].each do |post|
-        related_posts[tag] ||= []
-        related_posts[tag] << post
+    if @_related_posts.nil?
+      @_related_posts = []
+      
+      if @headers[:related] && @headers[:related] == 'none'
+        return @_related_posts
+        
+      elsif @headers[:related] && @headers[:related].is_a?(Array)
+        @_related_posts = @headers[:related].map{ |slug| Post.find(slug) }
+        
+      else
+        @_related_posts = Post.find_tagged_with(tags.first).delete_if{ |post| post.slug == self.slug }[0...5]
+        
       end
     end
 
-    related_posts
+    @_related_posts
   end
   
   
