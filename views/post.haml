@@ -3,12 +3,3 @@
 %hr
 
 = partial 'ad'
-
-- if @post.related_posts.any?
-  %hr
-  
-  %aside
-    %h3 You might also like
-    %ul
-      - @post.related_posts.each do |post|
-        %li= link_to_post post
