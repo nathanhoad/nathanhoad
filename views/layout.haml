@@ -6,7 +6,7 @@
 
     %meta{ property: 'og:title', content: page_title }/
     %meta{ property: 'og:description', content: page_description }/
-    %meta{ property: 'og:image', content: 'http://nathanhoad.net/images/nathan-profile.png' }/
+    %meta{ property: 'og:image', content: 'https://nathanhoad.net/images/nathan-profile.png' }/
     
     %meta{ name: "author", content: "nathan hoad, nathanhoad.net" }/
     %meta{ name: "verify-v1", content: "FJjra037EqYRGo8w0Atq5BHkBi8B+MPZSD+0jKQebLs=" }/
@@ -18,9 +18,6 @@
     %link{ rel: "apple-touch-icon", type: "image/png", href: "/images/apple-touch-icon.png" }/
     %link{ rel: "alternate", type: "application/rss+xml", href: "http://feeds.feedburner.com/nathanhoad", title: "NathanHoad.net RSS" }/
     %link{ rel: "icon", type: "image/png", href: "/images/favicon.png" }/
-    
-    %link{ rel: "openid.server", href: "http://www.myopenid.com/server" }/
-    %link{ rel: "openid.delegate", href: "http://nathanhoad.myopenid.com" }/
 
     %script{ type: 'text/javascript', src: '/javascripts/jquery.js' }
     %script{ type: 'text/javascript', src: '/javascripts/bootstrap.js' }
@@ -44,16 +41,14 @@
       %h2
         %span
           Hi! I'm Nathan Hoad. I make #{link_to 'Athletable', 'https://athletable.com'}
-          and #{link_to 'Slacker', 'http://slacker.nathanhoad.net'}.
+          and #{link_to 'Slacker', 'https://slacker.nathanhoad.net'}.
       
       %section
         = link_to 'Twitter', 'http://twitter.com/nathanhoad'
         &middot;
         = link_to 'GitHub', 'http://github.com/nathanhoad'
         &middot;
-        = link_to 'Dribbble', 'http://dribbble.com/nathanhoad'
-        &middot;
-        = link_to 'NGU Technology', 'http://ngutechnology.com.au'
+        = link_to 'YouTube', 'https://www.youtube.com/channel/UCIdCxj0B9BXJ5tHXLgNWF6w'
         &middot;
         = link_to 'RSS', '/rss'
       
