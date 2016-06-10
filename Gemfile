@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
-ruby "2.1.2"
+ruby "2.3.0"
 
-gem 'sinatra', '~> 1.3.3'
+gem 'sinatra', '~> 1.4', '>= 1.4.7'
 
-gem 'chronic', '~>0.9.1'
+gem 'chronic', '~> 0.10.2'
 
 # Data (posts)
 gem 'maneki', '~>1.1.0'
