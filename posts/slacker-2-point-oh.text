@@ -1,0 +1,34 @@
+# Slacker 2.0
+
+ - published: 2016-06-08 17:00
+ - tags: slack, app
+
+<img src="media/slacker-2-logo.png" style="width:150px; float:right; margin: 0 0 15px 15px!important" />
+
+I just pushed a massive update to Slacker.
+
+For the uninitiated: Slacker is a tool for posting funny replies to [Slack](https://slack.com)
+as your favourite characters.
+
+For fans of Slacker: Lots of improvements! I've done a 100% rebuild from version one.
+
+The first major change is the removal of Slack API tokens. Now you can simply 
+click the 'Sign in with Slack' button and it will take care of the rest.
+
+Once you're in you'll see a total overhaul of the user interface. You can now
+sign in to multiple Slack teams and quickly switch between them from the 
+Google Material-ish Design side panel.
+
+I've added a bunch of new built-in characters (mainly based on the most common
+requests that I've gotten). The new character form has grown smarter too.
+
+You'll also see the new 'Clone Team Member' button. I know you were technically able to
+clone team members before but the user experience was a bit clunky (and used 
+the somewhat unreliable and now dead mustachify.me service).
+
+[![](media/slacker-2-screenshot.png)](https://slacker.nathanhoad.net)
+
+The last big change that I'll mention is that Slacker now works great on your mobile
+for posting funny replies on the go.
+
+To find the other updates [go check out Slacker for yourself](https://slacker.nathanhoad.net).
