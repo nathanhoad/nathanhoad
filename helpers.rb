@@ -36,7 +36,7 @@ helpers do
   
   # Grab the full url of the current site
   def url
-    request.scheme + '://' + request.host
+    'https://' + request.host
   end
   
   # Render a partial template
