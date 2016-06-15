@@ -69,8 +69,8 @@ article > p > iframe { max-width: 100%; height: 270px; margin: 10px 0; }
 
 /* About */
 body > footer { margin: 60px 0 30px 0; }
-body > footer > h2 { background: url(/images/nathan.png) no-repeat top; font-size: 15px; font-weight: normal; line-height: 18px; height: 320px; width: 280px; margin: auto; position: relative; }
-body > footer > h2 > span { color: #444; display: block; font-family: "Gloria Hallelujah"; font-size: 17px; line-height: 24px; margin: auto; width: 130px; position: absolute; top: 18px; left: 30px; }
+body > footer > h2 { background: url(/images/nathan.png) no-repeat top; font-size: 15px; font-weight: normal; line-height: 18px; height: 302px; width: 300px; margin: 0 auto 20px; position: relative; }
+body > footer > h2 > span { color: #444; display: block; font-family: "Gloria Hallelujah"; font-size: 17px; line-height: 24px; margin: auto; width: 130px; position: absolute; top: 18px; left: 26px; }
 body > footer > h2 > span > a { color: black; text-decoration: none; }
 body > footer > section { color: #999; text-align: center; font-size: 14px; font-weight: bold; margin-bottom: 5px; }
 body > footer > section > a { color: #999; }
@@ -145,5 +145,5 @@ only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
   body > header > h1 > a { background-image: url(/images/logo@2x.png); background-size: 84px 91px; }
-  body > footer > h2 { background-image: url(/images/nathan@2x.png); background-size: 277px 299px; }
+  body > footer > h2 { background-image: url(/images/nathan@2x.png); background-size: 300px 302px; }
 }
