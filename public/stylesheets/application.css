@@ -120,14 +120,15 @@ code.shell span.keywords { color: #fff; }
 
 .aff > .internal { cursor: pointer; display: block; height: 250px; width: 300px; text-align: center; }
   .aff > .internal:hover { text-decoration: none; }
-  .aff > .internal > .image > img { height: 180px; margin-bottom: 10px; }
-  .aff > .internal > .title { color: black; font-size: 16px; }
-  .aff > .internal > .from { color: #999; font-family: 'Enriqueta'; font-size: 16px; }
+  .aff > .internal > img { border-radius: 50%; margin-bottom: 10px; max-width: 170px; }
+  .aff > .internal > .title { color: black; font-size: 16px; margin-bottom: 8px; }
+  .aff > .internal > .from { color: #666; font-family: 'Enriqueta'; font-size: 16px; }
 
 /* PayPal */
-.coffee { }
+.coffee { margin-top: 30px }
   .coffee p { font-family: 'Enriqueta'; text-align: justify; font-size: 18px; line-height: 25px; }
   .coffee form { margin-top: 20px; text-align: center; }
+  .coffee input { max-width: 280px; }
 
 /* Mobile */
 @media all and (max-device-width: 480px) {
