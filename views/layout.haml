@@ -16,19 +16,12 @@
     %meta{ name: "verify-v1", content: "FJjra037EqYRGo8w0Atq5BHkBi8B+MPZSD+0jKQebLs=" }/
     %meta{ :'http-equiv' => "Content-type", content: "text/html;charset=UTF-8" }/
     
-    %link{ rel: "stylesheet", type: "text/css", href: '/stylesheets/bootstrap.css' }/
-    %link{ rel: "stylesheet", type: "text/css", href: '/stylesheets/application.css' }/
     %meta{ name: "viewport", content: "width=device-width, minimum-scale=1.0, maximum-scale=1.0" }/
     %link{ rel: "apple-touch-icon", type: "image/png", href: "/images/apple-touch-icon.png" }/
     %link{ rel: "alternate", type: "application/rss+xml", href: "http://feeds.feedburner.com/nathanhoad", title: "NathanHoad.net RSS" }/
     %link{ rel: "icon", type: "image/png", href: "/images/favicon.png" }/
-
-    %script{ type: 'text/javascript', src: '/javascripts/jquery.js' }
-    %script{ type: 'text/javascript', src: '/javascripts/bootstrap.js' }
-    %script{ type: 'text/javascript', src: '/javascripts/application.js' }
-    %script{ type: 'text/javascript', src: '/javascripts/code_highlighter.js' }
-    :plain
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+    %link{ rel: "stylesheet", type: "text/css", href: '/stylesheets/application.css' }/
     
   %body
     %header
@@ -60,6 +53,13 @@
         &copy;
         = Time.now.year
         Nathan Hoad
+    
+    %script{ type: 'text/javascript', src: '/javascripts/jquery.js' }
+    %script{ type: 'text/javascript', src: '/javascripts/bootstrap.js' }
+    %script{ type: 'text/javascript', src: '/javascripts/application.js' }
+    %script{ type: 'text/javascript', src: '/javascripts/code_highlighter.js' }
+    :plain
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
     %script{ type: 'text/javascript' }
       :plain

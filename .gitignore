@@ -2,6 +2,8 @@
 .DS_Store
 
 # App Junk
+.sass-cache
 .bundle
 tmp
 log
+public/*.html

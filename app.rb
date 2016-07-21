@@ -5,19 +5,30 @@ require 'maneki'
 require 'moredown'
 require 'erb'
 require 'haml'
+require 'sass'
 
-require 'models'
-require 'helpers'
+require_relative 'models'
+require_relative 'helpers'
 
 
-configure do
-  set :static_cache_control, [:public, max_age: 1.year]
+set :scss, views: "public/stylesheets"
+get '/stylesheets/application.css' do
+  scss :application, style: :compressed
 end
 
 
 get '/' do
-  @posts = Post.index || raise(Sinatra::NotFound)
-  haml :index
+  filename = File.dirname(__FILE__) + '/public/cache/_index.html'
+  if File.file? filename
+    File.open(filename)
+  else
+    @posts = Post.index || raise(Sinatra::NotFound)
+  
+    html = haml :index
+    File.write(filename, html)
+  
+    html
+  end
 end
 
 
@@ -69,15 +80,21 @@ end
 
 
 get '/:slug/?' do
-  @post = Post.find(params[:slug])
-  
-  if @post
-    cache_control :public, max_age: 1.week
-    haml :post
+  filename = File.dirname(__FILE__) + '/public/cache/' + params[:slug] + '.html'
+  if File.file? filename
+    File.open(filename)
   else
-    @keyword = params[:slug].gsub('-', ' ')
-    @posts = Post.search(@keyword)
-    haml :search
+    @post = Post.find(params[:slug])
+  
+    if @post
+      html = haml :post
+      File.write(filename, html)
+      html
+    else
+      @keyword = params[:slug].gsub('-', ' ')
+      @posts = Post.search(@keyword)
+      haml :search
+    end
   end
 end
 
