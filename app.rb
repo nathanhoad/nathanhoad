@@ -11,7 +11,10 @@ require_relative 'models'
 require_relative 'helpers'
 
 
+set :static_cache_control, [:public, max_age: 1.year]
 set :scss, views: "public/stylesheets"
+
+
 get '/stylesheets/application.css' do
   scss :application, style: :compressed
 end
@@ -62,7 +65,6 @@ end
 get '/media/:file.:ext' do
   filename = File.dirname(__FILE__) + '/posts/media/' + params[:file] + '.' + params[:ext]
   if File.file? filename
-    cache_control :public, max_age: 1.week
     send_file(filename)
   else
     raise(Sinatra::NotFound)
@@ -103,6 +105,8 @@ before do
   unless settings.development?
     redirect "https://nathanhoad.net" if request.host != 'nathanhoad.net' || request.scheme != 'http'
   end
+  
+  cache_control :public, max_age: 1.week
 end
 
 

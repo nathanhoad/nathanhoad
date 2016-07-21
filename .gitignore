@@ -6,4 +6,4 @@
 .bundle
 tmp
 log
-public/*.html
+public/cache/*.html
