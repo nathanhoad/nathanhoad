@@ -20,6 +20,11 @@ get '/stylesheets/application.css' do
 end
 
 
+get '/time' do
+  Time.now.getlocal.strftime('%Y-%m-%d %H:%M:%S')
+end
+
+
 get '/' do
   filename = File.dirname(__FILE__) + '/public/cache/_index.html'
   if File.file? filename
