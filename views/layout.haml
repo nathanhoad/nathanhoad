@@ -52,7 +52,10 @@
         = Time.now.year
         Nathan Hoad
     
-    %link{ rel: "stylesheet", type: "text/css", href: '/stylesheets/application.css' }/
+    
+    %noscript#deferred-styles
+      %link{ rel: "stylesheet", type: "text/css", href: '/stylesheets/application.css' }/
+    
     %script{ type: 'text/javascript', src: '/javascripts/jquery.js' }
     %script{ type: 'text/javascript', src: '/javascripts/bootstrap.js' }
     %script{ type: 'text/javascript', src: '/javascripts/application.js' }
@@ -84,3 +87,14 @@
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(wf, s);
       })();
+      
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
