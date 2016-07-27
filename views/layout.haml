@@ -56,11 +56,12 @@
     %noscript#deferred-styles
       %link{ rel: "stylesheet", type: "text/css", href: '/stylesheets/application.css' }/
     
-    %script{ type: 'text/javascript', src: '/javascripts/jquery.js' }
-    %script{ type: 'text/javascript', src: '/javascripts/bootstrap.js' }
-    %script{ type: 'text/javascript', src: '/javascripts/application.js' }
-    %script{ type: 'text/javascript', src: '/javascripts/code_highlighter.js' }
+    
     :plain
+      <script async src="/javascripts/jquery.js"></script>
+      <script async src="/javascripts/bootstrap.js"></script>
+      <script async src="/javascripts/code_highlighter.js"></script>
+      <script async src="/javascripts/application.js"></script>
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
     :javascript
