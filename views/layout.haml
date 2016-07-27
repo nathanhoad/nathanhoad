@@ -21,6 +21,9 @@
     %link{ rel: "alternate", type: "application/rss+xml", href: "http://feeds.feedburner.com/nathanhoad", title: "NathanHoad.net RSS" }/
     %link{ rel: "icon", type: "image/png", href: "/images/favicon.png" }/
     
+    %style
+      = @style
+    
   %body
     %header
       %h1
@@ -50,19 +53,12 @@
       %aside
         &copy;
         = Time.now.year
-        Nathan Hoad
-    
-    
-    %noscript#deferred-styles
-      %link{ rel: "stylesheet", type: "text/css", href: '/stylesheets/application.css' }/
-    
-    
-    :plain
-      <script async src="/javascripts/jquery.js"></script>
-      <script async src="/javascripts/bootstrap.js"></script>
-      <script async src="/javascripts/code_highlighter.js"></script>
-      <script async src="/javascripts/application.js"></script>
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        Nathan Hoad  
+  
+  
+    - if @post
+      :plain
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
     :javascript
       var _gaq = _gaq || [];
@@ -89,13 +85,4 @@
         s.parentNode.insertBefore(wf, s);
       })();
       
-      var loadDeferredStyles = function() {
-        var addStylesNode = document.getElementById("deferred-styles");
-        var replacement = document.createElement("div");
-        replacement.innerHTML = addStylesNode.textContent;
-        document.body.appendChild(replacement)
-        addStylesNode.parentElement.removeChild(addStylesNode);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-      else window.addEventListener('load', loadDeferredStyles);
+      #{@script}

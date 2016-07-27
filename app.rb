@@ -15,11 +15,6 @@ set :static_cache_control, [:public, max_age: 1.year]
 set :scss, views: "public/stylesheets"
 
 
-get '/stylesheets/application.css' do
-  scss :application, style: :compressed
-end
-
-
 get '/time' do
   Time.now.getlocal.strftime('%Y-%m-%d %H:%M:%S')
 end
@@ -33,7 +28,7 @@ get '/' do
     @posts = Post.index || raise(Sinatra::NotFound)
   
     html = haml :index
-    File.write(filename, html)
+    File.write(filename, html) unless settings.development?
   
     html
   end
@@ -95,7 +90,7 @@ get '/:slug/?' do
   
     if @post
       html = haml :post
-      File.write(filename, html)
+      File.write(filename, html) unless settings.development?
       html
     else
       @keyword = params[:slug].gsub('-', ' ')
@@ -112,6 +107,9 @@ before do
   end
   
   cache_control :public, max_age: 1.week
+  
+  @style = scss :application, style: :compressed
+  @script = [:code_highlighter, :application].map{ |file| File.open(File.dirname(__FILE__) + '/public/javascripts/' + file.to_s + '.js').read }.join("\n")
 end
 
 
