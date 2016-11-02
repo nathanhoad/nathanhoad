@@ -147,21 +147,3 @@ only screen and (min-device-pixel-ratio: 1.5) {
   body > header > h1 > a { background-image: url(/images/logo@2x.png); background-size: 84px 91px; }
   body > footer > h2 { background-image: url(/images/nathan@2x.png); background-size: 300px 302px; }
 }
-
-
-.ruby-rampage {
-  font-family: "Enriqueta", georgia;
-  font-size: 18px;
-  line-height: 25px;
-  text-align: center;
-  color: #c60;
-  margin: 30px 0;
-  padding: 20px 0;
-  border-top: 2px dashed lighten(#c60, 40%);
-  border-bottom: 2px dashed lighten(#c60, 40%);
-  
-  a {
-    text-decoration: underline;
-    color: #c60;
-  }
-}
