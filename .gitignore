@@ -7,3 +7,4 @@
 tmp
 log
 public/cache/*.html
+/docs

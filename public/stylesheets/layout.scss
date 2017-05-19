@@ -55,7 +55,8 @@ article > header > cite { display: block; margin-top: 40px; text-align: center; 
 article > header > cite > a { font-size: 20px; color: #090; font-family: 'Enriqueta', georgia, serif; text-decoration: underline; }
 article > header > cite > a:hover { color: #090; }
 article > p { font-family: 'Enriqueta', georgia, serif; text-align: justify; font-size: 18px; line-height: 25px; }
-article > p > img:only-child { margin: 30px auto !important; }
+article > p > img:only-child { margin: 30px auto !important; max-width: 100%; }
+article > p > a > img:only-child { margin: auto !important; max-width: 100%; }
 article > p > object { margin: 30px auto; }
 article > p a { color: black; text-decoration: underline; }
 article > ul { font-family: 'Enriqueta', georgia, serif; text-align: justify; font-size: 18px; line-height: 25px; }
