@@ -1,0 +1,70 @@
+# New Node Package: Imitation
+
+ - published: 2017-07-10 23:00
+ - tags: node, npm, javascript, testing
+
+I just published [Imitation](https://www.npmjs.com/package/imitation), a new Node package that helps with testing 
+React components (especially those using CSS modules).
+
+The most common use case is simply for mocking out image/css `require`s.
+
+For example, say you have a component:
+
+    #! Javascript
+    const React = require('react');
+    
+    // CSS module
+    const styles = require('./thing.css');
+    
+    // Image
+    const welcome_image = require('./welcome.png');
+    
+    class Thing extends React.Component {
+        render () {
+            return (
+                <div className={styles.wrapper}>
+                    <img src={welcome_image} />
+                </div>
+            )
+        }
+    }
+    
+    module.exports = Thing;
+
+If you were to simply use something like Enzyme then it would fail when trying to `require` the css and image files.
+
+That's where [Imitation](https://www.npmjs.com/package/imitation) comes in. It hooks into the default `require` and 
+injects a simple mock for images and css (images resolve to their own path and css resolves to a Proxy object where all custom
+properties resolve to just their name).
+
+    #! Javascript
+    const React = require('react');
+    const { mockDOM, unmockDOM, mockAssets, unmockAssets } = require('imitation');
+    const { test } = require('ava');
+    const { shallow } = require('enzyme');
+
+    var Thing;
+
+    test.beforeEach(t => {
+        mockAssets();
+        mockDOM();
+        
+        Thing = require('../components/thing'); // Thing uses require for images and css
+    });
+
+
+    test.afterEach(t => {
+        unmockDOM();
+        unmockAssets();
+    });
+
+
+    test("It renders", t => {
+        let component = shallow(<Thing />);
+        
+        // Assert something
+        // ...
+    });
+
+Imitation also has some methods for mocking URLs (for testing Redux Actions, etc) but I'll let 
+you [check them out in the README](https://www.npmjs.com/package/imitation).
