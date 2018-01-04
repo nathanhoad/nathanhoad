@@ -6,8 +6,8 @@
 
     %meta{ property: 'og:title', content: page_title }/
     %meta{ property: 'og:description', content: page_description }/
-    %meta{ property: 'og:image', content: 'https://nathanhoad.net/images/nathan-profile.png' }/
-    %meta{ property: 'og:url', content: 'https://nathanhoad.net' }/
+    %meta{ property: 'og:image', content: page_image }/
+    %meta{ property: 'og:url', content: url }/
     %meta{ property: 'og:type', content: 'article' }/
     %meta{ property: 'fb:admins', content: '218700192' }/
     %meta{ property: 'article:author', content: '218700192' }/
@@ -40,7 +40,7 @@
     %footer
       %h2
         %span
-          Hi! I'm Nathan Hoad. I make #{link_to 'Athletable', 'https://athletable.com'}
+          Hi! I'm Nathan Hoad. I make #{link_to 'Games', 'https://nathanhoad.itch.io/pixel-beach'}
           and #{link_to 'Slacker', 'https://slacker.nathanhoad.net'}.
       
       %section
@@ -49,6 +49,8 @@
         = link_to 'GitHub', 'http://github.com/nathanhoad'
         &middot;
         = link_to 'Instagram', 'http://instagram.com/nathanhoad'
+        &middot;
+        = link_to 'Itch.io', 'http://nathanhoad.itch.io'
         &middot;
         = link_to 'YouTube', 'https://www.youtube.com/channel/UCIdCxj0B9BXJ5tHXLgNWF6w'
         &middot;

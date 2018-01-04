@@ -4,501 +4,465 @@
 
 /* Layout */
 .row {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 a:hover {
-    color: black;
-    text-decoration: underline;
+  color: black;
+  text-decoration: underline;
 }
 img.left {
-    float: left;
-    margin: 0 5px 5px 0;
+  float: left;
+  margin: 0 5px 5px 0;
 }
 img.right {
-    float: right;
-    margin: 0 0 5px 5px;
+  float: right;
+  margin: 0 0 5px 5px;
 }
 img.center {
-    display: block;
-    margin: auto;
+  display: block;
+  margin: auto;
 }
+
 object {
-    display: block;
-    margin: auto;
+  display: block;
+  margin: auto;
 }
 abbr {
-    border-bottom: 1px dashed #444;
+  border-bottom: 1px dashed #444;
 }
 hr {
-    border: none;
+  border: none;
 }
 
 body > header {
 }
 body > header > h1 > a {
-    background: url(/images/logo.png) no-repeat top;
-    display: block;
-    width: 480px;
-    height: 94px;
-    margin: 40px auto;
+  background: url(/images/logo.png) no-repeat top;
+  display: block;
+  width: 480px;
+  height: 94px;
+  margin: 40px auto;
 }
 body > header > h1 > a > span {
-    display: none;
+  display: none;
 }
 
 body > section {
-    margin: auto;
-    max-width: 600px;
+  margin: auto;
+  max-width: 700px;
 }
 body > section > hr {
-    border-top: 1px solid #ccc;
-    height: 1px;
-    width: 300px;
-    margin: 30px auto;
+  border-top: 1px solid #ccc;
+  height: 1px;
+  width: 300px;
+  margin: 30px auto;
 }
 
 /* Index */
 body > section > ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 body > section > ul > li {
-    text-align: center;
-    padding: 10px 0;
+  text-align: center;
+  padding: 10px 0;
 }
 body > section > ul a {
-    color: #333;
-    font-family: 'Arvo', georgia, serif;
-    font-size: 23px;
-    line-height: 30px;
+  color: #333;
+  font-family: 'Arvo', georgia, serif;
+  font-size: 23px;
+  line-height: 30px;
 }
 
 body > section > aside {
-    text-align: center;
-    margin-top: 30px;
+  text-align: center;
+  margin-top: 30px;
 }
 body > section > aside > a {
-    color: #999;
-    font-family: 'Arvo', georgia, serif;
-    font-size: 23px;
-    line-height: 30px;
+  color: #999;
+  font-family: 'Arvo', georgia, serif;
+  font-size: 23px;
+  line-height: 30px;
 }
 body > section > aside > a:hover {
-    color: #999;
+  color: #999;
 }
 
 body > section > aside > h3 {
-    color: #999;
-    font-family: 'Arvo', georgia, serif;
-    font-size: 14px;
-    font-weight: normal;
-    margin: 0 0 15px 0;
+  color: #999;
+  font-family: 'Arvo', georgia, serif;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0 0 15px 0;
 }
 body > section > aside > h3 > a {
-    color: #999;
+  color: #999;
 }
 body > section > aside > h3 > a:hover {
-    color: #999;
+  color: #999;
 }
 body > section > aside > ul {
-    font-family: 'Enriqueta', georgia, serif;
-    font-size: 18px;
-    color: #333;
-    list-style: none;
-    margin: 0;
-    margin-top: -20px;
-    margin-bottom: 40px;
+  font-family: 'Enriqueta', georgia, serif;
+  font-size: 18px;
+  color: #333;
+  list-style: none;
+  margin: 0;
+  margin-top: -20px;
+  margin-bottom: 40px;
 }
 body > section > aside > ul > li {
-    padding: 5px;
+  padding: 5px;
 }
 body > section > aside > ul > li > a {
-    color: #333;
+  color: #333;
 }
 
 body > section > header {
-    text-align: center;
-    margin-bottom: 25px;
-    font-family: 'Georgia';
-    font-size: 16px;
-    font-style: italic;
-    color: #090;
+  text-align: center;
+  margin-bottom: 25px;
+  font-family: 'Georgia';
+  font-size: 16px;
+  font-style: italic;
+  color: #090;
 }
 
 /* Posts */
 article {
-    padding-bottom: 40px;
-    margin-bottom: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 article > header {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 article > header > h2 {
-    font-family: 'Arvo', georgia, serif;
-    font-size: 35px;
-    line-height: 45px;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 15px;
+  font-family: 'Arvo', georgia, serif;
+  font-size: 35px;
+  line-height: 45px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 15px;
 }
 article > header > h2 > a {
-    color: #333;
+  color: #333;
 }
 article > header > h2 > a:hover {
-    color: #333;
-    text-decoration: underline;
+  color: #333;
+  text-decoration: underline;
 }
 article > header > aside {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    color: #999;
-    margin: auto;
-    text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #999;
+  margin: auto;
+  text-align: center;
 }
 article > header > aside a {
-    color: #999;
+  color: #999;
 }
 article > header > aside a:hover {
-    color: #999;
-    text-decoration: underline;
+  color: #999;
+  text-decoration: underline;
 }
 article > header > aside ul {
-    display: inline;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 article > header > aside li {
-    display: inline;
+  display: inline;
 }
 article > header > cite {
-    display: block;
-    margin-top: 40px;
-    text-align: center;
+  display: block;
+  margin-top: 40px;
+  text-align: center;
 }
 article > header > cite > a {
-    font-size: 20px;
-    color: #090;
-    font-family: 'Enriqueta', georgia, serif;
-    text-decoration: underline;
+  font-size: 20px;
+  color: #090;
+  font-family: 'Enriqueta', georgia, serif;
+  text-decoration: underline;
 }
 article > header > cite > a:hover {
-    color: #090;
+  color: #090;
 }
 article > p {
-    font-family: 'Enriqueta', georgia, serif;
-    text-align: left;
-    font-size: 18px;
-    line-height: 25px;
+  font-family: 'Enriqueta', georgia, serif;
+  text-align: left;
+  font-size: 18px;
+  line-height: 25px;
 }
 article > p > img:only-child {
-    margin: 30px auto !important;
-    max-width: 100%;
+  margin: 30px auto !important;
+  max-width: 100%;
 }
 article > p > a > img:only-child {
-    margin: auto !important;
-    max-width: 100%;
+  margin: auto !important;
+  max-width: 100%;
 }
+article > p > a > img[src^='https://instagram'] {
+  max-width: 70%;
+  display: block;
+}
+
 article > p > object {
-    margin: 30px auto;
+  margin: 30px auto;
 }
 article > p a {
-    color: black;
-    text-decoration: underline;
+  color: black;
+  text-decoration: underline;
 }
 article > ul {
-    font-family: 'Enriqueta', georgia, serif;
-    text-align: justify;
-    font-size: 18px;
-    line-height: 25px;
+  font-family: 'Enriqueta', georgia, serif;
+  text-align: justify;
+  font-size: 18px;
+  line-height: 25px;
 }
 article > ul > li {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 article > blockquote {
-    border: none;
-    border-left: 2px solid #900;
-    margin: 30px;
+  border: none;
+  border-left: 2px solid #900;
+  margin: 30px;
 }
 article > blockquote > p {
-    color: #900;
-    font-family: 'Enriqueta', georgia, serif;
-    font-size: 18px;
-    font-style: italic;
+  color: #900;
+  font-family: 'Enriqueta', georgia, serif;
+  font-size: 18px;
+  font-style: italic;
 }
 article > h3 {
-    color: #999;
-    font-family: "Arvo";
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 50px;
-    margin-top: 40px;
-    text-align: center;
+  color: #999;
+  font-family: 'Arvo';
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 50px;
+  margin-top: 40px;
+  text-align: center;
 }
 article > hr {
-    display: none;
+  display: none;
 }
 article > p > iframe {
-    max-width: 100%;
-    height: 270px;
-    margin: 10px 0;
+  max-width: 100%;
+  height: 270px;
+  margin: 10px 0;
+}
+article > p > iframe.itch {
+  height: auto;
 }
 
 /* About */
 body > footer {
-    font-family: Helvetica, Arial, sans-serif;
-    margin: 60px 0 30px 0;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 60px 0 30px 0;
 }
 body > footer > h2 {
-    background: url(/images/nathan.png) no-repeat top;
-    font-size: 15px;
-    font-weight: normal;
-    line-height: 18px;
-    height: 302px;
-    width: 300px;
-    margin: 0 auto 20px;
-    position: relative;
+  background: url(/images/nathan.png) no-repeat top;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 18px;
+  height: 302px;
+  width: 300px;
+  margin: 0 auto 20px;
+  position: relative;
 }
 body > footer > h2 > span {
-    color: #444;
-    display: block;
-    font-family: "Gloria Hallelujah";
-    font-size: 17px;
-    line-height: 24px;
-    margin: auto;
-    width: 130px;
-    position: absolute;
-    top: 18px;
-    left: 26px;
+  color: #444;
+  display: block;
+  font-family: 'Gloria Hallelujah';
+  font-size: 17px;
+  line-height: 24px;
+  margin: auto;
+  width: 130px;
+  position: absolute;
+  top: 18px;
+  left: 26px;
 }
 body > footer > h2 > span > a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 body > footer > section {
-    color: #999;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 5px;
+  color: #999;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 body > footer > section > a {
-    color: #999;
+  color: #999;
 }
 body > footer > section > a:hover {
-    color: #999;
+  color: #999;
 }
 body > footer > aside {
-    color: #999;
-    font-size: 14px;
-    margin-top: 10px;
-    text-align: center;
+  color: #999;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 /* Archives */
 body > section > section {
-    text-align: center;
+  text-align: center;
 }
 body > section > section > h2 {
-    color: #999;
-    font-family: 'Arvo', georgia, serif;
-    font-size: 14px;
-    font-weight: normal;
-    margin-top: 30px;
+  color: #999;
+  font-family: 'Arvo', georgia, serif;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 30px;
 }
 body > section > section > ul {
-    list-style: none;
-    margin: 0 0 20px 0;
-    padding: 0;
+  list-style: none;
+  margin: 0 0 20px 0;
+  padding: 0;
 }
 body > section > section > ul > li {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 body > section > section > ul a {
-    font-family: 'Arvo', georgia, serif;
-    color: black;
-    font-size: 18px;
+  font-family: 'Arvo', georgia, serif;
+  color: black;
+  font-size: 18px;
 }
 
 /* Code */
 pre {
-    background: none;
-    border: none;
-    padding: 10px 0 20px 10px;
-    white-space: pre;
-    word-break: normal;
-    word-wrap: normal;
+  background: none;
+  border: none;
+  padding: 10px 0 20px 10px;
+  white-space: pre;
+  word-break: normal;
+  word-wrap: normal;
 }
 code {
-    white-space: pre;
-    word-break: normal;
-    word-wrap: normal;
+  white-space: pre;
+  word-break: normal;
+  word-wrap: normal;
 }
 code span.comment {
-    color: #999;
+  color: #999;
 }
 code span.string {
-    color: #080;
+  color: #080;
 }
 code span.symbol {
-    color: #086fa1;
+  color: #086fa1;
 }
 code span.module_class {
-    color: #e45c47;
+  color: #e45c47;
 }
 code span.variable {
-    color: #9303a7;
+  color: #9303a7;
 }
 code span.keywords {
-    color: #ff6400;
+  color: #ff6400;
 }
 code span.global {
-    color: #9303a7;
+  color: #9303a7;
 }
 
 code.html span {
-    color: #fff;
+  color: #fff;
 }
 code.html span.tag,
 code.haml span.tag,
 code.html span.anglebrackets {
-    color: #ff9000;
+  color: #ff9000;
 }
 code.html span.attribute {
-    color: #e8bf6a;
+  color: #e8bf6a;
 }
 code.html span.string {
-    color: #080;
+  color: #080;
 }
 code.html span.comment {
-    color: #999;
+  color: #999;
 }
 code.html span.doctype,
 code.haml span.doctype {
-    color: #900;
+  color: #900;
 }
 
 code.css .selectors {
-    color: #e8bf6a;
+  color: #e8bf6a;
 }
 code.css .properties {
-    color: #6d9cbe;
+  color: #6d9cbe;
 }
 
 code.shell {
-    color: #ccc;
+  color: #ccc;
 }
 code.shell span.keywords {
-    color: #fff;
-}
-
-/* Google Adsense */
-.aff {
-    position: relative;
-    width: 300px;
-    margin: auto;
-}
-.aff > .ad-300-250 {
-    width: 300px;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.aff > .ad-120-600 {
-    position: fixed;
-    top: 20px;
-    left: 10px;
-}
-
-.aff > .internal {
-    cursor: pointer;
-    display: block;
-    height: 250px;
-    width: 300px;
-    text-align: center;
-}
-.aff > .internal:hover {
-    text-decoration: none;
-}
-.aff > .internal > img {
-    border-radius: 50%;
-    margin-bottom: 10px;
-    max-width: 170px;
-}
-.aff > .internal > .title {
-    color: black;
-    font-size: 16px;
-    margin-bottom: 8px;
-}
-.aff > .internal > .from {
-    color: #666;
-    font-family: 'Enriqueta', georgia, serif;
-    font-size: 16px;
+  color: #fff;
 }
 
 /* PayPal */
 .coffee {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 .coffee p {
-    font-family: 'Enriqueta', georgia, serif;
-    text-align: justify;
-    font-size: 18px;
-    line-height: 25px;
+  font-family: 'Enriqueta', georgia, serif;
+  text-align: justify;
+  font-size: 18px;
+  line-height: 25px;
 }
 .coffee form {
-    margin-top: 20px;
-    text-align: center;
+  margin-top: 20px;
+  text-align: center;
 }
 .coffee input {
-    max-width: 280px;
+  max-width: 280px;
 }
 
 /* Mobile */
 @media all and (max-device-width: 480px) {
-    .ad-120-600 {
-        display: none;
-    }
+  body > header > h1 > a {
+    width: 100%;
+  }
+  body > section {
+    width: 100%;
+  }
+  body > section > ul {
+    padding: 0 5px;
+  }
 
-    body > header > h1 > a {
-        width: 100%;
-    }
-    body > section {
-        width: 100%;
-    }
-    body > section > ul {
-        padding: 0 5px;
-    }
-
-    article {
-        padding: 0 15px;
-    }
-    article h2 {
-        font-family: 'Arvo', georgia, serif;
-        font-size: 30px;
-        line-height: 40px;
-        text-align: center;
-        margin-top: 40px;
-        margin-bottom: 20px;
-    }
+  article {
+    padding: 0 15px;
+  }
+  article h2 {
+    font-family: 'Arvo', georgia, serif;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  article > p > a > img[src^='https://instagram'] {
+    max-width: 100%;
+  }
 }
+
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-    only screen and (-moz-min-device-pixel-ratio: 1.5),
-    only screen and (-o-min-device-pixel-ratio: 3/2),
-    only screen and (min-device-pixel-ratio: 1.5) {
-    body > header > h1 > a {
-        background-image: url(/images/logo@2x.png);
-        background-size: 84px 91px;
-    }
-    body > footer > h2 {
-        background-image: url(/images/nathan@2x.png);
-        background-size: 300px 302px;
-    }
+  only screen and (-moz-min-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  body > header > h1 > a {
+    background-image: url(/images/logo@2x.png);
+    background-size: 84px 91px;
+  }
+  body > footer > h2 {
+    background-image: url(/images/nathan@2x.png);
+    background-size: 300px 302px;
+  }
 }

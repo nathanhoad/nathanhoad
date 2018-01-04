@@ -32,11 +32,18 @@ helpers do
       "I'm Nathan Hoad and I'm a software geek that loves the beauty of simple things. I blog about Ruby, Rails, Sinatra, Git, and Graphic Design"
     end
   end
+
+
+  def page_image
+    return @post.image if @post && @post.image?
+    
+    'https://nathanhoad.net/images/nathan-profile.png'
+  end
   
   
   # Grab the full url of the current site
   def url
-    'https://' + request.host
+    'https://' + request.host + request.path
   end
   
   # Render a partial template

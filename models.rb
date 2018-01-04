@@ -84,6 +84,15 @@ class Post < Maneki
   def link
     @headers[:link]
   end
+
+
+  def image
+    @headers[:image] || nil
+  end
+
+  def image?
+    image
+  end
   
   
   # Check if this post is valid
