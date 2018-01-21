@@ -3,6 +3,11 @@
 */
 
 /* Layout */
+html,
+body {
+  background: #eee;
+}
+
 .row {
   margin-top: 30px;
 }
@@ -39,19 +44,6 @@ hr {
   border: none;
 }
 
-body > header {
-}
-body > header > h1 > a {
-  background: url(/images/logo.png) no-repeat top;
-  display: block;
-  width: 480px;
-  height: 94px;
-  margin: 40px auto;
-}
-body > header > h1 > a > span {
-  display: none;
-}
-
 body > section {
   margin: auto;
   max-width: 700px;
@@ -62,6 +54,35 @@ body > section > hr {
   width: 300px;
   margin: 30px auto;
 }
+
+/* Main wrapper */
+body > header {
+  max-width: 400px;
+  margin: 80px auto;
+
+  h1 {
+    a {
+      img {
+        max-width: 100%;
+        border: none;
+      }
+    }
+  }
+}
+
+body > aside {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Arvo';
+  font-size: 18px;
+  line-height: 28px;
+
+  a {
+    text-decoration: underline;
+  }
+}
+/* /Main Wrapper */
 
 /* Index */
 body > section > ul {
@@ -132,182 +153,12 @@ body > section > header {
   color: #090;
 }
 
-/* Posts */
-article {
-  padding-bottom: 40px;
-  margin-bottom: 40px;
-}
-article > header {
-  margin-bottom: 40px;
-}
-article > header > h2 {
-  font-family: 'Arvo', georgia, serif;
-  font-size: 35px;
-  line-height: 45px;
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 15px;
-}
-article > header > h2 > a {
-  color: #333;
-}
-article > header > h2 > a:hover {
-  color: #333;
-  text-decoration: underline;
-}
-article > header > aside {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  color: #999;
-  margin: auto;
-  text-align: center;
-}
-article > header > aside a {
-  color: #999;
-}
-article > header > aside a:hover {
-  color: #999;
-  text-decoration: underline;
-}
-article > header > aside ul {
-  display: inline;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-article > header > aside li {
-  display: inline;
-}
-article > header > cite {
-  display: block;
-  margin-top: 40px;
-  text-align: center;
-}
-article > header > cite > a {
-  font-size: 20px;
-  color: #090;
-  font-family: 'Enriqueta', georgia, serif;
-  text-decoration: underline;
-}
-article > header > cite > a:hover {
-  color: #090;
-}
-article > p {
-  font-family: 'Enriqueta', georgia, serif;
-  text-align: left;
-  font-size: 18px;
-  line-height: 25px;
-}
-article > p > img:only-child {
-  margin: 30px auto !important;
-  max-width: 100%;
-}
-article > p > a > img:only-child {
-  margin: auto !important;
-  max-width: 100%;
-}
-article > p > a > img[src^='https://instagram'] {
-  max-width: 70%;
-  display: block;
-}
-
-article > p > object {
-  margin: 30px auto;
-}
-article > p a {
-  color: black;
-  text-decoration: underline;
-}
-article > ul {
-  font-family: 'Enriqueta', georgia, serif;
-  text-align: justify;
-  font-size: 18px;
-  line-height: 25px;
-}
-article > ul > li {
-  margin-bottom: 15px;
-}
-article > blockquote {
-  border: none;
-  border-left: 2px solid #900;
-  margin: 30px;
-}
-article > blockquote > p {
-  color: #900;
-  font-family: 'Enriqueta', georgia, serif;
-  font-size: 18px;
-  font-style: italic;
-}
-article > h3 {
-  color: #999;
-  font-family: 'Arvo';
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 50px;
-  margin-top: 40px;
-  text-align: center;
-}
-article > hr {
-  display: none;
-}
-article > p > iframe {
-  max-width: 100%;
-  height: 270px;
-  margin: 10px 0;
-}
-article > p > iframe.itch {
-  height: auto;
-}
-
-/* About */
 body > footer {
   font-family: Helvetica, Arial, sans-serif;
-  margin: 60px 0 30px 0;
-}
-body > footer > h2 {
-  background: url(/images/nathan.png) no-repeat top;
-  font-size: 15px;
-  font-weight: normal;
-  line-height: 18px;
-  height: 302px;
-  width: 300px;
-  margin: 0 auto 20px;
-  position: relative;
-}
-body > footer > h2 > span {
-  color: #444;
-  display: block;
-  font-family: 'Gloria Hallelujah';
-  font-size: 17px;
-  line-height: 24px;
-  margin: auto;
-  width: 130px;
-  position: absolute;
-  top: 18px;
-  left: 26px;
-}
-body > footer > h2 > span > a {
-  color: black;
-  text-decoration: none;
-}
-body > footer > section {
-  color: #999;
+  margin: 60px auto 30px auto;
   text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-body > footer > section > a {
+  font-size: 12px;
   color: #999;
-}
-body > footer > section > a:hover {
-  color: #999;
-}
-body > footer > aside {
-  color: #999;
-  font-size: 14px;
-  margin-top: 10px;
-  text-align: center;
 }
 
 /* Archives */
@@ -450,19 +301,5 @@ code.shell span.keywords {
   }
   article > p > a > img[src^='https://instagram'] {
     max-width: 100%;
-  }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-  only screen and (-moz-min-device-pixel-ratio: 1.5),
-  only screen and (-o-min-device-pixel-ratio: 3/2),
-  only screen and (min-device-pixel-ratio: 1.5) {
-  body > header > h1 > a {
-    background-image: url(/images/logo@2x.png);
-    background-size: 84px 91px;
-  }
-  body > footer > h2 {
-    background-image: url(/images/nathan@2x.png);
-    background-size: 300px 302px;
   }
 }

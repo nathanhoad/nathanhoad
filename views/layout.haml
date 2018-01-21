@@ -22,6 +22,8 @@
     %link{ rel: "apple-touch-icon", type: "image/png", href: "/images/apple-touch-icon.png" }/
     %link{ rel: "alternate", type: "application/rss+xml", href: "http://feeds.feedburner.com/nathanhoad", title: "NathanHoad.net RSS" }/
     %link{ rel: "icon", type: "image/png", href: "/images/favicon.png" }/
+
+    %script{ src: "https://static.itch.io/api.js" }
     
     %style
       = @style
@@ -30,37 +32,24 @@
     %header
       %h1
         %a{ href: '/' }
-          %span Nathan Hoad
+          %img{ src: '/images/blog-header.png', alt: "Hi! I'm Nathan Hoad" }/
     
     %section
-      %hr
       = yield
-      %hr
-          
+    
+    %aside
+      %p
+        My partner, Lilly, and I live in sunny Australia. I like to #{link_to 'paint', 'https://instagram.com/nathanhoad'}, #{link_to 'code', 'https://github.com/nathanhoad'}, and #{link_to 'make games', 'https://nathanhoad.itch.io'}.
+      %p
+        I write short stuff on #{link_to 'Twitter', 'https://twitter.com/nathanhoad'} and long stuff on #{link_to 'Medium', 'https://medium.com/nathanhoad'}.
+      %p
+        Sometimes I help tell stories for #{link_to 'ABC News', 'http://www.abc.net.au/news/nathan-hoad/8893522'}.
+    
     %footer
-      %h2
-        %span
-          Hi! I'm Nathan Hoad. I make #{link_to 'Games', 'https://nathanhoad.itch.io/pixel-beach'}
-          and #{link_to 'Slacker', 'https://slacker.nathanhoad.net'}.
-      
-      %section
-        = link_to 'Twitter', 'http://twitter.com/nathanhoad'
-        &middot;
-        = link_to 'GitHub', 'http://github.com/nathanhoad'
-        &middot;
-        = link_to 'Instagram', 'http://instagram.com/nathanhoad'
-        &middot;
-        = link_to 'Itch.io', 'http://nathanhoad.itch.io'
-        &middot;
-        = link_to 'YouTube', 'https://www.youtube.com/channel/UCIdCxj0B9BXJ5tHXLgNWF6w'
-        &middot;
-        = link_to 'RSS', '/rss'
-      
-      %aside
-        &copy;
-        = Time.now.year
-        Nathan Hoad  
-  
+      &copy;
+      = Time.now.year
+      Nathan Hoad  
+
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-650804-3']);
@@ -82,6 +71,15 @@
         wf.async = 'true';
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(wf, s);
+      })();
+      
+      (function() {
+        [].slice.call(document.querySelectorAll('.buy-game')).forEach(function(button) {
+          Itch.attachBuyButton(button, {
+            user: "nathanhoad",
+            game: button.getAttribute('data-game')
+          });
+        });
       })();
       
       #{@script}
