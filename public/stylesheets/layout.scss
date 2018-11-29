@@ -70,16 +70,17 @@ body > header {
   }
 }
 
-body > aside {
+body > section footer {
   max-width: 500px;
   margin: auto;
   text-align: center;
-  font-family: 'Arvo';
+  font-family: 'Enriqueta', georgia, serif;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 25px;
 
   a {
     text-decoration: underline;
+    color: rgb(139, 0, 93);
   }
 }
 /* /Main Wrapper */
@@ -92,13 +93,13 @@ body > section > ul {
 }
 body > section > ul > li {
   text-align: center;
-  padding: 10px 0;
 }
 body > section > ul a {
-  color: #333;
+  color: rgb(51, 51, 51);
   font-family: 'Arvo', georgia, serif;
-  font-size: 23px;
+  font-size: 18px;
   line-height: 30px;
+  text-decoration: underline;
 }
 
 body > section > aside {
@@ -108,7 +109,7 @@ body > section > aside {
 body > section > aside > a {
   color: #999;
   font-family: 'Arvo', georgia, serif;
-  font-size: 23px;
+  font-size: 18px;
   line-height: 30px;
 }
 body > section > aside > a:hover {
@@ -268,12 +269,16 @@ code.shell span.keywords {
   font-size: 18px;
   line-height: 25px;
 }
-.coffee form {
-  margin-top: 20px;
-  text-align: center;
+.coffee a {
+  text-decoration: underline;
+  color: rgb(24, 155, 116);
 }
-.coffee input {
-  max-width: 280px;
+
+.coffee hr {
+  border-top: 1px solid #ccc;
+  height: 1px;
+  width: 300px;
+  margin: 90px auto 30px auto;
 }
 
 /* Mobile */
