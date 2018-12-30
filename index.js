@@ -11,7 +11,6 @@ function serve() {
   const express = require('express');
   const helmet = require('helmet');
   const compression = require('compression');
-  const enableDestroy = require('server-destroy');
 
   const app = express();
   app.use(helmet());
@@ -31,6 +30,7 @@ function serve() {
 
   // Enable auto restarting in development
   if (process.env.NODE_ENV !== 'production') {
+    const enableDestroy = require('server-destroy');
     enableDestroy(listener);
 
     // Recompile on changes to anything
