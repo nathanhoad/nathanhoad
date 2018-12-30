@@ -12,10 +12,19 @@
 
 <script type="text/javascript">
   // Floating rock
-  setTimeout(function() {
-    var rock = document.querySelector('.welcome > aside > img[src^="rock"]');
-    if (rock) rock.style.setProperty('animation-name', 'floating');
-  }, 100);
+  var rock = document.querySelector('.welcome > aside > img[src^="rock"]');
+  if (rock) {
+    // No idea why but safari hated this when it was a proper css animation...
+    var up = true;
+    setInterval(function() {
+      rock.style.setProperty('transform', 'translate(-50%, -' + (up ? 35 : 32) + '%)');
+      up = !up;
+    }, 3100);
+    setTimeout(function() {
+      rock.style.setProperty('transform', 'translate(-50%, -35%)');
+      up = !up;
+    }, 100);
+  }
 
   // Footer
   document.querySelector('footer > aside > span').textContent = new Date().getFullYear();
