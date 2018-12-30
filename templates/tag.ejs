@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <title>Nathan Hoad</title>
+  <meta property="og:title" content="#<%= tag %> - Nathan Hoad" />
+  <meta name="description" content="Posts tagged with #<%= tag %>" />
+  <meta property="og:description" content="Posts tagged with #<%= tag %>" />
+  <meta property="og:image" content="" />
+  <meta property="og:url" content="https://nathanhoad.net/tags/<%= tag %>" />
+  <meta name="author" content="Nathan Hoad" />
+
+  <meta name="verify-v1" content="FJjra037EqYRGo8w0Atq5BHkBi8B+MPZSD+0jKQebLs=" />
+  <meta name="p:domain_verify" content="5c8fe00840c14d6c92865fc017137b69" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"  />
+  <link type="image/png" href="/favicon.png" rel="icon" />
+  <script src='https://static.itch.io/api.js'></script>
+</head>
+
+<body>
+
+<aside>
+  <a href="/">Nathan Hoad</a>
+</aside>
+
+<main class="tag">
+  <header>
+    <h1>#<%= tag %></h1>
+  </header>
+  <ul>
+    <% posts.forEach(post => { %>
+      <li><a href="/<%= post.slug %>"><%= post.title %></a></li>
+    <% }); %>
+  </ul>
+</main>
+
+<%- include('footer') %>
+
+</body>
+
+</html>

@@ -1,7 +1,0 @@
-# What's your IP?
-
- - published: 2010-05-21 22:43
- - tags: programming, ruby
- - link: http://whatsmyip.heroku.com
-
-I just pushed [my intro to Sinatra example app](/intro-to-sinatra-make-an-ip-checker) to Heroku. The source is available on [my GitHub](http://github.com/nathanhoad/whatsmyip-heroku).

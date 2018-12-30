@@ -1,0 +1,31 @@
+{
+  "name": "nathanhoad",
+  "version": "6.0.0",
+  "description": "The code that powers https://nathanhoad.net",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "Nathan Hoad",
+  "homepage": "https://github.com/nathanhoad/nathanhoad#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nathanhoad/nathanhoad.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "compression": "^1.7.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "fs-extra": "^7.0.1",
+    "helmet": "^3.15.0",
+    "html-minifier": "^3.5.21",
+    "marked": "^0.5.2",
+    "node-sass": "^4.11.0"
+  },
+  "devDependencies": {
+    "server-destroy": "^1.0.1"
+  }
+}

@@ -1,8 +1,0 @@
-# Genki now gives you a sitemap
-
- - published: 2009-08-23 02:44
- - tags: rails, web
-
-[Genki](http://github.com/nathanhoad/genki) now supports sitemaps out of the metaphorical box! The sitemap that Genki generates is in the standard format that is supported by Google and includes all of your posts and pages. You don't have to do anything to set it up; it just works.
-
-If you are using Google's Webmaster Tools you can point it at `/sitemap.xml` and away you go.

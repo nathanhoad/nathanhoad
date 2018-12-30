@@ -1,0 +1,56 @@
+<footer>
+  <header>Follow me everywhere</header>
+  <ul>
+    <li><a href="https://twitter.com/nathanhoad">Twitter</a></li>
+    <li><a href="https://github.com/nathanhoad">GitHub</a></li>
+    <li><a href="https://www.youtube.com/channel/UCIdCxj0B9BXJ5tHXLgNWF6w">YouTube</a></li>
+    <li><a href="https://nathanhoad.itch.io">Itch</a></li>
+    <li><a href="https://bynathanhoad.etsy.com">Etsy</a></li>
+  </ul>
+  <aside>&copy <span><%= new Date().getFullYear() %></span> Nathan Hoad</aside>
+</footer>
+
+<script type="text/javascript">
+  // Floating rock
+  setTimeout(function() {
+    var rock = document.querySelector('.welcome > aside > img[src^="rock"]');
+    if (rock) rock.style.setProperty('animation-name', 'floating');
+  }, 100);
+
+  // Footer
+  document.querySelector('footer > aside > span').textContent = new Date().getFullYear();
+
+  // Google Analytics
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-650804-3']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+  // Google Fonts
+  WebFontConfig = {
+    google: { families: ['Enriqueta', 'Amatic SC', 'Open Sans:400,700'] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+    '://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+  
+  // Itch
+  (function() {
+    [].slice.call(document.querySelectorAll('.buy-game')).forEach(function(button) {
+      Itch.attachBuyButton(button, {
+        user: "nathanhoad",
+        game: button.getAttribute('data-game')
+      });
+    });
+  })();
+</script>

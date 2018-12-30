@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <title>Nathan Hoad</title>
+  <meta property="og:title" content="Nathan Hoad" />
+  <meta name="description" content="I paint and make games. Sometimes I write stuff." />
+  <meta property="og:description" content="I paint and make games. Sometimes I write stuff." />
+  <meta property="og:image" content="https://nathanhoad.net/share.jpg" />
+  <meta property="og:url" content="https://nathanhoad.net" />
+  <meta name="author" content="Nathan Hoad" />
+
+  <meta name="verify-v1" content="FJjra037EqYRGo8w0Atq5BHkBi8B+MPZSD+0jKQebLs=" />
+  <meta name="p:domain_verify" content="5c8fe00840c14d6c92865fc017137b69" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"  />
+  <link type="image/png" href="/icon.png" rel="icon" />
+  <script src='https://static.itch.io/api.js'></script>
+</head>
+
+<body>
+
+<section class="welcome">
+  <h1>Hi! I'm Nathan Hoad</h1>
+  <aside>
+    <img src="purple-star.gif" />
+    <img src="blue-star.gif" />
+    <img src="green-star.gif" />
+    <img src="rock.gif" />
+  </aside>
+  <p>
+    I spend my time <a href="https://nathanhoad.itch.io">making video games</a> with my wife, <a href="https://lillypiri.com">Lilly Piri</a>.
+  </p>
+  <p>
+    Making games combines my other passions, <a href="https://github.com/nathanhoad">coding</a>, <a href="https://bynathanhoad.etsy.com">making art</a>, and composing music.
+  </p>
+  <p>
+    Sometimes I write stuff too...
+  </p>
+</section>
+
+<!-- Archive -->
+
+<section class="archive">
+  <% Object.keys(archive).sort((a, b) => parseInt(b, 10) - parseInt(a, 10)).forEach(year => { %>
+    <section>
+      <header>
+        <h2><%= year %></h2>
+      </header>
+      <ul>
+        <% archive[year].forEach(post => { %>
+          <li><a href="/<%= post.slug %>"><%= post.title %></a></li>
+        <% }); %>
+      </ul>
+    </section>
+  <% }); %>
+</section>
+
+<%- include('footer') %>
+
+</body>
+</html>

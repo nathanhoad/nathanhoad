@@ -1,10 +1,5 @@
-# OS Junk
 .DS_Store
-
-# App Junk
-.sass-cache
-.bundle
-tmp
-log
-public/cache/*.html
-/docs
+Thumbs.db
+node_modules
+/public
+/artifacts

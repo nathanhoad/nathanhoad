@@ -1,5 +1,30 @@
-# Ruby + Markdown + Git powered Blog
+<img src="templates/footer.gif" />
 
-[Maneki](http://github.com/nathanhoad/maneki/) grabs Markdown documents from disk, parses them into memory for meta-data, and serves them up. My reasoning is that Atom/Sublime/Whatever is great for writing articles and Git is great for keeping things organised. Throw Ruby and Sinatra into the mix and you have all the ingredients for an insanely simple blogging engine.
+# Nathan Hoad
 
-I'm currently using it to power my blog at [nathanhoad.net](http://nathanhoad.net).
+The code that powers [https://nathanhoad.net](https://nathanhoad.net)
+
+## Writing posts
+
+Create a folder in the `/posts` directory and name it what your slug/url is going to be (eg. `posts/just-start-now`).
+
+Now create a `.text` file of the same name as the folder and put it in that folder (eg. `posts/just-start-now/just-start-now.text`).
+
+The first lines of the post will be its title, followed by a list of its headers:
+
+```
+# Just start now
+
+- published: 2018-03-06
+- tags: games, painting
+
+There is a long road between a dream and reality. The path is not well worn and sometimes hard to see.
+
+...
+```
+
+## Developing
+
+To run the server just do `npm start`. Posts will be compiled statically and then a simple asset server will spin up.
+
+In development mode (`NODE_ENV !== 'production'`) the server will watch for changes to posts and templates and recompile/restart when needed.

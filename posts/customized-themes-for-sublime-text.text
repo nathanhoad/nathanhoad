@@ -1,8 +1,0 @@
-# Customized Themes for Sublime Text
-
- - published: 2013-09-15 14:10
- - tags: programming
-
-The cool thing about Sublime Text is that any TextMate themes work right away. So that means tools like [this TextMate theme editor](http://tmtheme-editor.herokuapp.com/#/Summerfruit) can be used to make colour schemes for Sublime as well.
-
-Once you've downloaded a theme you like, it's easy to install it. Go back to Sublime Text and from the menu select _Sublime Text > Preferences > Browse Packages..._. Then copy the theme file into the User directory. Restart Sublime and then the new theme should show up under _Sublime Text > Preferences > Color Scheme_.
