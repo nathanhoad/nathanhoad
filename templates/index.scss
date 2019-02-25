@@ -46,7 +46,23 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -32%);
-      transition: transform 3s ease-in-out;
+
+      animation-name: float;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+
+      @keyframes float {
+        0% {
+          top: 50%;
+        }
+        50% {
+          top: 49%;
+        }
+        100% {
+          top: 50%;
+        }
+      }
 
       @media screen and (max-width: 440px) {
         max-width: 66%;
