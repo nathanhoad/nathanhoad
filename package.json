@@ -1,6 +1,6 @@
 {
   "name": "nathanhoad",
-  "version": "6.0.4",
+  "version": "6.0.5",
   "description": "The code that powers https://nathanhoad.net",
   "private": true,
   "main": "index.js",
