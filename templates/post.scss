@@ -84,6 +84,16 @@ body > article {
       padding: 0 10px;
     }
 
+    .twitter-tweet {
+      margin-left: 20px;
+      max-width: calc(100% - 20px);
+
+      @media screen and (max-width: 440px) {
+        margin-left: 0;
+        max-width: 100%;
+      }
+    }
+
     h2 {
       font-size: 26px;
       line-height: 32px;

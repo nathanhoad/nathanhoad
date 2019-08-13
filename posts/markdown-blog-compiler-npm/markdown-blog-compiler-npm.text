@@ -1,0 +1,10 @@
+# Extracting my Markdown blog compiler
+
+- published: 2019-05-23 23:00
+- tags: javascript
+
+I've just extracted my blog post static site compiler into an NPM to make it easier for people to use it themselves.
+
+Previously if you'd forked/cloned the repository for this blog it was messy to merge in upstream updates. Now that the compiler and the blog itself are separate that should be way easier.
+
+[Check out the compiler on NPM](https://www.npmjs.com/package/@nathanhoad/hey).
