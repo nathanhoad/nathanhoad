@@ -15,6 +15,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@nathanhoad/hey": "^1.0.0"
+    "@nathanhoad/hey": "^1.0.1"
   }
 }
