@@ -4,101 +4,31 @@
 
   & > h1 {
     position: absolute;
-    top: 20px;
-    width: 100%;
-    text-align: center;
-    font-size: 80px;
-    line-height: 100px;
-    margin: 20px 0 10px 0;
-    padding: 0;
-    // text-transform: uppercase;
-    font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    color: rgb(22, 48, 87);
-    color: #eee;
-    z-index: 1000;
-
-    @media screen and (max-width: 440px) {
-      top: 40px;
-      font-size: 50px;
-    }
+    top: -200px;
   }
 
   & > aside {
     width: 100%;
-    height: 700px;
-    background: url(/stars.png) 50% 50%;
+    height: 512px;
+    background: url(/forest-bg.gif) repeat-x center;
     margin-bottom: 30px;
-    overflow: hidden;
     position: relative;
 
     @media screen and (max-width: 440px) {
-      height: 480px;
-      background-size: 66% 66%;
+      max-width: 100%;
+      overflow: hidden;
       margin-bottom: 20px;
+      height: 300px;
     }
 
-    & > img[src^='rock'] {
-      max-width: 512px;
-      width: 100%;
+    & > img[src^='forest'] {
       position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       display: block;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -32%);
-
-      animation-name: float;
-      animation-duration: 4s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
-
-      @keyframes float {
-        0% {
-          top: 50%;
-        }
-        50% {
-          top: 49%;
-        }
-        100% {
-          top: 50%;
-        }
-      }
 
       @media screen and (max-width: 440px) {
-        max-width: 66%;
-      }
-    }
-
-    & > img[src^='purple'] {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-420px, -140px);
-
-      @media screen and (max-width: 440px) {
-        display: none;
-      }
-    }
-
-    & > img[src^='blue'] {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(320px, -200px);
-
-      @media screen and (max-width: 440px) {
-        display: none;
-      }
-    }
-
-    & > img[src^='green'] {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(320px, 150px);
-
-      @media screen and (max-width: 440px) {
-        display: none;
+        max-height: 300px;
       }
     }
   }
