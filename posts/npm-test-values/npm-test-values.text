@@ -1,8 +1,0 @@
-# NPM: Test Values
-
- - published: 2015-11-25 23:00
- - tags: javascript
-
-I just published an [NPM for generating random values for mock test objects](https://www.npmjs.com/package/test-values).
-
-You can use it for generating random names, numbers, etc.

@@ -1,70 +1,50 @@
 <!DOCTYPE html>
 <html lang="en-AU">
-<head>
-  <title><%= post.title %> - Nathan Hoad</title>
-  <meta property="og:title" content="<%= post.title %> - Nathan Hoad" />
-  <meta name="description" content="<%= post.headers.description %>" />
-  <meta property="og:description" content="<%= post.headers.description %>" />
-  <meta property="og:image" content="<%= post.headers.share %>" />
-  <meta property="og:url" content="https://nathanhoad.net/<%= post.slug %>" />
-  <meta name="author" content="Nathan Hoad" />
+  <head>
+    <title><%= post.title %> - Nathan Hoad</title>
+    <meta property="og:title" content="<%= post.title %> - Nathan Hoad" />
+    <meta name="description" content="<%= post.headers.description %>" />
+    <meta property="og:description" content="<%= post.headers.description %>" />
+    <meta property="og:image" content="<%= post.headers.share %>" />
+    <meta property="og:url" content="https://nathanhoad.net/<%= post.slug %>" />
+    <meta name="author" content="Nathan Hoad" />
 
-  <meta name="verify-v1" content="FJjra037EqYRGo8w0Atq5BHkBi8B+MPZSD+0jKQebLs=" />
-  <meta name="p:domain_verify" content="5c8fe00840c14d6c92865fc017137b69" />
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"  />
-  <link type="image/png" href="/favicon.png" rel="icon" />
-  <script src='https://static.itch.io/api.js'></script>
-</head>
+    <meta
+      name="verify-v1"
+      content="FJjra037EqYRGo8w0Atq5BHkBi8B+MPZSD+0jKQebLs="
+    />
+    <meta name="p:domain_verify" content="5c8fe00840c14d6c92865fc017137b69" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link type="image/png" href="/favicon.png" rel="icon" />
+    <script src="/enhance.js"></script>
+  </head>
 
-<body>
-
-<aside>
-  <a href="/">
-    <span>Nathan Hoad</span>
-  </a>
-</aside>
-
-<article>
-  <% if (post.headers.format === 'partial') { %>
-    <%- post.html %>
-  <% } else { %>
-    <header>
-      <% if (post.headers.icon) { %><img src="<%= post.headers.icon %>" /><% } %>
-      <h1><%= post.title %></h1>
-      <aside>
-        <%= ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][post.headers.published.getMonth()] %> <%= post.headers.published.getFullYear() %>
-        &middot;
-        <ul>
-          <% post.headers.tags.forEach(tag => { %>
-            <li><a href="/tags/<%= tag %>">#<%= tag %></a></li>
-          <% }); %>
-        </ul>
-      </aside>
-    </header>
-
-    <% if (post.headers.banner) { %>
-      <figure>
-        <img src="<%= post.headers.banner %>" />
-        <% if (post.headers.caption) { %>
-          <figcaption><%= post.headers.caption %></figcaption>
-        <% } %>
-      </figure>
-    <% } %>
-
-  <section>
-    <%- post.html %>
-  </section>
-
-  <% } %>
-
-  <section>
+  <body>
     <aside>
-      <p>If I just made your day a little better then you can thank me with a <a href="https://paypal.me/nathanforyou/4usd">coffee</a> or maybe a <a href="https://paypal.me/nathanforyou/11usd">pizza</a>.</p>
+      <a href="/">
+        Nathan Hoad
+      </a>
     </aside>
-  </section>
-</article>
 
-<%- include('footer') %>
+    <article>
+      <header>
+        <h1><%= post.title %></h1>
+        <aside class="meta">
+          <%= ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+          'August', 'September', 'October', 'November',
+          'December'][post.headers.published.getMonth()] %> <%=
+          post.headers.published.getFullYear() %>
+        </aside>
+      </header>
 
-</body>
+      <section>
+        <%- post.html %>
+      </section>
+    </article>
+
+    <%- include('footer') %>
+  </body>
 </html>

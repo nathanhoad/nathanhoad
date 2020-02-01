@@ -1,0 +1,102 @@
+body > footer {
+  border-top: 2px solid #ccc;
+  background: #f9f9f9;
+  padding-top: 0px;
+  margin: 120px 0 0 0;
+  padding-bottom: 30px;
+
+  & > ul {
+    list-style: none;
+    padding: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 90px 0 10px 0;
+    padding-top: 150px;
+    background: url(/footer.gif) no-repeat top center;
+    color: #666;
+
+    & > li {
+      display: inline-block;
+      margin: 0 5px;
+
+      & > a {
+        color: #666;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  & > aside {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #666;
+  }
+}
+
+.newsletter {
+  padding: 40px 0;
+
+  & > div {
+    max-width: 700px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+
+    @media screen and (max-width: 440px) {
+      padding: 0 20px;
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 30px;
+      padding: 0;
+      font-size: 22px;
+      line-height: 36px;
+    }
+
+    a {
+      color: black;
+    }
+  }
+
+  input[type="email"] {
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    border: 2px solid #666;
+    border-radius: 5px;
+    vertical-align: bottom;
+    padding: 0 10px;
+    width: 50%;
+
+    @media screen and (max-width: 440px) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  input[type="submit"] {
+    cursor: pointer;
+    background: rgb(28, 121, 28);
+    border: none;
+    border-bottom: 2px solid rgb(18, 83, 18);
+    border-radius: 5px;
+    line-height: 40px;
+    height: 40px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    vertical-align: bottom;
+    margin-left: 5px;
+  }
+}

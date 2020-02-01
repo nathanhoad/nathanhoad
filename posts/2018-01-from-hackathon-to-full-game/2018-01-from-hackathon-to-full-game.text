@@ -1,0 +1,71 @@
+# From a hackathon project to a full game
+
+- published: 2018-01-08 23:00:00
+- tags: gamedev
+- share: beach.jpg
+
+Back in November we won 'best design' at Node Knockout for our game Pixel Beach. After a bit of extra effort it is now available as a downloadable PC game.
+
+<section data-type="wide">
+
+[![Pixel Beach](header.jpg)](https://nathanhoad.itch.io/pixel-beach)  
+_Pixel Beach started out as our Node Knockout 2017 entry_
+
+</section>
+
+## The hackathon
+
+In case you aren't familiar, Node Knockout is a coding competition that has a strict 48 hour time frame.
+
+We had a bunch of ideas for the game before starting the hackathon but, with any time limited project, we had to make a lot of sacrifices to finish on time.
+
+As the final hours were approaching we made a final list of things we thought we didn't have time left to do. In the end, the only feature that matters is that the game _feels_ like a whole. The player would really only know if something was missing if it was half done or if the game loop itself was not an actual loop.
+
+We had planned on having a trick based scoring system where you would ride a wave up into the air and complete arrow key combinations. The simple replacement was just collecting some floating items to score points and avoiding others to not die.
+
+The last few touches were for adding a title and a score screen and making sure all of the graphics felt like they belonged together.
+
+We were pretty happy with what we submitted and, as it turned out, so were the judges. We picked up 'best design'.
+
+A couple of weeks later I started thinking about the stuff we left out. I thought about the challenge of turning Pixel Beach into a downloadable PC game. 
+
+## Taking it further
+
+I'd been working with [Electron](https://www.electronjs.org/) recently for app stuff but I wanted to see how hard it would be to use it as a wrapper for a web game.
+
+That part was pretty straight forward; just swapping the basic server with Electron. 
+
+The real work was implementing the extra gameplay stuff.
+
+I started by abstracting a bunch of common scene stuff (mainly camera and text effects) into a parent Scene class. I then created another abstracted Scene class for screens that had a title/menu setup and used that for the Title, Highscores, and About screens.
+
+Next I set up a data manager for persisting scores between games.
+
+<section data-type="pull-right">
+
+[![Pixel Beach on Itch.io](beach.jpg)](https://nathanhoad.itch.io/pixel-beach)  
+_Check out Pixel Beach on Itch.io_
+
+</section>
+
+The next step was the biggest - adding the trick based scoring. After a lot of trial and error (mostly due to not understanding how some parts of Phaser.js actually work) I ended up with a scoring system that I was happy with. 
+
+Flying into the air would present you with an arrow sequence that you had to match before you landed back in the wave. The more momentum you gained before launching into the air the longer you would fly for, buying more time to complete the trick. Completing a trick extended the countdown timer. 
+
+At the same time you were supposed to be collecting random stars that floated past in the wave. Both couldn't be done at once so you had to balance your time between the two - extending the countdown to have more time to collect stars. All the while you had to watch out for mines or it was all over.
+
+I'm a big fan of subtle feedback animation. It not only looks cool but it also helps teach the player what things do. When a trick was successfully completed I added some animation where each arrow prompt bounced into the timer which then would shoot out a little label showing that time had been added to the clock.
+
+For the case of a failed trick, I added some extra tweens to make it obvious that something went wrong.
+
+Then I swapped out the dependency on Spine for sprite animation with a simpler spritesheet/atlas handler using the JSON output from [Aseprite](https://www.aseprite.org/). Admittedly, this was mostly just because I wanted to experiment with randomizing layers for generating different characters per session.
+
+[Jaap](https://twitter.com/jaaprood), who composed the music for the game, was kind enough to extend the main game theme to be loopable.
+
+I also wanted to try out implementing a translation system so added one and translated the game into Spanish and German (with the help of [Lilly](https://lillypiri.com)).
+
+And lastly, I uploaded the finished build to [Itch.io](https://nathanhoad.itch.io/pixel-beach).
+
+And even more lastly, I open sourced the game to help people learn more about making games with Phaser.js. 
+
+Check out [Pixel Beach on GitHub](https://github.com/nathanhoad/pixelbeach) and let me know if you found it helpful.

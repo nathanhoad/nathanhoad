@@ -3,5 +3,6 @@
   "url": "https://nathanhoad.net",
   "posts": "posts",
   "public": "public",
-  "templates": "templates"
+  "templates": "templates",
+  "pages": ["404"]
 }

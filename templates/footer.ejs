@@ -1,5 +1,21 @@
 <footer>
-  <header>Follow me everywhere</header>
+  <form action="https://nathanhoad.us4.list-manage.com/subscribe?u=02b7c08b783c10184c4a1ef63&id=c81513b13f"
+    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="newsletter" target="_blank"
+    novalidate>
+    <div>
+      <p>
+        If you want to keep up to date with my adventures in game development then you
+        can <a href="https://twitter.com/nathanhoad">follow me on Twitter</a> or
+        subscribe to my monthly newsletter.
+      </p>
+      <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_02b7c08b783c10184c4a1ef63_c81513b13f" tabindex="-1" value="">
+      </div>
+      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+    </div>
+  </form>
+
   <ul>
     <li><a href="https://twitter.com/nathanhoad">Twitter</a></li>
     <li><a href="https://github.com/nathanhoad">GitHub</a></li>
@@ -14,37 +30,17 @@
   // Footer
   document.querySelector('footer > aside > span').textContent = new Date().getFullYear();
 
-  // Google Analytics
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-650804-3']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-  
   // Google Fonts
   WebFontConfig = {
     google: { families: ['Enriqueta', 'Open Sans:400,700'] }
   };
-  (function() {
+  (function () {
     var wf = document.createElement('script');
     wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-    '://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+      '://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
     wf.type = 'text/javascript';
     wf.async = 'true';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
-  })();
-  
-  // Itch
-  (function() {
-    [].slice.call(document.querySelectorAll('.buy-game')).forEach(function(button) {
-      Itch.attachBuyButton(button, {
-        user: "nathanhoad",
-        game: button.getAttribute('data-game')
-      });
-    });
   })();
 </script>

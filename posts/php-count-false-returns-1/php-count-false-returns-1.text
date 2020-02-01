@@ -1,6 +1,0 @@
-# PHP: count(false) returns 1
-
-- published: 2009-02-27 07:40
-- tags: php
-
-If you ever come across a variable that has a count of 1 but, when you `print_r` it, it displays nothing then that is probably why. If you do come across a situation where this comes up you might have bigger problems elsewhere in your code 

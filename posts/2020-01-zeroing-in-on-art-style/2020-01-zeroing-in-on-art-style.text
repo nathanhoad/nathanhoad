@@ -1,0 +1,75 @@
+# Zeroing in on an art style
+
+ - published: 2020-01-31
+ - tags: art, gamedev
+ - share: share.png
+
+A dead motherboard meant most of January was spent less on game dev and more on refining my art style.
+
+<section data-type="wide">
+
+![Me, Lilly, and Coco having a picnic](picnic.png)  
+_A month of practicing pixel art goes a long way_
+
+</section>
+
+The story this month actually begins one day earlier, on December 31, 2019.
+
+It was mid-morning on New Years Eve and we had just finished a quick round of PUBG when my computer just suddenly turned itself off.
+
+After some failed over-the-phone triaging, I drove it up to Ben's and, after some actual testing, he diagnosed the issue as a faulty motherboard. We sent it off for a replacement and were told that the turnaround for a new motherboard was a few weeks.
+
+Given the PC was my primary game dev machine I decided to use those weeks to practice some pixel art.
+
+<section data-type="pull-right">
+
+[![Oddity reveal trailer](oddity.jpg)](https://www.youtube.com/watch?v=-CBwIXnbUuY)  
+_Oddity's reveal trailer (youtube.com)_
+
+</section>
+
+It was around then that I also came across the new reveal trailer for Oddity (being renamed from Mother 4). Earthbound is one of my favourite games and I loved the look of Oddity.
+
+Initially, I was thinking of having sprites in a style similar to GameBoy Advance era Pokemon games - small-ish character sprites and only having four directions for movement. Earthbound and Mother 3 not only had bigger sprites but were also animated in eight directions. 
+
+Without much more thought I figured I'd try the challenge of bigger sprites and more directions for my game.
+
+I started by recreating my Coco character sprite from the adventure game I'm working on.
+
+<section data-type="gallery" data-layout="2">
+
+![Small Coco sprite](coco-small.gif)  
+_The original size_
+
+![Coco sprite](coco.gif)  
+_The bigger size allowed for more detail_
+
+</section>
+
+The results, in my opinion anyway, were immediately better.
+
+I really liked the balance of detail in the new style. They were small enough that I could conceivably animate a bunch of characters but big enough to show more detailed animations.
+
+For the next fun challenge I decided to redraw a scene featuring our D&D party.
+
+<section data-type="gallery" data-layout="2">
+
+![Brave Adventurers pixel art](brave-adventurers.png)  
+_I drew this back in August_
+
+![Brave Adventurers pixel art with more detail](brave-adventurers2.png)  
+_More detail meant more personality_
+
+</section>
+
+The extra level of detail meant more facial expressions as well as gestures. I think having those extra pixels to play with really adds more personality to each character.
+
+Next up I decided to make a little scene with me and Lilly and Coco (as an actual cat) in it. 
+
+I figured it would make a better landing header for this site so I updated the home page.
+
+That got me thinking about some other changes I wanted to make to this site.
+
+After spending over ten years posting mostly random stuff I've decided to focus on just game dev and instead of writing quick little howtos I think I'd prefer to write longer form. With that in mind, this is the first of what should be monthly posts about the games I'm working on.
+
+I've also set up a mailing list for anyone that might be interested in getting these posts as they come out, right to their inbox. I've always wished more game developers would share their process so I figure I'd help add to that.

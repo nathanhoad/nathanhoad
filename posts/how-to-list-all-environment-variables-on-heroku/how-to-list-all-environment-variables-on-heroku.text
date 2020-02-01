@@ -1,8 +1,0 @@
-# How to: List all environment variables on Heroku
-
- - published: 2016-02-04 11:00
- - tags: heroku
-
-You probably already know that `heroku config` lists out the config variables that
-you have added yourself but if you want to know what other env vars are being set
-by Heroku themselves you can use `heroku run printenv`.

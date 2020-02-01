@@ -1,0 +1,26 @@
+# Building little web apps with @suddenly
+
+- published: 2019-08-09 16:00
+- tags: javascript
+
+When I'm not making games, I develop things for the web.
+
+Recently I found myself needing to make a lot of small apps in a short amount of time. I figured it was a good excuse to throw together some kind of framework to help get the boilerplate stuff done quicker.
+
+I generally use the same few packages when building web apps with very similar structure and configuration so abstracting the shared stuff was pretty straight forward.
+
+## Server
+
+- [`@suddenly/server`](https://www.npmjs.com/package/@suddenly/server) creates and configures an [Express](https://expressjs.com/) app with a bunch of default middleware. It also provides a simple way of configuring routing.
+- [`@suddenly/mailer`](https://www.npmjs.com/package/@suddenly/mailer) provides a simple way of sending templated emails (for notifications or whatever).
+
+## Client
+
+- [`@suddenly/api`](https://www.npmjs.com/package/@suddenly/api) provides some convenience wrappers around the `fetch` API.
+- [`@suddenly/flux`](https://www.npmjs.com/package/@suddenly/flux) is a simple implementation of [Flux](https://facebook.github.io/flux/) that is based on [Redux](https://redux.js.org/).
+
+## Compiler
+
+- [`@suddenly/compiler`](https://www.npmjs.com/package/@suddenly/compiler) wraps [Parcel](https://parceljs.org/) and the [Typescript compiler](https://www.typescriptlang.org/) to provide a single watcher/builder for both the client and server code.
+
+None of this stuff is meant to be used in big apps but if you find any of them helpful I'd love to [hear about it](https://twitter.com/nathanhoad).

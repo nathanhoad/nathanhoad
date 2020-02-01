@@ -3,7 +3,6 @@
   "version": "6.1.0",
   "description": "The code that powers https://nathanhoad.net",
   "private": true,
-  "main": "index.js",
   "scripts": {
     "start": "hey run"
   },
@@ -15,6 +14,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@nathanhoad/hey": "^1.0.1"
+    "@nathanhoad/hey": "^1.4.0"
   }
 }

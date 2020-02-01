@@ -1,55 +1,101 @@
 <!DOCTYPE html>
 <html lang="en-AU">
-<head>
-  <title>Nathan Hoad</title>
-  <meta property="og:title" content="Nathan Hoad" />
-  <meta name="description" content="I paint and make games. Sometimes I write stuff." />
-  <meta property="og:description" content="I paint and make games. Sometimes I write stuff." />
-  <meta property="og:image" content="https://nathanhoad.net/share.jpg" />
-  <meta property="og:url" content="https://nathanhoad.net" />
-  <meta name="author" content="Nathan Hoad" />
+  <head>
+    <title>Nathan Hoad</title>
+    <meta property="og:title" content="Nathan Hoad" />
+    <meta
+      name="description"
+      content="I paint and make games. Sometimes I write stuff."
+    />
+    <meta
+      property="og:description"
+      content="I paint and make games. Sometimes I write stuff."
+    />
+    <meta property="og:image" content="https://nathanhoad.net/share.jpg" />
+    <meta property="og:url" content="https://nathanhoad.net" />
+    <meta name="author" content="Nathan Hoad" />
 
-  <meta name="verify-v1" content="FJjra037EqYRGo8w0Atq5BHkBi8B+MPZSD+0jKQebLs=" />
-  <meta name="p:domain_verify" content="5c8fe00840c14d6c92865fc017137b69" />
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"  />
-  <link type="image/png" href="/favicon.png" rel="icon" />
-  <script src='https://static.itch.io/api.js'></script>
-</head>
+    <meta
+      name="verify-v1"
+      content="FJjra037EqYRGo8w0Atq5BHkBi8B+MPZSD+0jKQebLs="
+    />
+    <meta name="p:domain_verify" content="5c8fe00840c14d6c92865fc017137b69" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link type="image/png" href="/favicon.png" rel="icon" />
+  </head>
 
-<body>
+  <body>
+    <header class="welcome">
+      <div></div>
+      <h1>Nathan Hoad</h1>
+    </header>
 
-<section class="welcome">
-  <h1>Hi! I'm Nathan Hoad</h1>
-  <aside>
-    <img src="forest.gif" />
-  </aside>
-  <p>
-    I spend my time <a href="https://nathanhoad.itch.io">making video games</a> and random other creative things with my wife, <a href="https://lillypiri.com">Lilly Piri</a>.
-  </p>
-  <p>
-    Making games combines my other passions, <a href="https://github.com/nathanhoad">coding</a>, <a href="https://bynathanhoad.etsy.com">making art</a>, and composing music.
-  </p>
-  <p>
-    Occasionally I write stuff too...
-  </p>
-</section>
+    <section class="about">
+      <p>
+        Hi, I'm Nathan Hoad. I'm an independent game developer from Australia.
+      </p>
+      <p>
+        I love writing code, drawing pictures, and telling stories and making
+        games combines all of those things.
+      </p>
+      <p>
+        When I was a kid I had a fondness for adventure games and as an adult
+        that has only grown.
+      </p>
+      <p>
+        I'm making an adventure game with
+        <a href="https://lillypiri.com">Lilly Piri</a> about our cat, Coco.
+        There's something special about following along with a project as it's
+        being made so I'll be sharing regular updates with progress.
+      </p>
+    </section>
 
-<section class="archive">
-  <% Object.keys(archive).sort((a, b) => parseInt(b, 10) - parseInt(a, 10)).forEach(year => { %>
-    <section>
-      <header>
-        <h2><%= year %></h2>
-      </header>
+    <section class="contents">
       <ul>
-        <% archive[year].forEach(post => { %>
-          <li><a href="/<%= post.slug %>"><%= post.title %></a></li>
-        <% }); %>
+        <% posts.forEach(post => { %>
+        <li>
+          <h2><a href="/<%= post.slug %>"><%= post.title %></a></h2>
+          <aside class="meta">
+            <%= ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+            'August', 'September', 'October', 'November',
+            'December'][post.headers.published.getMonth()] %> <%=
+            post.headers.published.getFullYear() %>
+          </aside>
+        </li>
+        <% }) %>
       </ul>
     </section>
-  <% }); %>
-</section>
 
-<%- include('footer') %>
+    <%- include('footer') %>
 
-</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var background = document.querySelector(".welcome");
+        var foreground = background.firstElementChild;
+        var title = background.querySelector("h1");
+
+        function parallax() {
+          var bounds = background.getBoundingClientRect();
+          var scroll = bounds.bottom / window.innerHeight;
+
+          if (scroll > 2 || scroll < -1) return;
+
+          foreground.style.setProperty(
+            "transform",
+            "translateY(" + scroll * 6 + "%)"
+          );
+          title.style.setProperty(
+            "transform",
+            "translate(-50%, " + (scroll - 0.8) * 40 + "%)"
+          );
+        }
+        parallax();
+
+        window.addEventListener("scroll", parallax);
+      });
+    </script>
+  </body>
 </html>

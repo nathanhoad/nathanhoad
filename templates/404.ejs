@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+  <head>
+    <title>Page not found</title>
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link type="image/png" href="/favicon.png" rel="icon" />
+  </head>
+
+  <body>
+    <aside>
+      <a href="/">
+        Nathan Hoad
+      </a>
+    </aside>
+
+    <script>
+      [
+        {
+          from: "/what-i-learned-from-365-paintings",
+          to: "/2017-12-what-i-learned-from-365-paintings"
+        },
+        {
+          from: "/just-start-now",
+          to: "/2018-03-just-start-now"
+        }
+      ].forEach(function(route) {
+        if (document.location.search.split("=")[1] === route.from) {
+          document.location.replace(route.to);
+        }
+      });
+    </script>
+
+    <section class="not-found">
+      <h1>That page could not be found</h1>
+      <p>
+        Either it no longer exists or you have a typo.
+      </p>
+      <p>
+        If you are looking for stuff about Git then I suggest
+        <a href="https://duckduckgo.com/">DuckDuckGo</a>.
+      </p>
+      <p>Otherwise you can <a href="/">go home</a>.</p>
+    </section>
+
+    <%- include('footer') %>
+  </body>
+</html>
