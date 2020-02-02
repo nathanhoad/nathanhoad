@@ -82,6 +82,7 @@ body > footer {
   }
 
   input[type="submit"] {
+    -webkit-appearance: none;
     cursor: pointer;
     background: rgb(28, 121, 28);
     border: none;
