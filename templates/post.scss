@@ -154,18 +154,73 @@ body > article {
 
   /* Third Party */
 
-  .twitter-tweet {
-    margin: 20px auto;
-
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    font-size: 17px;
-    line-height: 24px;
+  .tweet {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
     color: black;
     font-style: normal;
-    text-align: right;
 
-    & > a {
+    a {
+      text-decoration: none;
+    }
+
+    .tweet-profile {
+      display: block;
+      position: relative;
+      padding-left: 42px;
+      color: black;
+      font-size: 12px;
+      line-height: 16px;
+      color: #666;
+      margin-bottom: 10px;
+
+      strong {
+        color: black;
+        display: block;
+        font-size: 14px;
+        line-height: 16px;
+        position: relative;
+
+        em {
+          display: inline-block;
+          font-size: 9px;
+          color: white;
+          background: #3794db;
+          border-radius: 50%;
+          width: 14px;
+          height: 14px;
+          line-height: 14px;
+          font-style: normal;
+          text-align: center;
+          vertical-align: middle;
+          text-indent: -1px;
+          transform: translateY(-1px);
+          margin-left: 3px;
+        }
+      }
+
+      & > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+
+      &:hover > strong {
+        text-decoration: underline;
+      }
+    }
+
+    .tweet-time {
+      margin: 20px -20px -20px -20px;
+      padding: 10px 20px;
+      border-top: 1px solid #ddd;
       font-size: 14px;
       color: #888;
       display: block;
@@ -173,7 +228,8 @@ body > article {
     }
 
     p {
-      text-align: left;
+      margin: 0 0 10px 0;
+
       & > a {
         color: #2b7bb9;
         text-decoration: underline;
@@ -182,6 +238,10 @@ body > article {
         &[href*="hashtag"] {
           color: #888;
         }
+      }
+
+      & > img {
+        border-radius: 3px;
       }
     }
 

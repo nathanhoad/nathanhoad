@@ -10,6 +10,13 @@ window.addEventListener("DOMContentLoaded", function() {
     var p = em.parentElement;
     var figure = document.createElement("figure");
 
+    // Bail out if the main element is a link but not an image
+    if (
+      p.firstElementChild.tagName === "A" &&
+      !p.firstElementChild.querySelector("img")
+    )
+      return;
+
     // Add image (or link if it is one)
     figure.appendChild(p.firstElementChild);
 
@@ -26,12 +33,38 @@ window.addEventListener("DOMContentLoaded", function() {
   // Quotes
   //
   queryAll("blockquote").forEach(function(quote) {
-    [].slice.call(quote.children).forEach(function(line) {
-      if (line.innerText.startsWith("--")) {
-        line.className = "author";
-        line.innerHTML = line.innerText.replace(/^\-\-/, "&mdash;");
-      }
-    });
+    var lines = [].slice.call(quote.children);
+    var lastLine = lines[lines.length - 1];
+
+    if (lastLine.querySelector('a[href*="twitter.com/nathanhoad/status"]')) {
+      quote.className = "tweet";
+      quote.removeChild(lastLine);
+      lastLine.innerHTML = lastLine.innerHTML.replace("--", "");
+      // Published time
+      var time = lastLine.querySelector("a");
+      time.className = "tweet-time";
+      lastLine.removeChild(time);
+      quote.appendChild(time);
+      // Profile
+      var matches = lastLine.innerText.match(/([^\(]+)\(([^\)]+)/, "");
+      var name = matches[1].trim();
+      var verified = name.endsWith("*");
+      name = name.replace(/\*$/, "");
+      var handle = matches[2];
+      var author = document.createElement("a");
+      author.href = "https://twitter.com/" + handle.replace("@", "");
+      author.className = "tweet-profile";
+      author.innerHTML =
+        '<img src="/twitter-profile.jpg" /><strong>' +
+        name +
+        (verified ? " <em>✔</em>" : "") +
+        "</strong> " +
+        handle;
+      quote.insertBefore(author, quote.firstElementChild);
+    } else if (lastLine.innerText.startsWith("--")) {
+      line.className = "author";
+      line.innerHTML = line.innerHTML.replace(/^\-\-/, "&mdash;");
+    }
   });
 
   //
