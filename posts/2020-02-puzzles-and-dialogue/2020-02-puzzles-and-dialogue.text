@@ -1,0 +1,64 @@
+# Puzzles and dialogue trees
+
+- published: 2020-02-28
+- tags: gamedev
+
+Well, that's the end of February which means its time for another game dev update.
+
+I started out this month expanding on some of the pixel art I started a few weeks back.
+
+<section data-type="pull-right">
+
+![Coco can walk in eight directions](coco.gif)  
+_Coco can now walk in eight directions._
+
+</section>
+
+After deciding to go ahead with a [new art style](/2020-01-zeroing-in-on-art-style), I was keen to experiment a little more. First up was adding walk cycles for each direction for Coco. Having previously only cared about the main four directions, doing the diagonals was an interesting challenge.
+
+One thing I always find comforting about pixel art animation is how finite the actual possibilities are, especially with such tiny canvases. When something seems difficult you can just keep experimenting until it looks right.
+
+More often than not, putting a pixel in a weird place ends up looking more right than where it theoretically should be.
+
+## Puzzle dependency charts
+
+The main focus for February was thinking up puzzles for the yet to be titled Coco adventure game.
+
+I had been keeping a notebook of puzzle ideas but it was time to move them into something more structured.
+
+[Ron Gilbert](https://www.grumpygamer.com/puzzle_dependency_charts) came up with the idea for puzzle dependency charts while working on some of the old Lucasarts adventures.
+
+These charts help keep track of how everything fits together and give you a visual idea of the complexity of the game.
+
+So far I think I have half of Act 1 of the game mapped out and a small part of Act 2.
+
+## Branching dialogue
+
+The secondary focus for February was building a branching dialogue editor.
+
+Dialogue handling had been a planned feature of the engine for a while so it felt good to finally be tackling it.
+
+Initially, I thought I'd end up using something like [YarnSpinner](https://yarnspinner.dev/) or [Ink](https://www.inklestudios.com/ink/) but, while both are great tools, neither really fit my needs for this project. _On a related topic: I did use Ink for our multi-award winning news game, [The Amazon Race](https://www.abc.net.au/news/2019-02-27/amazon-warehouse-workers-game-race/10803346)._
+
+<section data-type="pull-right">
+
+![A simple dialogue structure](dialogue.png)  
+_The general idea - everything can be expressed as a node that points to other nodes._
+
+</section>
+
+I set up a GitHub project and mapped out how it was all going to work.
+
+The dialogue engine would have two parts - the editor, for writing the dialogue trees, and the handler, for importing and parsing those dialogue trees in the game itself.
+
+My plan for organising dialogue was treating everything as a 'node' - a single piece of dialogue is a node, a conditional branch is a node, a set of responses is a node (with each response pointing to another node).
+
+Nodes could have 'mutations' and 'conditions' that call out into the game itself to affect or query things. Other dialogue engines that I researched were mostly keeping their own state (that the game could query) but I felt like reversing that was better for how I wanted to deal with things.
+
+One of the main goals I wanted was for the dialogue handler to be stateless. Given a starting key it would give you what was available and then tell you what the next key was.
+
+With that in mind I started building the editor. I decided on it being a web app because I figured it would eventually be used collaboratively (also because I had been meaning to give [Next.js](https://nextjs.org/) another whirl given it had been ages since I last looked at it).
+
+Fast forward to now and the editor is functionally almost done - it's usable but it's ugly as sin.
+
+Once the design side of things is done I think I'll open source it in case it's useful for anyone else.

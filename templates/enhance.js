@@ -11,11 +11,7 @@ window.addEventListener("DOMContentLoaded", function() {
     var figure = document.createElement("figure");
 
     // Bail out if the main element is a link but not an image
-    if (
-      p.firstElementChild.tagName === "A" &&
-      !p.firstElementChild.querySelector("img")
-    )
-      return;
+    if (p.firstElementChild.tagName === "A" && !p.firstElementChild.querySelector("img")) return;
 
     // Add image (or link if it is one)
     figure.appendChild(p.firstElementChild);
@@ -55,11 +51,7 @@ window.addEventListener("DOMContentLoaded", function() {
       author.href = "https://twitter.com/" + handle.replace("@", "");
       author.className = "tweet-profile";
       author.innerHTML =
-        '<img src="/twitter-profile.jpg" /><strong>' +
-        name +
-        (verified ? " <em>✔</em>" : "") +
-        "</strong> " +
-        handle;
+        '<img src="/twitter-profile.jpg" /><strong>' + name + (verified ? " <em>✔</em>" : "") + "</strong> " + handle;
       quote.insertBefore(author, quote.firstElementChild);
     } else if (lastLine.innerText.startsWith("--")) {
       line.className = "author";
@@ -101,10 +93,12 @@ window.addEventListener("DOMContentLoaded", function() {
         break;
 
       case "IMG":
-      // Do nothing. We already have the image
+        // Do nothing. We already have the image
+        break;
 
       case "VIDEO":
-      // Do nothing. We already have the video
+        // Do nothing. We already have the video
+        break;
 
       default:
         media = media.querySelector("img");
@@ -153,11 +147,9 @@ window.addEventListener("DOMContentLoaded", function() {
 
     // Set up rows
     var rowClasses = ["one", "two", "three", "four"];
-    var rowCounts = (section.getAttribute("data-layout") || "")
-      .split(",")
-      .map(function(n) {
-        return parseInt(n, 10);
-      });
+    var rowCounts = (section.getAttribute("data-layout") || "").split(",").map(function(n) {
+      return parseInt(n, 10);
+    });
     for (var r = 0; r < rowCounts.length; r++) {
       var row = document.createElement("div");
       row.className = "row " + rowClasses[rowCounts[r] - 1];
