@@ -54,8 +54,8 @@ window.addEventListener("DOMContentLoaded", function() {
         '<img src="/twitter-profile.jpg" /><strong>' + name + (verified ? " <em>✔</em>" : "") + "</strong> " + handle;
       quote.insertBefore(author, quote.firstElementChild);
     } else if (lastLine.innerText.startsWith("--")) {
-      line.className = "author";
-      line.innerHTML = line.innerHTML.replace(/^\-\-/, "&mdash;");
+      lastLine.className = "author";
+      lastLine.innerHTML = lastLine.innerHTML.replace(/^\-\-/, "&mdash;");
     }
   });
 

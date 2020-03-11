@@ -9,20 +9,11 @@
     <meta property="og:url" content="https://nathanhoad.net/tags/<%= tag %>" />
     <meta name="author" content="Nathan Hoad" />
 
-    <meta
-      name="verify-v1"
-      content="FJjra037EqYRGo8w0Atq5BHkBi8B+MPZSD+0jKQebLs="
-    />
+    <meta name="verify-v1" content="FJjra037EqYRGo8w0Atq5BHkBi8B+MPZSD+0jKQebLs=" />
     <meta name="p:domain_verify" content="5c8fe00840c14d6c92865fc017137b69" />
-    <meta
-      name="viewport"
-      content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
     <link type="image/png" href="/favicon.png" rel="icon" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Enriqueta|Open+Sans:400,700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Enriqueta|Open+Sans:400,700&display=swap" rel="stylesheet" />
   </head>
 
   <body>
@@ -40,10 +31,8 @@
           <li>
             <h2><a href="/<%= post.slug %>"><%= post.title %></a></h2>
             <aside class="meta">
-              <%= ['January', 'February', 'March', 'April', 'May', 'June',
-              'July', 'August', 'September', 'October', 'November',
-              'December'][post.headers.published.getMonth()] %> <%=
-              post.headers.published.getFullYear() %>
+              <%= ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
+              'November', 'December'][post.headers.published.getMonth()] %> <%= post.headers.published.getFullYear() %>
             </aside>
           </li>
           <% }) %>

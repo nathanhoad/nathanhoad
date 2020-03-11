@@ -19,20 +19,44 @@ hr {
 
 // Back link
 body > aside:first-child {
-  border-top: 4px solid green;
-  padding: 20px 0 60px 0;
+  padding: 20px 40px;
+  margin-bottom: 150px;
+  position: relative;
+  height: 64px;
+  display: flex;
 
   & > a {
-    color: transparent;
-    text-indent: -1000px;
-    background: url("/nathanhoad.png") no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-    display: block;
-    width: 100%;
-    height: 200px;
-    margin: auto;
-    transition: all 0.2s ease;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 85px;
+    color: #666;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    margin-right: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    flex-grow: 0;
+    position: relative;
+
+    &:hover {
+      color: black;
+    }
+
+    &:first-of-type {
+      background: url("/logo.png") no-repeat top left;
+      background-size: 64px 64px;
+      height: 64px;
+      padding-left: 80px;
+      flex-grow: 1;
+      color: #292929;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 
   @media screen and (max-width: 440px) {

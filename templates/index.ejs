@@ -2,10 +2,7 @@
 <html lang="en-AU">
   <head>
     <title>Nathan Hoad and the game dev adventure</title>
-    <meta
-      property="og:title"
-      content="Nathan Hoad and the game dev adventure"
-    />
+    <meta property="og:title" content="Nathan Hoad and the game dev adventure" />
     <meta
       name="description"
       content="I'm making an adventure game with Lilly Piri about our cat, Coco. There's something special about following along with a project as it's being made so I'll  sharing regular updates with progress."
@@ -18,21 +15,12 @@
     <meta property="og:url" content="https://nathanhoad.net" />
     <meta name="author" content="Nathan Hoad" />
 
-    <meta
-      name="verify-v1"
-      content="FJjra037EqYRGo8w0Atq5BHkBi8B+MPZSD+0jKQebLs="
-    />
+    <meta name="verify-v1" content="FJjra037EqYRGo8w0Atq5BHkBi8B+MPZSD+0jKQebLs=" />
     <meta name="p:domain_verify" content="5c8fe00840c14d6c92865fc017137b69" />
-    <meta
-      name="viewport"
-      content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
     <link type="image/png" href="/favicon.png" rel="icon" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Enriqueta|Open+Sans:400,700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Enriqueta|Open+Sans:400,700&display=swap" rel="stylesheet" />
   </head>
 
   <body>
@@ -46,18 +34,15 @@
         Hi, I'm Nathan Hoad. I'm an independent game developer from Australia.
       </p>
       <p>
-        I love writing code, drawing pictures, and telling stories and making
-        games combines all of those things.
+        I love writing code, drawing pictures, and telling stories and making games combines all of those things.
       </p>
       <p>
-        When I was a kid I had a fondness for adventure games and as an adult
-        that has only grown.
+        When I was a kid I had a fondness for adventure games and as an adult that has only grown.
       </p>
       <p>
         I'm making an adventure game with
-        <a href="https://lillypiri.com">Lilly Piri</a> about our cat, Coco.
-        There's something special about following along with a project as it's
-        being made so I'll be sharing regular updates with progress.
+        <a href="https://lillypiri.com">Lilly Piri</a> about our cat, Coco. There's something special about following
+        along with a project as it's being made so I'll be sharing regular updates with progress.
       </p>
     </section>
 
@@ -67,10 +52,8 @@
         <li>
           <h2><a href="/<%= post.slug %>"><%= post.title %></a></h2>
           <aside class="meta">
-            <%= ['January', 'February', 'March', 'April', 'May', 'June', 'July',
-            'August', 'September', 'October', 'November',
-            'December'][post.headers.published.getMonth()] %> <%=
-            post.headers.published.getFullYear() %>
+            <%= ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
+            'November', 'December'][post.headers.published.getMonth()] %> <%= post.headers.published.getFullYear() %>
           </aside>
         </li>
         <% }) %>
@@ -91,14 +74,8 @@
 
           if (scroll > 2 || scroll < -1) return;
 
-          foreground.style.setProperty(
-            "transform",
-            "translateY(" + scroll * 6 + "%)"
-          );
-          title.style.setProperty(
-            "transform",
-            "translate(-50%, " + (scroll - 0.8) * 40 + "%)"
-          );
+          foreground.style.setProperty("transform", "translateY(" + scroll * 6 + "%)");
+          title.style.setProperty("transform", "translate(-50%, " + (scroll - 0.8) * 40 + "%)");
         }
         parallax();
 
