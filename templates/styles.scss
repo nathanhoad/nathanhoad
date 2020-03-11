@@ -28,7 +28,7 @@ body > aside:first-child {
   & > a {
     display: inline-block;
     vertical-align: middle;
-    line-height: 85px;
+    padding-top: 32px;
     color: #666;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     margin-right: 20px;
@@ -46,9 +46,11 @@ body > aside:first-child {
     &:first-of-type {
       background: url("/logo.png") no-repeat top left;
       background-size: 64px 64px;
+      padding-top: 32px;
       height: 64px;
       padding-left: 80px;
       flex-grow: 1;
+      flex-shrink: 0;
       color: #292929;
       font-weight: bold;
       font-size: 18px;
@@ -60,7 +62,16 @@ body > aside:first-child {
   }
 
   @media screen and (max-width: 440px) {
-    padding-bottom: 30px;
+    padding: 10px;
+    margin-bottom: 100px;
+
+    & > a {
+      display: none;
+
+      &:first-of-type {
+        display: inline-block;
+      }
+    }
   }
 }
 
