@@ -1,3 +1,5 @@
+// TODO: make a full screen image viewer thing
+
 function queryAll(selector, parent) {
   return [].slice.call(document.querySelectorAll(selector, parent));
 }
@@ -158,5 +160,93 @@ window.addEventListener("DOMContentLoaded", function() {
         row.appendChild(items.shift());
       }
     }
+  });
+
+  //
+  // Collect all images into a global gallery
+  //
+  var allImages = queryAll("article img").filter(function(image) {
+    return image.parentElement.tagName !== "A";
+  });
+
+  function closeGallery() {
+    gallery.className = "main-gallery";
+  }
+
+  function previousImage() {
+    currentIndex = currentIndex === 0 ? allImages.length - 1 : currentIndex - 1;
+    currentImage.src = allImages[currentIndex].src;
+    currentImage.className = currentImage.className.includes("1") ? "jiggle-left-2" : "jiggle-left-1";
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % allImages.length;
+    currentImage.src = allImages[currentIndex].src;
+    currentImage.className = currentImage.className.includes("1") ? "jiggle-right-2" : "jiggle-right-1";
+  }
+
+  var currentIndex = 0;
+  var gallery = document.createElement("div");
+  gallery.className = "main-gallery";
+  var overlay = document.createElement("div");
+  overlay.className = "overlay";
+  overlay.addEventListener("click", closeGallery);
+  gallery.appendChild(overlay);
+  var currentImage = new Image();
+  gallery.appendChild(currentImage);
+
+  if (allImages.length > 1) {
+    var prevButton = document.createElement("button");
+    prevButton.title = "Previous";
+    prevButton.innerText = "‹";
+    prevButton.className = "previous";
+    prevButton.addEventListener("click", previousImage);
+    gallery.appendChild(prevButton);
+
+    var nextButton = document.createElement("button");
+    nextButton.title = "Next";
+    nextButton.innerText = "›";
+    nextButton.className = "next";
+    nextButton.addEventListener("click", nextImage);
+    gallery.appendChild(nextButton);
+  }
+
+  var closeButton = document.createElement("button");
+  closeButton.title = "Close";
+  closeButton.innerText = "×";
+  closeButton.className = "close";
+  closeButton.addEventListener("click", closeGallery);
+  gallery.appendChild(closeButton);
+
+  document.body.appendChild(gallery);
+
+  window.addEventListener("keyup", function(event) {
+    if (!gallery.className.includes("visible")) return;
+
+    switch (event.keyCode) {
+      case 39:
+        event.preventDefault();
+        event.stopPropagation();
+        return nextImage();
+
+      case 37:
+        event.preventDefault();
+        event.stopPropagation();
+        return previousImage();
+
+      case 27:
+        event.preventDefault();
+        event.stopPropagation();
+        return closeGallery();
+    }
+  });
+
+  allImages.forEach(function(image, index) {
+    // Open the gallery on this index
+    image.addEventListener("click", function() {
+      gallery.className = "main-gallery visible";
+      currentIndex = index;
+      currentImage.src = allImages[currentIndex].src;
+    });
   });
 });

@@ -1,11 +1,25 @@
 body > article {
   & > header {
-    max-width: 700px;
-    margin: 50px auto 30px auto;
+    max-width: 960px;
+    margin: 50px auto;
+    position: relative;
+    text-align: center;
+    padding-bottom: 50px;
 
     @media screen and (max-width: 440px) {
       max-width: 100%;
-      padding: 0 10px;
+      // padding: 0 10px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 150px;
+      height: 1px;
+      background: #ccc;
+      transform: translateX(-50%);
     }
   }
 
@@ -22,20 +36,21 @@ body > article {
   }
 
   h1 {
-    font-size: 42px;
-    line-height: 48px;
-    margin-bottom: 20px;
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 30px;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-weight: bold;
 
     @media screen and (max-width: 440px) {
-      font-size: 35px;
-      line-height: 42px;
+      font-size: 40px;
+      line-height: 48px;
+      padding: 5px;
     }
   }
 
   .meta {
-    font-size: 16px;
+    font-size: 18px;
     margin: 0 auto;
     color: #999;
     font-family: Arial, Helvetica, sans-serif;

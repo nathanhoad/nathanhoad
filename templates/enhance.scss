@@ -158,3 +158,140 @@
     margin: 0;
   }
 }
+
+.main-gallery {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateY(110%);
+  transition: transform 0.3s ease;
+
+  &.visible {
+    transform: translateY(0);
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 64px;
+    height: 64px;
+    background: rgba(47, 154, 231, 0.6);
+    border: none;
+    color: white;
+    font-size: 40px;
+    line-height: 62px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+
+    @media screen and (max-width: 440px) {
+      top: initial;
+      bottom: 0;
+      transform: translate(0, 0);
+      background: rgba(47, 154, 231, 0.9);
+    }
+
+    &.previous {
+      left: 0;
+    }
+
+    &.next {
+      right: 0;
+    }
+
+    &.close {
+      top: 0;
+      transform: translate(0, 0);
+      right: 0;
+      background: rgba(170, 12, 12, 0.8);
+      vertical-align: bottom;
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 95%;
+    max-height: 95vh;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+    background: white;
+
+    &.jiggle-left-1 {
+      animation-name: jiggle-left-1;
+      animation-duration: 0.25s;
+      animation-iteration-count: 1;
+    }
+
+    &.jiggle-left-2 {
+      animation-name: jiggle-left-2;
+      animation-duration: 0.25s;
+      animation-iteration-count: 1;
+    }
+
+    &.jiggle-right-1 {
+      animation-name: jiggle-right-1;
+      animation-duration: 0.25s;
+      animation-iteration-count: 1;
+    }
+
+    &.jiggle-right-2 {
+      animation-name: jiggle-right-2;
+      animation-duration: 0.25s;
+      animation-iteration-count: 1;
+    }
+  }
+
+  @keyframes jiggle-left-1 {
+    0%,
+    100% {
+      transform: translate(-50%, -50%);
+    }
+    50% {
+      transform: translate(-49%, -50%);
+    }
+  }
+
+  @keyframes jiggle-left-2 {
+    0%,
+    100% {
+      transform: translate(-50%, -50%);
+    }
+    50% {
+      transform: translate(-49%, -50%);
+    }
+  }
+
+  @keyframes jiggle-right-1 {
+    0%,
+    100% {
+      transform: translate(-50%, -50%);
+    }
+    50% {
+      transform: translate(-51%, -50%);
+    }
+  }
+
+  @keyframes jiggle-right-2 {
+    0%,
+    100% {
+      transform: translate(-50%, -50%);
+    }
+    50% {
+      transform: translate(-51%, -50%);
+    }
+  }
+}
