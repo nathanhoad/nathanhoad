@@ -1,0 +1,49 @@
+# SayWhat: A branching dialogue editor
+
+- published: 2020-05-30
+- tags: gamedev
+
+The past couple of months have been a bit slow on the game dev front (what with a global pandemic and the release of Animal Crossing and all) but I have finally finished my [branching dialogue editor](https://nathanhoad.itch.io/saywhat).
+
+<section data-type="wide">
+
+![SayWhat screenshot](saywhat.jpg)  
+_SayWhat is a simple branching dialogue editor._
+
+</section>
+
+The initial approach for the editor was a web app.
+
+While I did [write a new ORM](https://github.com/nathanhoad/nathanhoad-data) and a [Next.js API helper](https://github.com/nathanhoad/nathanhoad-next-api) in the process I ended up deciding against the web app.
+
+The main reason being I wanted the dialogue project files to exist alongside the actual game code in the repository so that it could be versioned and tracked.
+
+I might move it back onto the web when I have the time to implement user accounts and access management but for now, a desktop tool suites my needs.
+
+## Nodes
+
+The user interface went through a number of changes since [the prototype I mentioned previously](/2020-02-puzzles-and-dialogue).
+
+I reworked the 'everything is a node' idea and grouped items into two phases - general dialogue and options.
+
+Each _node_ would contain a number of 'lines' that would be spoken in order by the characters and then be followed up by the various ways to exit the node.
+
+Each 'prompt' would either point to another node or to end the conversation.
+
+## Conditions and Mutations
+
+Any line or prompt can have a condition attached. Conditions call out to the engine to check some state (the dialogue handler itself being stateless) and hide the line unless it is resolved as true.
+
+Mutations call out to the engine and affect state. For example, a character might say "Here, have this thing" and then the engine could run a 'GiveThing' mutation which runs an animation and then updates the character's inventory before continuing the dialogue flow.
+
+## Exporting
+
+My engine pipeline only uses XML at the moment but I figured it was pretty easy to add in a JSON option just in case.
+
+I made both formats to just be lists of sequences containing every line (or group of responses) as their own 'nodes'. Each of those nodes contains a single thing and then points to the next node in the chain.
+
+The idea was that in the parser/engine I could just request an entry point (a sequence and node combination) and then step through each line from there.
+
+---
+
+You can grab a copy of [SayWhat on Itch](https://nathanhoad.itch.io/saywhat) or check out the source on [GitHub](https://github.com/nathanhoad/SayWhat).

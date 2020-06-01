@@ -110,11 +110,13 @@ body > article {
     }
   }
 
-  p > code {
-    background: rgb(167, 233, 173);
-    font-size: 14px;
-    padding: 4px;
-    color: black;
+  p > code,
+  li > code,
+  a > code {
+    background: rgb(4, 19, 39);
+    font-size: 16px;
+    padding: 4px 8px;
+    color: white;
     border-radius: 3px;
     font-family: "Courier New", Courier, monospace;
     font-weight: bold;
@@ -274,7 +276,8 @@ body > article {
     }
   }
 
-  iframe[src^="https://www.youtube"] {
+  iframe[src^="https://www.youtube"]
+  {
     width: 960px;
     height: 540px;
     margin: 0px -130px;
