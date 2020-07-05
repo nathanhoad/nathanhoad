@@ -98,8 +98,8 @@ body > article {
   pre {
     margin: 40px -130px;
     padding: 8px 16px;
-    background: #222;
-    color: white;
+    background: #ddd;
+    color: black;
     border-radius: 3px;
     font-size: 14px;
     overflow-x: scroll;
@@ -113,10 +113,10 @@ body > article {
   p > code,
   li > code,
   a > code {
-    background: rgb(4, 19, 39);
+    background: #ddd;
     font-size: 16px;
     padding: 4px 8px;
-    color: white;
+    color: black;
     border-radius: 3px;
     font-family: "Courier New", Courier, monospace;
     font-weight: bold;

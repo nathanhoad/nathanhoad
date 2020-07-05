@@ -1,0 +1,57 @@
+# Getting characters to talk
+
+- published: 2020-06-30
+- tags: gamedev
+
+After finishing the initial build of [my dialogue editor](2020-05-a-branching-dialogue-editor) last month I got started adding support for it into my game engine.
+
+<section data-type="wide">
+
+![Dialogue with options](options.jpg)  
+_Having a white glove for options was a given._
+
+</section>
+
+Building out the MonoGame Pipeline extension for it was mostly straight forward. After all, it's just reading pretty flat XML and writing basic lists back to the binary XNB.
+
+The real magic came about when I started on the dialogue handler.
+
+Originally I was going to use a string dictionary for any global game state and simple delegates for mutations but that quickly became a bad idea.
+
+Doing it that way meant sacrificing way too much for zero gain. I would have lost all typings for game state as well as the ability to use `IEnumerator` magic in mutations.
+
+So then I started experimenting with reflection. I was already using a tiny bit of reflection in some of the rendering part of the engine so it wasn't overly difficult to get my head around it for this use case.
+
+<section data-type="pull-right">
+
+![Dialogue editor](hi.jpg)  
+_Making changes to the dialogue is easy with my dialogue editor._
+
+</section>
+
+The result was something I'm pretty happy with.
+
+As needed, the dialogue handler could probe the global game state for conditional checks and to perform mutations. Mutations could yield floats to delay the next line of dialogue.
+
+My testing so far had just been using text output in the console and using number key input for selecting options. It was time to look at rendering things properly.
+
+First up, I added a method to my graphics helpers to create a nine-slice texture from an image. This would be the base of the resizable dialogue balloons.
+
+Next up was modifying my markup text component so that it could 'type out' dialogue text at a given speed.
+
+I then spent a bit of time trying out different styles of speech balloons (name placements, padding, colours, etc) before settling on simple white with coloured names. This will probably get more refined over time but it's good enough for now.
+
+<section data-type="pull-right">
+
+![Final Fantasy 9 uses a white glove for options](ff9.jpg)  
+_Final Fantasy 9 uses a white glove for options._
+
+</section>
+
+For the options menus, a white glove is something of an RPG staple so I figured it was a safe choice.
+
+I decided to model mine off the one from Final Fantasy 9 (one of my favourite games).
+
+Now that the dialogue system is looking pretty great I feel like most of my dev work going forward is going to be less on the engine and more on the game itself.
+
+Feels good.
