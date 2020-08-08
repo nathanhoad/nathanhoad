@@ -1,0 +1,42 @@
+# All good adventures start in the tavern
+
+- published: 2020-07-31 10:00
+- tags: gamedev
+
+July started with a chat with [Maurice](https://twitter.com/butlermaurice) about the upcoming MonoGame support for dotnet core.
+
+Before then, Impulse had been using .NET Framework but with a bit of help from [Maurice's MonoGame Utils](https://github.com/MauriceButler/MonoGameUtils)
+and a surprisingly small amount of messing about I managed to convert the engine and pipeline extensions over to dotnet core.
+
+With the engine in pretty good shape I was free for most of the month to be focused on the game itself.
+
+<section data-type="wide">
+
+![A tavern scene in pixel art](tavern.png)  
+_A few Brave Adventurers play a game in the tavern._
+
+</section>
+
+I've been using [Notion](https://www.notion.so) as a brain dump for any ideas I have for the game. There were several documents with different 
+story outlines but I managed to consolidate the bits I liked from all of them into a single story arc.
+
+I'm a big fan of the classic Final Fantasy games as well as D&D so I'm setting Coco's adventure in a classic fantasy world with magic and monsters. I'm also a fan of 
+Earthbound and Day of the Tentacle for their light-heartedness and absurdity so I'll be incorporating those elements as well.
+
+While details of the story may change over time it felt good to have a clearer idea of what the general shape of it was going to be.
+
+Story and the puzzle flow go hand in hand and so far things are starting to fall into place. 
+
+The puzzle dependency chart has changed a lot over the last few months. While most puzzles are connected and have a natural flow there
+are still a few non-contiguous puzzles that I need to find good spots for (or drop altogether).
+
+With a broad idea of everything I figured the next logical step was to get a single "scene" or plot point properly working.
+
+I decided to start with one that was mostly simple but would contain a bunch of "core loop" gameplay.
+
+The scene I've picked is a tavern where Coco finds a group of adventurers playing a tabletop RPG.
+
+So my aim for this month is finish the tavern assets, the dialogue scripts for the NPCs, and get a first pass battle system working for the optional fight that
+might go down in there.
+
+It's going to be a busy month.
